@@ -1,0 +1,44 @@
+/* ConsultationSection.css */
+.consultation-section {
+    background-color: #CF4A46;
+    padding: 4.5rem 0;
+    text-align: center;
+  }
+  
+  .consultation-section h2 {
+    color: #fff;
+    font-size: 2.25rem;
+    margin-bottom: 0.625rem;
+  }
+  
+  .consultation-section p {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-left: 16.25%;
+  }
+  
+  .consultation-section .form-control {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 1.25rem;
+    padding: 0.538rem;
+    font-size: 1rem;
+    margin-top: 1.25rem;
+  }
+  
+  .consultation-section .btn-appointment {
+    background-color: #fff;
+    color: black;
+    border-radius: 0;
+    border: none;
+    padding: 0.538rem 5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1.25rem;
+  }
+  
+  .consultation-section .btn-appointment:hover {
+    background-color: #1B2125;
+    color: white;
+  }

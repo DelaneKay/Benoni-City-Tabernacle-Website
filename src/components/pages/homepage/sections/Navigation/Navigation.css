@@ -1,0 +1,60 @@
+.navbar {
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+    padding-top: 1rem;
+    z-index: 1030; /* Ensure it's on top of other content */
+  }
+
+  .navbar .nav-link {
+    color: #ffffff;
+  }
+
+  .navbar.scrolled {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar.scrolled .nav-link {
+   color: black;
+  }
+
+  .navbar.scrolled button:hover {
+    background-color: #CF4A46;
+    color: white;
+    border-color: #CF4A46;
+    font-size: small;
+  }
+
+  .navbar button {
+    background-color: #ffffff;
+    color: black;
+    border-color: #ffffff;
+    font-size: small;
+  }
+
+  .navbar button:hover {
+    background-color: #D3D4D5;
+    color: black;
+    border-color: #D3D4D5;
+    font-size: small;
+  }
+
+  .nav-section button {
+    border-radius: 0%;
+  }
+
+  .logo {
+    height: 4.125rem;
+    width: auto;
+    background-color: white; 
+  }
+  
+  .right-aligned {
+    justify-content: flex-end;
+  }
+  
+  
+  .navbar.active {
+    background-color: #1B2125;
+  }
+

@@ -1,0 +1,99 @@
+/* Bringing Faith Section */
+.faith {
+    background-color: #1B2125;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .testimonial-section {
+    position: relative;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .background-image {
+    position: absolute;
+    width: 66%;
+    height: 72%;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-left: 25%;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-left: 2rem;
+  }
+  
+  .vertical-line {
+    width: 2.5px;
+    height: 9rem;
+    background-color: #fff;
+  }
+  
+  .testimonial {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    background-color: #CF4A46; /* Replace with the appropriate color */
+    padding: 20px;
+    border-radius: 0%;
+    color: #fff; /* Replace with the appropriate text color */
+    text-align: center;
+    width: 90%;
+  }
+  
+  .author {
+    display: flex;
+    align-items: center;
+    margin-top: -0.5rem;
+  }
+  
+  .author img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .author span {
+    font-size: 1rem;
+  }
+  
+  .carousel-indicators {
+    bottom: 1rem;
+  }
+
+
+  
+
+
+  

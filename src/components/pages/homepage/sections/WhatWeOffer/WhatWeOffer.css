@@ -1,0 +1,60 @@
+/* What We Offer Section */
+.container-custom {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8; /* Light background color */
+  }
+  
+  .title-custom {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #111827; /* Black text color */
+  }
+  
+  
+  .card-custom {
+    border: none;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .card-img-custom {
+    border-radius: 0;
+    height: auto;
+    display: block;
+  }
+  
+  .card-title-custom {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111827; /* Black text color */
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .card-title-custom::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #CF4A46; /* Black line color */
+    margin: 10px auto 0;
+  }
+  
+  .card-subtitle-custom {
+    font-size: 14px;
+    color: #CF4A46; /* Orange-red text color */
+    margin-top: 10px;
+  }
+
+  .card-title-custom:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #CF4A46; /* Black text color */
+    margin-top: 10px;
+    position: relative;
+    transform: scale(1.1);
+  }
+  
+  

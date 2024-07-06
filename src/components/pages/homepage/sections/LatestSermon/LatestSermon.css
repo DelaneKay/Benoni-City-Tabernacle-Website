@@ -1,0 +1,21 @@
+.latest-sermon {
+    background-color: #fff;
+}
+
+.latest-sermon button {
+    font-size: large;
+    border-radius: 0%;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+.latest-sermon-container {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.latest-sermon p {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+}
+
