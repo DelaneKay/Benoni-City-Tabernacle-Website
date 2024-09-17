@@ -20,5 +20,42 @@
     margin-left: 1rem;
   }
 
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .vertical-line1 {
+    width: 1.4rem;
+    height: 17rem;
+  }
+}
 
-  
+   /* Responsive styles for screens up to 600px */
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+    .church-info-text {
+      margin-right: 3%;
+    }
+
+    .vertical-line1 {
+      width: 1.4rem;
+      height: 16rem;
+    }
+  }
+
+  /* Responsive styles for screens from 600px to 900px */
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    .church-info-text {
+      margin-right: 3%;
+    }
+
+    .vertical-line1 {
+      width: 0.9rem;
+      height: 9rem;
+    }
+  }
+
+  /* Responsive styles for screens from 900px to 1200px */
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .church-info-text {
+      margin-right: 3%;
+    }
+
+  }

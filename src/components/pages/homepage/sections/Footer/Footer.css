@@ -27,7 +27,7 @@
   }
 
   .footer-nav a:hover {
-    color: #cf4a46;
+    color: #CF4A46;
     text-decoration: none;
   }
   
@@ -42,7 +42,7 @@
   }
   
   .footer-phone {
-    color: #cf4a46;
+    color: #CF4A46;
     font-size: 2rem;
   }
   
@@ -75,8 +75,8 @@
   }
 
   .social-icon:hover {
-    background-color: #cf4a46;
-    border: 1px solid #cf4a46;
+    background-color: #CF4A46;
+    border: 1px solid #CF4A46;
     color: #DD817E
   }
   

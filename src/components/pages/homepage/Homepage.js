@@ -22,15 +22,16 @@ const Homepage = () => {
             <CarouselPage/>
         </header>
         <ChurchInfo/>
-        <AboutChurch/>
-        <OurMinistries/>
-        <LatestSermon/>
-        <WhatWeOffer/>
-        <BringingFaith/>
-        <Team/>
-        <AppSection/>
-        <Consultation/>
-        <Footer/>
+        {/*<AboutChurch/>*/}
+        {/*<OurMinistries/>*/}
+        {/*<LatestSermon/>*/}
+        {/*<WhatWeOffer/>*/}
+        {/*<BringingFaith/>*/}
+        {/*<Team/>*/}
+        {/*<AppSection/>*/}
+        {/*<Consultation/>*/}
+        {/*<Footer/>*/}
+        
     </>
   )
 }

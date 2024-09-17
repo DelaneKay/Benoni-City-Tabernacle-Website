@@ -7,6 +7,11 @@
 
   .navbar .nav-link {
     color: #ffffff;
+    padding: 0.5rem;
+  }
+
+  .navbar .nav-link:hover {
+    transform: scale(1.1);
   }
 
   .navbar.scrolled {
@@ -18,11 +23,16 @@
    color: black;
   }
 
+  .navbar.scrolled .nav-link:hover {
+    color: #CF4A46;
+    transform: scale(1.1);
+   }
+
   .navbar.scrolled button:hover {
     background-color: #CF4A46;
     color: white;
     border-color: #CF4A46;
-    font-size: small;
+
   }
 
   .navbar button {
@@ -58,3 +68,89 @@
     background-color: #1B2125;
   }
 
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+  .navbar .nav-link:hover {
+    transform: scale(0);
+  }
+
+  .navbar.scrolled .nav-link:hover {
+    transform: scale(0);
+   }
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+
+}
+
+/* Responsive styles for screens from  400px to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+  .navbar .nav-link:hover {
+    transform: scale(0);
+  }
+
+  .navbar.scrolled .nav-link:hover {
+    transform: scale(0);
+   }
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+}
+
+/* Responsive styles for screens from  600px to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+  .navbar .nav-link:hover {
+    transform: scale(0);
+  }
+
+  .navbar.scrolled .nav-link:hover {
+    transform: scale(0);
+   }
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+}
+
+/* Responsive styles for screens from  900px to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+
+}
