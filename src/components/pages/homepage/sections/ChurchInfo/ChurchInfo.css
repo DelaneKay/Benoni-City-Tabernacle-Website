@@ -24,7 +24,11 @@
 @media screen and (max-width: 400px) {
   .vertical-line1 {
     width: 1.4rem;
-    height: 17rem;
+    height: 11rem;
+  }
+
+  .church-info-text {
+    font-size: 1.1rem;
   }
 }
 

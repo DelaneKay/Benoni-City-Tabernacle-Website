@@ -1,10 +1,10 @@
 .about-church {
-  background-color: #f8f8f8;
   position: relative;
 }
 
 .layout-church {
   position: relative;
+  background-color: #f8f8f8;
 }
 
 .layout-church-media {
@@ -32,6 +32,7 @@
 .about-church p {
   font-size: large;
 }
+
 
 /* @media screen and (min-width: 992px) {
   .layout-church {
@@ -61,7 +62,34 @@
   }
 } */
 
+@media screen and (max-width: 500px) {
+  .layout-church-media {
+    min-height: 18.75rem;
+  }
+
+  .about-church button {
+    margin-top: 2rem;
+    font-size: small;
+    border-radius: 0%;
+  }
+  
+  .about-church p {
+    font-size: medium;
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  .layout-church-media {
+    min-height: 38.75rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
+
+  .about-church {
+    background-color: #f8f8f8;
+  }
 
   .layout-church {
     display: flex;
@@ -88,6 +116,7 @@
     padding: 3.4375rem 0 3.4375rem;
     padding-left: 25%;
   }
+
 }
 
 

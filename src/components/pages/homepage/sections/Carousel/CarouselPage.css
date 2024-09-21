@@ -208,6 +208,40 @@
     padding-right: 15px; /* Reduce padding for smaller screens */
     max-width: 100%; /* Full-width container */
   }
+ 
+}
 
-  
+@media screen  and (max-height: 600px) {
+   /* Adjusting the carousel height to be more mobile-friendly */
+   .carousel-caption {
+    top: 22.5%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Smaller paragraph font size */
+  }
+
+  .address {
+    visibility: hidden;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+
+  img {
+    height: 60vh; /* Smaller image height for mobile */
+    object-fit: cover; /* Make sure image scales properly */
+  }
 }

@@ -36,5 +36,79 @@
     font-size: 1.25rem;
   }
 
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .ministries-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 
+  .ministry-name {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .ministries-section {
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .ministries-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .ministry-name {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .ministries-section {
+    padding: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .ministries-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .ministry-name {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .ministries-section {
+    padding: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Responsive styles for screens from 900px up to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .ministries-title {
+    font-size: 2.3rem;
+    margin-top: 2rem;
+  }
+
+  .ministry-name {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .ministries-section {
+    padding: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .ministry-icon {
+    font-size: 2.7rem;
+  }
+}
   

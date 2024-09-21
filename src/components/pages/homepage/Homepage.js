@@ -23,8 +23,8 @@ const Homepage = () => {
         </header>
         <ChurchInfo/>
         <AboutChurch/>
-        {/*<OurMinistries/>*/}
-        {/*<LatestSermon/>*/}
+        <OurMinistries/>
+        <LatestSermon/>
         {/*<WhatWeOffer/>*/}
         {/*<BringingFaith/>*/}
         {/*<Team/>*/}
