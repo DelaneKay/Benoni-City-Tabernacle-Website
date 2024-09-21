@@ -22,7 +22,7 @@ const Homepage = () => {
             <CarouselPage/>
         </header>
         <ChurchInfo/>
-        {/*<AboutChurch/>*/}
+        <AboutChurch/>
         {/*<OurMinistries/>*/}
         {/*<LatestSermon/>*/}
         {/*<WhatWeOffer/>*/}

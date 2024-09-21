@@ -3,6 +3,7 @@
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
     padding-top: 1rem;
     z-index: 1030; /* Ensure it's on top of other content */
+    font-size: 0.90rem;
   }
 
   .navbar .nav-link {
@@ -11,7 +12,7 @@
   }
 
   .navbar .nav-link:hover {
-    transform: scale(1.1);
+    color: #CF4A46;
   }
 
   .navbar.scrolled {
@@ -25,7 +26,6 @@
 
   .navbar.scrolled .nav-link:hover {
     color: #CF4A46;
-    transform: scale(1.1);
    }
 
   .navbar.scrolled button:hover {
@@ -39,7 +39,7 @@
     background-color: #ffffff;
     color: black;
     border-color: #ffffff;
-    font-size: small;
+    font-size: 0.90rem;
   }
 
   .navbar button:hover {
