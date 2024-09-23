@@ -3,7 +3,7 @@ import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { MdCheck } from "react-icons/md";
 import Image from '../../../../../media/homepage/img10.jpg';
 import './AppSection.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const AppSection = () => {
   return (
@@ -11,14 +11,11 @@ const AppSection = () => {
       <div className="container">
         <div className="layout layout-2">
           <div 
-            className="layout-media bg-image animated fadeInUpBig" 
+            className="layout-media bg-image" 
             style={{ backgroundImage: `url(${Image})` }}
-            data-animate='{"class":"fadeInUpBig"}'
           ></div>
           <div 
-            className="layout-content bg-100 animated fadeInUpBig" 
-            data-animate='{"class":"fadeInUpBig","delay":".2s"}' 
-            style={{ animationDelay: '0.2s' }}
+            className="layout-content bg-100" 
           >
             <div className="text-block-1">
               <h2>DOWNLOAD THE APP</h2>

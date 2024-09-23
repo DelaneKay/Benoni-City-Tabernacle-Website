@@ -27,9 +27,9 @@ const Homepage = () => {
         <LatestSermon/>
         <WhatWeOffer/>
         <BringingFaith/>
-        {/*<Team/>*/}
-        {/*<AppSection/>*/}
-        {/*<Consultation/>*/}
+        <Team/>
+        <AppSection/>
+        <Consultation/>
         {/*<Footer/>*/}
         
     </>

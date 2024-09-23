@@ -1,5 +1,4 @@
 
-  
   .meet-our-team h2 {
     margin-top: 4rem;
   }
@@ -103,5 +102,121 @@
   .arrow-button:hover .arrow-icon {
     color: #B33E3A;
   }
+
+   /* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 900px up to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
   
   
