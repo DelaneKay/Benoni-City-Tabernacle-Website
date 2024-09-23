@@ -8,14 +8,14 @@ const LatestSermon = () => {
     <section className='latest-sermon'>
       <Container className='latest-sermon-container'>
         <Row className='latest-sermon-row'>
-            <Col xs={12} md={3}>
+            <Col xs={12} md={12} lg={3} xl={3}>
                 <h1>LATEST SERMON</h1>
                 <p>Explore & watch our latest sermons by our pastor and other various preachers.</p>
                 <Button
                     variant="danger"  
                     size="lg">OTHER SERMONS</Button>
             </Col>
-            <Col xs={12} md={9}>
+            <Col xs={12} md={12} lg={9} xl={9}>
               <div className='react-player-wrapper'>
                 <ReactPlayer 
                   url='https://www.youtube.com/watch?v=XM-bkWkMyRg' 

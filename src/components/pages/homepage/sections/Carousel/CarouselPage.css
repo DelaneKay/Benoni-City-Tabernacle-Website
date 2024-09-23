@@ -87,15 +87,15 @@
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.2rem;
   }
 
   h1 {
-    font-size: 2.75rem; /* Smaller headings on mobile */
+    font-size: 2.3rem; /* Smaller headings on mobile */
   }
 
   .carousel-caption p {
-    font-size: 1.25rem; /* Smaller paragraph font size */
+    font-size: 1rem; /* Smaller paragraph font size */
   }
 
   .address {
@@ -130,20 +130,20 @@
 @media screen and (min-width: 600px) and (max-width: 900px) {
   /* Adjusting the carousel height to be more mobile-friendly */
   .carousel-caption {
-    top: 28.5%; /* Lowering the text on smaller screens */
+    top: 20%; /* Lowering the text on smaller screens */
     padding: 5%;
   }
 
   h3 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 3rem; /* Smaller headings on mobile */
+    font-size: 2.25rem; /* Smaller headings on mobile */
   }
 
   .carousel-caption p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .address {
@@ -178,15 +178,15 @@
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 
   h1 {
-    font-size: 4rem; /* Smaller headings on mobile */
+    font-size: 2.75rem; /* Smaller headings on mobile */
   }
 
   .carousel-caption p {
-    font-size: 1.75rem;
+    font-size: 1rem;
   }
 
   .address {

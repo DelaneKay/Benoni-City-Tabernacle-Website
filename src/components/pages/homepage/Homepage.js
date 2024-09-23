@@ -25,8 +25,8 @@ const Homepage = () => {
         <AboutChurch/>
         <OurMinistries/>
         <LatestSermon/>
-        {/*<WhatWeOffer/>*/}
-        {/*<BringingFaith/>*/}
+        <WhatWeOffer/>
+        <BringingFaith/>
         {/*<Team/>*/}
         {/*<AppSection/>*/}
         {/*<Consultation/>*/}
