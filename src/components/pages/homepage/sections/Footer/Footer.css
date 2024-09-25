@@ -110,5 +110,112 @@
   .footer-copyright a:hover {
     color: white;
   }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .row-links {
+    display: none;
+  }
+
+  .footer-logo {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+  }
+
+  .footer-horizontal-line {
+    width: 80%;
+  }
+
+  .footer-address {
+    margin-top: 20%;
+  }
+
+  .social-icons{
+    margin-top: 10%;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px){
+  .row-links {
+    display: none;
+  }
+
+  .footer-logo {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+  }
+
+  .footer-horizontal-line {
+    width: 80%;
+  }
+
+  .footer-address {
+    margin-top: 20%;
+  }
+
+  .social-icons{
+    margin-top: 10%;
+  }
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .row-links {
+    display: none;
+  }
+
+  .footer-logo {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+  }
+
+  .footer-horizontal-line {
+    width: 80%;
+  }
+
+  .footer-address {
+    margin-top: 10%;
+  }
+
+  .social-icons{
+    margin-top: 10%;
+  }
+
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+  .footer-logo {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+  }
+
+  .footer-horizontal-line {
+    width: 80%;
+  }
+
+  .row-links {
+    font-size: 0.90rem;
+  }
+
+  .footer-nav {
+    gap: 3rem;
+  }
+  
+
+}
+
+  
+  
   
   

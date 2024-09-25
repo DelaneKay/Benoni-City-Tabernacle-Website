@@ -5,6 +5,9 @@ import './Footer.css'
 import logo from '../../../../../media/homepage/bct-logo.png'; // Replace with your logo path
 
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear(); // Get the current year
+
   return (
     <footer className="footer">
       <Container className='footer-container'>
@@ -13,8 +16,8 @@ const Footer = () => {
             <img src={logo} alt="Charia Logo" className="footer-logo" />
           </Col>
         </Row>
-        <Row className="justify-content-center">
-          <Col md="auto">
+        <Row className="justify-content-center row-links">
+          <Col>
             <nav className="footer-nav">
               <a href="#about">HOME</a>
               <a href="#donations">SERMONS</a>
@@ -26,7 +29,7 @@ const Footer = () => {
           </Col>
         </Row>
         <hr className="footer-separator" />
-        <Row className="text-center">
+        <Row className="text-center social-icons">
           <Col>
             <div className="footer-social">
                 <div className="social-icon-wrapper">
@@ -50,7 +53,7 @@ const Footer = () => {
         <Row className="text-center">
           <Col>
             <p className="footer-address">100 Elston Ave, Benoni, 1500</p>
-            <p className="footer-copyright">© 2024 BCT. All rights reserved. <a href="#privacy-policy">Designed by Castle Windsor Designs</a></p>
+            <p className="footer-copyright">© {currentYear} BCT. All rights reserved. <a href="#privacy-policy">Designed by Castle Windsor Designs</a></p>
           </Col>
         </Row>
       </Container>

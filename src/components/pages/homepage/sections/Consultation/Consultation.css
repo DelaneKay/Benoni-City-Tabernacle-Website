@@ -2,7 +2,6 @@
 .consultation-section {
     background-color: #CF4A46;
     padding: 4.5rem 0;
-    text-align: center;
   }
   
   .consultation-section h2 {
@@ -11,10 +10,10 @@
     margin-bottom: 0.625rem;
   }
   
-  .consultation-section p {
+  .consultation-section h5 {
     color: #fff;
     font-size: 1.125rem;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     margin-left: 16.25%;
   }
   
@@ -42,3 +41,119 @@
     background-color: #1B2125;
     color: white;
   }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  
+  .consultation-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+  
+  .consultation-section h5 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-left: 0%;
+    text-align: center;
+  }
+  
+  .consultation-section .btn-appointment {
+    background-color: #1B2125;
+    color: white;
+    width: 100%;
+  }
+  
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px){
+  
+  .consultation-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+  
+  .consultation-section h5 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-left: 0%;
+    text-align: center;
+  }
+  
+  .consultation-section .btn-appointment {
+    background-color: #1B2125;
+    color: white;
+    width: 100%;
+  }
+  
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px){
+  
+  .consultation-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    padding-left: 0.9375rem;
+    text-align: center;
+  }
+  
+  .consultation-section h5 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-left: 0%;
+    text-align: center;
+  }
+  
+  .consultation-section .btn-appointment {
+    background-color: #1B2125;
+    color: white;
+    width: 100%;
+  }
+  
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  
+  .consultation-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    padding-left: 0.9375rem;
+  }
+
+  .consultation-headings {
+    display: flex;
+  }
+  
+  .consultation-section h5 {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-left: 10%;
+  }
+  
+  .consultation-section .btn-appointment {
+    background-color: #1B2125;
+    color: white;
+    width: 100%;
+    padding: 0.538rem 4rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styles for screens from 1200px */
+@media screen and (min-width: 1200px) {
+  .consultation-headings {
+    display: flex;
+  }
+}
