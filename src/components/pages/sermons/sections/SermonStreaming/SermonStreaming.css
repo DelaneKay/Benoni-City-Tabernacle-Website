@@ -14,13 +14,26 @@
     aspect-ratio: 16/9;
   }
   
-  /* Sermon Title */
+  .sermon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically align the two h3 elements */
+    width: 100%;
+  }
+  
   .sermon-title {
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
+    margin: 0;
   }
+  
+  .speaker-info {
+    text-align: right;
+    font-size: 1rem;
+    font-weight: normal;
+    color: hsl(0, 0%, 40%); /* You can adjust the color to match your design */
+  }
+  
   
   /* Watch and Listen Buttons */
   button.mx-2 {
@@ -83,6 +96,42 @@
   .form-select:focus {
     outline: none;
     box-shadow: none;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+  
+  .pagination .page-item .page-link {
+    color: #1B2125;
+    background-color: #f0f0f0;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .pagination .page-item.active .page-link {
+    color: #f0f0f0;
+    background-color: #1B2125;
+    border-color: #1B2125;
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #f0f0f0;
+    border-color: #dee2e6;
+  }
+  
+  .pagination .page-link:hover {
+    color: #f0f0f0;
+    background-color: #1B2125;
+    border-color: #1B2125;
+  }
+  
+  .pagination .page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(27, 33, 37, 0.25);
   }
   
 
