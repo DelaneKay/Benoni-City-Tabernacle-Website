@@ -1,0 +1,19 @@
+.live-links-bar {
+    background-color: #1B2125;; /* Dark background */
+    padding: 2rem 0; /* Padding around the bar */
+  }
+  
+  .live-link {
+    color: #ffffff; /* White text */
+    margin: 0 1rem; /* Horizontal margin between links */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .live-link:hover {
+    color: #ffffff; /* White text */
+    cursor: pointer;
+  }
+  
+  

@@ -12,13 +12,10 @@ import AppSection from './sections/AppSection/AppSection'
 import Consultation from './sections/Consultation/Consultation'
 import Footer from './sections/Footer/Footer'
 
-
-
 const Homepage = () => {
   return (
     <>
         <header style={{ position: 'relative' }}>
-            <Navigation/>
             <CarouselPage/>
         </header>
         <ChurchInfo/>
@@ -31,7 +28,6 @@ const Homepage = () => {
         <AppSection/>
         <Consultation/>
         <Footer/>
-        
     </>
   )
 }

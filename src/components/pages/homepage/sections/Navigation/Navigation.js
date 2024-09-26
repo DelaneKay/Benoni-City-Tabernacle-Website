@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
 
 // Logo
@@ -17,6 +17,16 @@ const Navigation = () => {
   // State to track navbar scrolling
   const [scrolled, setScrolled] = useState(false);
 
+  // Get the current location (route)
+  const location = useLocation();
+
+  // Set whether the navbar should be transparent based on the route
+  const isHomePage = location.pathname === '/'; // Make transparent on HomePage
+  
+  const isActive = (path) => {
+    return location.pathname === path ? 'active-link' : ''; // Return 'active-link' class if the current path matches
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -31,7 +41,7 @@ const Navigation = () => {
       <Container>
       <Navbar
           expand="lg" 
-          className={`navbar ${scrolled ? 'scrolled' : ''}`}
+          className={`navbar ${scrolled ? 'scrolled' : ''} ${isHomePage && !scrolled ? 'navbar-transparent' : 'navbar-solid'}`}
           fixed="top"
           expanded={expanded} 
         >
@@ -52,13 +62,61 @@ const Navigation = () => {
 
             <Navbar.Collapse id="navbar-nav" className='right-aligned'>
                 <Nav>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>HOME</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>SERMONS</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>SPECIALS</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>SUNDAY SCHOOL CORNER</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>MISSIONARY</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>WILLIAM BRANHAM</Nav.Link>
-                  <Nav.Link to="/" as={Link} onClick={() => setExpanded(false)}>ABOUT US</Nav.Link>
+                <Nav.Link
+                  to="/"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                >
+                  HOME
+                </Nav.Link>
+                <Nav.Link
+                  to="/Sermons"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/Sermons')}
+                >
+                  SERMONS
+                </Nav.Link>
+                <Nav.Link
+                  to="/Specials"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/Specials')}
+                >
+                  SPECIALS
+                </Nav.Link>
+                <Nav.Link
+                  to="/SundaySchool"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/SundaySchool')}
+                >
+                  SUNDAY SCHOOL CORNER
+                </Nav.Link>
+                <Nav.Link
+                  to="/Missionary"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/Missionary')}
+                >
+                  MISSIONARY
+                </Nav.Link>
+                <Nav.Link
+                  to="/WilliamBranham"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/WilliamBranham')}
+                >
+                  WILLIAM BRANHAM
+                </Nav.Link>
+                <Nav.Link
+                  to="/AboutUs"
+                  as={Link}
+                  onClick={() => setExpanded(false)}
+                  className={isActive('/AboutUs')}
+                >
+                  ABOUT US
+                </Nav.Link>
                   <Button variant='light' onClick={() => setExpanded(false)}>ONLINE GIVING</Button>
                 </Nav>
             </Navbar.Collapse>

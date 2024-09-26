@@ -1,0 +1,67 @@
+.sermons-welcome-section {
+    height: 100vh; /* Take full screen height */
+    width: 100%;          /* Take the full width of its parent container */
+    min-height: 100vh;    /* Make sure the section takes up the full screen height */
+    padding-top: 10vh;    /* Adjust this to the height of your Navbar */
+    margin-top: 0;
+  }
+  
+  .sermons-image-col {
+    position: relative;
+  }
+  
+  .full-height-image {
+    width: 100%;
+    height: 90vh; /* Full height for the image */
+    object-fit: cover; /* Ensure image covers the div */
+  }
+  
+  .sermons-overlay-col {
+    position: relative;
+  }
+  
+  .sermons-overlay-container {
+    position: relative;
+  }
+  
+  .sermons-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(207, 74, 70, 0.8); /* Orange overlay with transparency */
+    color: white;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;*/
+    padding: 22rem 11rem 19rem 6rem;
+    text-align: left;
+  }
+  
+  .sermons-title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #1B2125;
+  }
+  
+  .sermons-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .watch-button {
+    background-color: #1B2125;
+    color: white;
+    padding: 0.55rem 1.5rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0%;
+    font-weight: bold;
+  }
+  
+  

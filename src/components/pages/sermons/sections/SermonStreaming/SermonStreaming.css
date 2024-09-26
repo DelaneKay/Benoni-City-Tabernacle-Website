@@ -1,0 +1,90 @@
+/* Title Styling */
+.latest-message-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .latest-message-title span {
+    color: #cf4a46;
+    border-bottom: 3px solid #cf4a46;
+  }
+  
+  /* Video Player Styling */
+  .react-player {
+    aspect-ratio: 16/9;
+  }
+  
+  /* Sermon Title */
+  .sermon-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Watch and Listen Buttons */
+  button.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Sermon Description */
+  .sermon-description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Recent Sermons Table */
+  .recent-sermons td {
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  /* Podcast Buttons */
+  button.outline-warning {
+    border-color: #cf4a46;
+    color: #cf4a46;
+  }
+  
+  button.outline-warning:hover {
+    background-color: #cf4a46;
+    color: white;
+  }
+
+  /* Updated Dropdown Styling */
+.dropdown-row {
+    background-color: #f0f0f0;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 5.7rem;
+  }
+  
+  .form-select {
+    width: 100%;
+    background-color: #ffffff; /* Changed to white background */
+    border: 1px solid #e0e0e0;
+    color: #333;
+    padding: 8px 30px 8px 12px;
+    border-radius: 0;
+    font-size: small;
+    font-weight: normal;
+    text-align: left;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 0 0 .293 4.707l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 1 0-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+  }
+  
+  .form-select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+
+
+  

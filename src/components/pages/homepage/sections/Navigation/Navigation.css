@@ -1,17 +1,42 @@
 .navbar {
-    background-color: transparent; /* Initial transparent background */
+    /*background-color: transparent;  Initial transparent background */
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
     padding-top: 1rem;
     z-index: 1030; /* Ensure it's on top of other content */
   }
 
-  .navbar .nav-link {
+  .navbar-transparent {
+    background-color: transparent !important;
+    border-bottom: none;
+  }
+  
+  .navbar-transparent .nav-link {
     color: #ffffff;
     margin: 0rem 0.391rem;
   }
+  
+  /* Solid navbar (applied when scrolled or on other pages) */
+  .navbar-solid {
+    background-color: white !important;  /* Example solid color, adjust as necessary */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-solid .nav-link{
+    color: black;
+    margin: 0rem 0.391rem;
+  }
+
+  /*.navbar .nav-link {
+    color: #ffffff;
+    margin: 0rem 0.391rem;
+  }*/
 
   .navbar .nav-link:hover {
     color: #CF4A46;
+  }
+
+  .active-link {
+    color: #CF4A46 !important; /* Highlight the active link */
   }
 
   .navbar.scrolled {
@@ -140,17 +165,21 @@
 
    .navbar .nav-link {
     color: black;
-    margin: 0rem 0.3rem;
+    margin: 0rem 0.2rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .navbar button {
-    font-size: 0.9rem
+    font-size: 0.8rem
    }
 
    .navbar {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
    }
+
+   .navbar .nav-link {
+    margin: 0rem 0.6rem;
+  }
 }
 
