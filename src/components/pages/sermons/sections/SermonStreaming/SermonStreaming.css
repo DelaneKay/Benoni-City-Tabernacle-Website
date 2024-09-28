@@ -98,6 +98,30 @@
     box-shadow: none;
   }
 
+  .form-control:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .form-control {
+    width: 100%;
+    background-color: #ffffff; /* Changed to white background */
+    border: 1px solid #e0e0e0;
+    color: #333;
+    padding: 8px 30px 8px 12px;
+    border-radius: 0;
+    font-size: small;
+    font-weight: normal;
+    text-align: left;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .form-option {
+    border-radius: 0;
+  }
+
   .pagination {
     display: flex;
     justify-content: center;
@@ -133,6 +157,50 @@
   .pagination .page-link:focus {
     box-shadow: 0 0 0 0.2rem rgba(27, 33, 37, 0.25);
   }
+
+  .series-row{
+    margin-top: 10rem;
+    margin-left: 5.7rem;
+    margin-right: 5.7rem;
+  }
+
+  .sermon-series-card {
+    border: none;
+    border-radius: 0;
+    transition: transform 0.3s ease-in-out;
+    width: 18rem;
+}
+
+.sermon-series-card .card-img-top {
+    border-radius: 0;
+    height: 10.5rem; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.sermon-series-card .card-body {
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.sermon-series-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sermon-series-card .card-text {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    font-style: italic;
+}
+
+.explore-series {
+  color: #cf4a46;
+  font-size: 1.1rem;
+  padding-top: -2.2rem;
+}
+
+
   
 
 
