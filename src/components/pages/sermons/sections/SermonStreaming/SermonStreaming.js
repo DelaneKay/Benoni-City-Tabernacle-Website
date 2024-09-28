@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Container, Row, Col, Button, Pagination, Table, Card } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import axios from 'axios';
@@ -48,6 +48,8 @@ const SermonStreaming = () => {
     const [filteredVideos, setFilteredVideos] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
+    const playerRef = useRef(null);
+
     const playlistsPerPage = 9;
     const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc';
     const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ';
@@ -56,12 +58,19 @@ const SermonStreaming = () => {
     // Sample speakers list (this could come from an API or some other data source)
     const speakers = ['Rev T. Mahere', 'Bro. Simba Manwere', 'Bro. Witness Makono', 'Bro. Jonathan Makono', 'Pastor William Ndlovu', 'Bro. Paul Mutimutema', 'Bro. Kuda Sibanda', 'Guest Speakers'];
 
+    const scrollToPlayer = () => {
+        if (playerRef.current) {
+            playerRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     // Function to handle search input change
     const handleSearchChange = (event) => {
         const term = event.target.value;
         setSearchTerm(term);
         filterVideos(term, selectedYear, selectedSpeaker);
     };
+
 
     // Function to filter videos based on search term
     const filterVideosBySearch = useCallback((term) => {
@@ -447,21 +456,23 @@ const SermonStreaming = () => {
                 const formattedDate = formatDate(currentVideo.snippet.publishedAt);
                 return (
                     <Row className="justify-content-center my-5 mb-4">
-                    <Col xs={12} md={10}>
-                    <div className="sermon-header mb-1">
-                        <h3 className="sermon-title">{sermonTitle}</h3>
-                        <h3 className="sermon-title speaker-info"><i>{speaker} {formattedDate}</i></h3>
-                    </div>
-                        
-                        {/* Video player */}
-                        <ReactPlayer
-                        url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
-                        className="react-player"
-                        width="100%"
-                        height="auto"
-                        controls
-                        />
-                    </Col>
+                        <Col xs={12} md={10}>
+                            <div className="sermon-header mb-1">
+                                <h3 className="sermon-title">{sermonTitle}</h3>
+                                <h3 className="sermon-title speaker-info"><i>{speaker} {formattedDate}</i></h3>
+                            </div>
+                            
+                            {/* Video player with ref */}
+                            <div ref={playerRef}>
+                                <ReactPlayer
+                                    url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
+                                    className="react-player"
+                                    width="100%"
+                                    height="auto"
+                                    controls
+                                />
+                            </div>
+                        </Col>
                     </Row>
                 );
                 })()}
@@ -524,6 +535,7 @@ const SermonStreaming = () => {
                                                 href={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                className='sermon-table-watch'
                                             >
                                                 Watch
                                             </a>

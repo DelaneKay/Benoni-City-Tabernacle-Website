@@ -5,6 +5,14 @@ import MessageImage from '../../../../../media/Sermons/Pastor.jpg';
 import CongregationImage from '../../../../../media/Sermons/Church-1.jpg';  
 
 const SermonsWelcome = () => {
+
+  const handleWatchNow = () => {
+    const playerElement = document.querySelector('.react-player');
+    if (playerElement) {
+      playerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="sermons-welcome-section">
       <Container fluid>
@@ -21,9 +29,9 @@ const SermonsWelcome = () => {
               <div className="sermons-overlay">
                 <h1 className="sermons-title">WATCH MESSAGES</h1>
                 <p className="sermons-description">
-                  We believe church isn’t a downloadable experience. We’d love to see you in-person this Sunday at 9:30AM and Wednesday at 6:30PM!
+                  We believe church isn't a downloadable experience. We'd love to see you in-person this Sunday at 9:30AM and Wednesday at 6:30PM!
                 </p>
-                <Button variant="dark" className="watch-button">Watch Now</Button>
+                <Button variant="dark" className="watch-button" onClick={handleWatchNow}>Watch Now</Button>
               </div>
             </div>
           </Col>
