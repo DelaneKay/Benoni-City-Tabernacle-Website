@@ -19,10 +19,10 @@ const Footer = () => {
         <Row className="justify-content-center row-links">
           <Col>
             <nav className="footer-nav">
-              <a href="#about">HOME</a>
-              <a href="#donations">SERMONS</a>
-              <a href="#events">SPECIALS</a>
-              <a href="#sermons">SUNDAY SCHOOL CORNER</a>
+              <a href="/">HOME</a>
+              <a href="/Sermons">SERMONS</a>
+              <a href="#events">MISSIONARY</a>
+              <a href="/SundaySchool">SUNDAY SCHOOL CORNER</a>
               <a href="#contact">ABOUT US</a>
               <a href="#contact">WILLIAM BRANHAM</a>
             </nav>

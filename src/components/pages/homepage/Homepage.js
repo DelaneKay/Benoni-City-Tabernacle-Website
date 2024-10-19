@@ -27,7 +27,6 @@ const Homepage = () => {
         <Team/>
         <AppSection/>
         <Consultation/>
-        <Footer/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import "./LiveLinks.css"
 
 const LiveLinks = () => {
   return (
-    <div className="live-links-bar">
+    <section className="live-links-bar">
         <Container>
         <Row className="justify-content-center">
             <Col xs="auto" md={3}>
@@ -17,11 +17,11 @@ const LiveLinks = () => {
             <a href="#youtube" className="live-link">Watch Live on our Apple app</a>
             </Col>
             <Col xs="auto" md={3}>
-            <a href="#youtube" className="live-link">Watch Live on our Google app</a>
+            <a href="#youtube" className="live-link">Watch Live on our Android app</a>
             </Col>
         </Row>
         </Container>
-    </div>
+    </section>
   )
 }
 

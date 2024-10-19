@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navigation from '../homepage/sections/Navigation/Navigation'
+import Footer from '../homepage/sections/Footer/Footer'
 
 const RootLayout = () => {
   return (
@@ -11,6 +12,9 @@ const RootLayout = () => {
       <main>
         <Outlet /> {/* This renders the current page's content */}
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }

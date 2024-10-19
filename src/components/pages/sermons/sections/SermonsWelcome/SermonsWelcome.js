@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './SermonsWelcome.css';
-import MessageImage from '../../../../../media/Sermons/Pastor.jpg';
+import MessageImage from '../../../../../media/Sermons/Pastor-2.jpg';
 import CongregationImage from '../../../../../media/Sermons/Church-1.jpg';  
 
 const SermonsWelcome = () => {
