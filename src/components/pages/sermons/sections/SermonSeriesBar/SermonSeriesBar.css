@@ -11,5 +11,38 @@
     padding-top: 0.5rem;
     font-size: 1rem;
   }
+
+  @media screen and (max-width: 400px) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) and (orientation: landscape) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  /* Landscape mode for medium devices */
+@media screen and (min-width: 600px) and (max-width: 992px) and (orientation: landscape) {
+  .sermon-series-bar {
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .sermon-series-bar {
+    left: 50%;
+  }
+}
+
+
   
   

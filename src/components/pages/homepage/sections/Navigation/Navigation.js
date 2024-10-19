@@ -78,14 +78,6 @@ const Navigation = () => {
                   SERMONS
                 </Nav.Link>
                 <Nav.Link
-                  to="/Specials"
-                  as={Link}
-                  onClick={() => setExpanded(false)}
-                  className={isActive('/Specials')}
-                >
-                  SPECIALS
-                </Nav.Link>
-                <Nav.Link
                   to="/SundaySchool"
                   as={Link}
                   onClick={() => setExpanded(false)}

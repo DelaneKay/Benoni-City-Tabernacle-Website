@@ -446,7 +446,7 @@ const SermonStreaming = () => {
        };
   
     return (
-      <Container>
+      <Container className='streaming-container'>
         {/* Video Section */}
         {currentVideo && (
           <>

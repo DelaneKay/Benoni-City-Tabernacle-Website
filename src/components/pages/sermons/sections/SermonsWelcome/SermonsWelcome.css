@@ -1,67 +1,177 @@
+/* Base styles */
 .sermons-welcome-section {
-    height: 100vh; /* Take full screen height */
-    width: 100%;          /* Take the full width of its parent container */
-    min-height: 100vh;    /* Make sure the section takes up the full screen height */
-    padding-top: 10vh;    /* Adjust this to the height of your Navbar */
-    margin-top: 0;
-  }
-  
-  .sermons-image-col {
-    position: relative;
-  }
-  
-  .full-height-image {
-    width: 100%;
-    height: 90vh; /* Full height for the image */
-    object-fit: cover; /* Ensure image covers the div */
-  }
-  
-  .sermons-overlay-col {
-    position: relative;
-  }
-  
-  .sermons-overlay-container {
-    position: relative;
-  }
-  
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.sermons-image-col {
+  position: relative;
+}
+
+.full-height-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.sermons-overlay-col,
+.sermons-overlay-container {
+  position: relative;
+}
+
+.sermons-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(207, 74, 70, 0.8);
+  color: white;
+  padding: 22rem 11rem 19rem 6rem;
+  text-align: left;
+}
+
+.sermons-title {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #1B2125;
+}
+
+.sermons-description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.watch-button {
+  background-color: #1B2125;
+  color: white;
+  padding: 0.55rem 1.5rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0%;
+  font-weight: bold;
+}
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
   .sermons-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(207, 74, 70, 0.8); /* Orange overlay with transparency */
-    color: white;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;*/
-    padding: 22rem 11rem 19rem 6rem;
-    text-align: left;
+    padding: 10rem 6rem 3rem 3rem;
   }
-  
+  .sermons-title {
+    font-size: 2rem;
+  }
+  .sermons-description {
+    font-size: 0.95rem;
+  }
+  .watch-button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape mode for small devices */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .sermons-overlay {
+    padding: 2rem 3rem;
+  }
+  .sermons-title {
+    font-size: 1.8rem;
+  }
+  .sermons-description {
+    font-size: 0.9rem;
+  }
+  .watch-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .sermons-overlay {
+    padding: 15rem 6rem 3rem 3rem;
+  }
   .sermons-title {
     font-size: 2.5rem;
-    font-weight: bolder;
-    margin-bottom: 1rem;
-    text-align: left;
-    color: #1B2125;
   }
-  
   .sermons-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
+    font-size: 1.2rem;
   }
-  
   .watch-button {
-    background-color: #1B2125;
-    color: white;
-    padding: 0.55rem 1.5rem;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 0%;
-    font-weight: bold;
+    padding: 0.65rem 1.5rem;
+    font-size: 1rem;
   }
-  
-  
+}
+
+/* Responsive styles for screens from 600px up to 992px */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .sermons-overlay {
+    padding: 16rem 6rem 3rem 3rem;
+  }
+  .sermons-title {
+    font-size: 4.1rem;
+  }
+  .sermons-description {
+    font-size: 1.5rem;
+  }
+  .watch-button {
+    padding: 0.95rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Landscape mode for medium devices */
+@media screen and (min-width: 600px) and (max-width: 992px) and (orientation: landscape) {
+  .sermons-overlay {
+    padding: 3rem 4rem;
+  }
+  .sermons-title {
+    font-size: 3rem;
+  }
+  .sermons-description {
+    font-size: 1.2rem;
+  }
+  .watch-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styles for screens from 992px up to 1200px */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .sermons-overlay {
+    padding: 11rem 6rem 3rem 3rem;
+  }
+  .sermons-title {
+    font-size: 4.1rem;
+  }
+  .sermons-description {
+    font-size: 1.25rem;
+  }
+  .watch-button {
+    padding: 0.95rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Landscape mode for large devices */
+@media screen and (min-width: 992px) and (orientation: landscape) {
+  .sermons-overlay {
+    padding: 13rem 6rem;
+  }
+  .sermons-title {
+    font-size: 3.5rem;
+  }
+  .sermons-description {
+    font-size: 1.3rem;
+  }
+  .watch-button {
+    padding: 0.85rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}

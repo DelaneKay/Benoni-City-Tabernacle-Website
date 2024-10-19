@@ -18,12 +18,12 @@ const SermonsWelcome = () => {
       <Container fluid>
         <Row className="align-items-center">
           {/* Left column with the image */}
-          <Col md={6} className="sermons-image-col p-0">
+          <Col xs={12} md={12} lg={6} className="sermons-image-col p-0">
             <img src={MessageImage} alt="Speaker" className="img-fluid full-height-image" />
           </Col>
 
           {/* Right column with image and overlay */}
-          <Col md={6} className="sermons-overlay-col p-0">
+          <Col  xs={12} md={12} lg={6} className="sermons-overlay-col p-0">
             <div className="sermons-overlay-container">
               <img src={CongregationImage} alt="Overlay background" className="img-fluid full-height-image" />
               <div className="sermons-overlay">

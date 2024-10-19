@@ -5,15 +5,16 @@
   
   .live-link {
     color: #ffffff; /* White text */
-    margin: 0 1rem; /* Horizontal margin between links */
     text-align: center;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .live-link:hover {
     color: #ffffff; /* White text */
     cursor: pointer;
   }
+
+  
   
   
