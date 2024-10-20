@@ -21,7 +21,7 @@ const Footer = () => {
             <nav className="footer-nav">
               <a href="/">HOME</a>
               <a href="/Sermons">SERMONS</a>
-              <a href="#events">MISSIONARY</a>
+              <a href="/Missionary">MISSIONS</a>
               <a href="/SundaySchool">SUNDAY SCHOOL CORNER</a>
               <a href="#contact">ABOUT US</a>
               <a href="#contact">WILLIAM BRANHAM</a>

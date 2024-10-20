@@ -91,7 +91,7 @@ const Navigation = () => {
                   onClick={() => setExpanded(false)}
                   className={isActive('/Missionary')}
                 >
-                  MISSIONARY
+                  MISSIONS
                 </Nav.Link>
                 <Nav.Link
                   to="/WilliamBranham"

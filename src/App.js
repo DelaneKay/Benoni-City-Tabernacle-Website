@@ -1,7 +1,7 @@
 import './App.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
-import { Homepage, RootLayout, Sermons, SundaySchool } from './components/pages';
+import { Homepage, Missionary, RootLayout, Sermons, SundaySchool } from './components/pages';
 
 function App() {
 
@@ -10,6 +10,7 @@ function App() {
       <Route index element={<Homepage/>}></Route>
       <Route path='/Sermons' element={<Sermons/>}></Route>
       <Route path='/SundaySchool' element={<SundaySchool/>}></Route>
+      <Route path='/Missionary' element={<Missionary/>}></Route>
     </Route>
   ))
 

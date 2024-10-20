@@ -1,25 +1,25 @@
-.sunday-school-welcome-section {
+.missions-welcome-section {
     height: auto;
     width: 100%;
   }
   
-  .sunday-school-image-col {
+  .missions-image-col {
     position: relative;
   }
   
-  .sunday-school-full-height-image {
+  .missions-full-height-image {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
   
-  .sunday-school-overlay-col,
-  .sunday-school-overlay-container {
+  .missions-overlay-col,
+  .missions-overlay-container {
     position: relative;
     height: 100%;
   }
   
-  .sunday-school-overlay {
+  .missions-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
     padding: 2rem; /* You can adjust this to manage text spacing */
   }
   
-  .sunday-school-title {
+  .missions-title {
     font-size: 3rem;
     font-weight: bolder;
     margin-bottom: 1rem;

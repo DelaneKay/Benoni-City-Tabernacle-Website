@@ -12,13 +12,10 @@ const SundaySchoolSenior = () => {
             <Col xs={12} md={8} className='sunday-school-senior-left-col'>
             <h1 className="display-4">Senior Sunday School Class</h1>
             <p>
-                <strong>13 I wonder if the little lad, that’s just come in, would want to sit with his parent. Or, there’s a Sunday school class in the back, little fellow, if you’d like to go back there.</strong> Brother Taylor, would you direct the little gentleman to the class. That’s fine. <strong>Sometimes they like to be with their own, you know. They, they have things in common, that they like to talk about. And it’s just like that.</strong>
+                I am happy to be here this morning, for this fine gathering of—of people, and especially for the young people, as I understand that this service this morning is dedicated to the young people of Shreveport. And that’s a very fine time in my life, and a highlight, or I’d call it a red-letter, to get to address the boys and girls that will—will be tomorrow, if there is a tomorrow. So, we’re happy for this.
             </p>
             <p>
-                <strong>14 The little twelve-year-old girl, as I have often said, if you see a little eight-, nine-, ten-year-old girl hanging around with grandma, all the time, there’s something wrong. See? There—there’s something wrong, because there’s too much difference in their age.</strong> You can imagine, grandma has got a sack of candy somewhere, that she can put her hand on. And little sis is, them big eyes are brightened up for the sack of candy. Because, in common, they would have nothing to talk about, nothing but just she could pet her and baby her. But that’s the way it is, and we’re glad that it’s just that way.
-            </p>
-            <p>
-                <i>59-1227M - "A Super Sign"</i>
+                <i>63-1130B - "Influence"</i>
             </p>
             </Col>
 
