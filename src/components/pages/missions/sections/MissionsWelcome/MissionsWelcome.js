@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 import ClayvilleImage1 from '../../../../../media/missions/clayville-1.png';
 import ClayvilleImage2 from '../../../../../media/missions/clayville-2.png';
 import './MissionsWelcome.css'
@@ -7,6 +7,7 @@ import './MissionsWelcome.css'
 const MissionsWelcome = () => {
   return (
     <section>
+      <Container fluid>
         <Row className="align-items-center">
             <Col xs={12} md={12} lg={6} className="missions-image-col p-0">
                 <img src={ClayvilleImage2} alt="Speaker" className="img-fluid missions-full-height-image" />
@@ -22,6 +23,7 @@ const MissionsWelcome = () => {
             </div>
           </Col>
         </Row>
+      </Container>
     </section>
   )
 }

@@ -33,7 +33,7 @@ const SundaySchoolSenior = () => {
                 </h6>
                 <h4 className="mb-4">Tomorrow's Church</h4>
                 <Button className='btn-sunday-school' variant="outline-danger" size="lg">
-                View Presentations & Sermons
+                Learn More
                 </Button>
             </div>
             </Col>

@@ -41,7 +41,7 @@ const Navigation = () => {
       <Container>
       <Navbar
           expand="lg" 
-          className={`navbar ${scrolled ? 'scrolled' : ''} ${isHomePage && !scrolled ? 'navbar-transparent' : 'navbar-solid'}`}
+          className={`navbar ${scrolled ? 'scrolled' : 'navbar-transparent'}`}
           fixed="top"
           expanded={expanded} 
         >

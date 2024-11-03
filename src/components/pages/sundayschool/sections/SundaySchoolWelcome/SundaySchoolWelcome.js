@@ -1,27 +1,26 @@
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
-import SeniorImage from '../../../../../media/sundayschool/Senior-Sunday-School.jpg';
-import JuniorImage from '../../../../../media/sundayschool/junior-sunday-school.jpg';
+import {Row, Col, Container, Button} from 'react-bootstrap';
+import JuniorVideo from '../../../../../media/sundayschool/College-Two-Cities-Church.mp4';
 import './SundaySchoolWelcome.css'
 
 const SundaySchoolWelcome = () => {
   return (
-    <section className='sunday-school-welcome'>
-      <Row className="align-items-center">
-        <Col xs={12} md={12} lg={6} className="sunday-school-image-col p-0">
-            <img src={JuniorImage} alt="Speaker" className="img-fluid sunday-school-full-height-image" />
-          </Col>
+    <section className="sunday-school-video-background-container">
+      <Container fluid>
+        {/* Video Background */}
+        <video autoPlay loop muted className="sunday-school-video-background">
+          <source src={JuniorVideo} type="video/mp4"/>
+        </video>
 
-        {/* Right column with image and overlay */}
-          <Col  xs={12} md={12} lg={6} className="sunday-school-overlay-col p-0">
-            <div className="sunday-school-overlay-container">
-              <img src={SeniorImage} alt="Overlay background" className="img-fluid sunday-school-full-height-image" />
-              <div className="sunday-school-overlay">
-                <h1 className="sunday-school-title">SUNDAY SCHOOL CORNER</h1>
-              </div>
-            </div>
-          </Col>
-        </Row>
+        {/* Overlay */}
+        <div className="sunday-school-video-overlay">
+          <div className="sunday-school-overlay-content">
+            <h1>Welcome to our Sunday School Corner</h1>
+            <p>Training kids and young people in the way of the Lord according to the message of the day. We'd love to see your children in-person this Sunday at 9:30AM!</p>
+            <button className="btn btn-outline-light">Learn More</button>
+          </div>
+        </div>
+      </Container>
     </section>
   )
 }
