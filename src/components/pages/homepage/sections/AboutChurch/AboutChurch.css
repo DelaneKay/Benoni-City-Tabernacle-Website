@@ -4,7 +4,7 @@
 
 .layout-church {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #e7e7e7;
 }
 
 .layout-church-media {
@@ -88,7 +88,7 @@
 @media screen and (min-width: 1200px) {
 
   .about-church {
-    background-color: #f8f8f8;
+    background-color: #e7e7e7;
   }
 
   .layout-church {

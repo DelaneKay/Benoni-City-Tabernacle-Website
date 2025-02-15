@@ -2,7 +2,7 @@
 .container-custom {
     text-align: center;
     padding: 3.125rem 0;
-    background-color: #f8f8f8; /* Light background color */
+    background-color: #e7e7e7; /* Light background color */
   }
   
   .title-custom {
@@ -17,7 +17,7 @@
   .card-custom {
     border: none;
     margin-bottom: 1.25rem;
-    background-color: #f8f8f8;
+    background-color: #e7e7e7;
   }
   
   .card-img-custom {

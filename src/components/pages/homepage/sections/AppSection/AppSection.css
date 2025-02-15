@@ -4,7 +4,7 @@
   
   .layout {
     position: relative;
-    background-color: #f8f8f8;
+    background-color: #e7e7e7;
   }
   
   /*.layout-2 {
@@ -196,7 +196,7 @@
   @media screen and (min-width: 1200px) {
   
     .app-section {
-      background-color: #f8f8f8;
+      background-color: #e7e7e7;
     }
   
     .layout {

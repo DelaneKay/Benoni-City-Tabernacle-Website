@@ -70,7 +70,7 @@ button.outline-warning:hover {
 
 /* Updated Dropdown Styling */
 .dropdown-row {
-  background-color: #f0f0f0;
+  background-color: #e7e7e7;
   padding: 0.5rem 0.5rem;
   border-radius: 0;
   display: flex;
@@ -140,25 +140,25 @@ button.outline-warning:hover {
 
 .pagination .page-item .page-link {
   color: #1B2125;
-  background-color: #f0f0f0;
+  background-color: #e7e7e7;
   border: 1px solid #dee2e6;
   padding: 0.5rem 0.75rem;
 }
 
 .pagination .page-item.active .page-link {
-  color: #f0f0f0;
+  color: #e7e7e7;
   background-color: #1B2125;
   border-color: #1B2125;
 }
 
 .pagination .page-item.disabled .page-link {
   color: #6c757d;
-  background-color: #f0f0f0;
+  background-color: #e7e7e7;
   border-color: #dee2e6;
 }
 
 .pagination .page-link:hover {
-  color: #f0f0f0;
+  color: #e7e7e7;
   background-color: #1B2125;
   border-color: #1B2125;
 }
@@ -187,7 +187,7 @@ button.outline-warning:hover {
 }
 
 .sermon-series-card .card-body {
-  background-color: #F1F1F1;
+  background-color: #e7e7e7;
   text-align: center;
 }
 
@@ -371,7 +371,7 @@ padding-top: -2.2rem;
   }
   
     .recent-sermons tr:nth-child(odd) {
-      background-color: #F2F2F2; /* Light background color for odd rows */
+      background-color: #e7e7e7; /* Light background color for odd rows */
     }
   
     .recent-sermons tr:nth-child(even) {
