@@ -4,6 +4,7 @@ import WilliamBranhamLinks from './sections/WilliamBranhamLinks/WilliamBranhamLi
 import WilliamBranhamFirst from './sections/WilliamBranhamFirst/WilliamBranhamFirst'
 import WilliamBranhamSecond from './sections/WilliamBranhamSecond/WilliamBranhamSecond'
 import WilliamBranhamThird from './sections/WilliamBranhamThird/WilliamBranhamThird'
+import WilliamBranhamFourth from './sections/WilliamBranhamFourth/WilliamBranhamFourth'
 
 const WilliamBranham = () => {
   return (
