@@ -1,0 +1,247 @@
+/* Carousel Page Component*/
+.carousel-caption {
+    position: absolute;
+    top: 12.25rem;
+    color: #fff;
+    text-align: left;
+    right: 0%;
+    left: 0%
+  }
+
+  .carousel-caption button {
+    border-radius: 0%;
+  }
+  
+  .address {
+    color: #fff;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 68.75rem;
+  }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  /* Adjusting the carousel height to be more mobile-friendly */
+  .carousel-caption {
+    top: 22.5%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Smaller paragraph font size */
+  }
+
+  .address {
+    position: absolute; /* Position it relative to the viewport */
+    bottom: 5%; /* 10% distance from the bottom of the screen */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+  }
+
+  .address h4 {
+    font-size: .85rem; /* Smaller heading in address */
+  }
+
+  .address p {
+    font-size: 0.65rem; /* Smaller paragraph in address */
+    padding-right: 5%;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+
+  img {
+    height: 60vh; /* Smaller image height for mobile */
+    object-fit: cover; /* Make sure image scales properly */
+  }
+}
+
+  /* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  /* Adjusting the carousel height to be more mobile-friendly */
+  .carousel-caption {
+    top: 22.5%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.3rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Smaller paragraph font size */
+  }
+
+  .address {
+    position: absolute; /* Position it relative to the viewport */
+    bottom: 5%; /* 10% distance from the bottom of the screen */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+  }
+
+  .address h4 {
+    font-size: 1rem; /* Smaller heading in address */
+  }
+
+  .address p {
+    font-size: 0.75rem; /* Smaller paragraph in address */
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+
+  img {
+    height: 60vh; /* Smaller image height for mobile */
+    object-fit: cover; /* Make sure image scales properly */
+  }
+}
+
+/* Responsive styles for screens from  600px to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  /* Adjusting the carousel height to be more mobile-friendly */
+  .carousel-caption {
+    top: 20%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.25rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+
+  .address {
+    position: absolute; /* Position it relative to the viewport */
+    bottom: 10%; /* 10% distance from the bottom of the screen */
+    left: 70%; /* Move it horizontally to the center */
+    transform: translateX(-50%); /* Center it by shifting left by 50% of its width */
+    font-size: 0.875rem; /* Smaller font size for the address */
+    width: 100%; /* Ensure it's wide enough to center properly */
+  }
+
+  .address p {
+    font-size: 1rem;
+  }
+
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+
+  
+}
+
+/* Responsive styles for screens from  900px to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  /* Adjusting the carousel height to be more mobile-friendly */
+  .carousel-caption {
+    top: 30%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 2.75rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .address {
+    position: absolute; /* Position it relative to the viewport */
+    bottom: 10%; /* 10% distance from the bottom of the screen */
+    left: 73%; /* Move it horizontally to the center */
+    transform: translateX(-50%); /* Center it by shifting left by 50% of its width */
+    
+    width: 100%; /* Ensure it's wide enough to center properly */
+  }
+
+  .address p {
+    font-size: 1.25rem; /* Smaller font size for the address */
+  }
+
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+ 
+}
+
+@media screen  and (max-height: 600px) {
+   /* Adjusting the carousel height to be more mobile-friendly */
+   .carousel-caption {
+    top: 22.5%; /* Lowering the text on smaller screens */
+    padding: 5%;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller headings on mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Smaller paragraph font size */
+  }
+
+  .address {
+    visibility: hidden;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Full-width container */
+  }
+
+  img {
+    height: 60vh; /* Smaller image height for mobile */
+    object-fit: cover; /* Make sure image scales properly */
+  }
+}

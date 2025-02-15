@@ -1,0 +1,122 @@
+.about-church {
+  position: relative;
+}
+
+.layout-church {
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.layout-church-media {
+  min-height: 28.75rem;
+  background-position: center center;
+  background-size: cover;
+}
+
+.layout-church-content {
+  padding: 1.25rem 0.9375rem;
+}
+
+
+.bg-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.about-church button {
+  margin-top: 2rem;
+  font-size: large;
+  border-radius: 0%;
+}
+
+.about-church p {
+  font-size: large;
+}
+
+
+/* @media screen and (min-width: 992px) {
+  .layout-church {
+    display: flex;
+  }
+
+  .layout-church-2 {
+    justify-content: flex-end;
+  }
+
+  .layout-church-2 .layout-church-media {
+    position: absolute;
+    right: 53%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: calc(100vw - 51% - (100vw - 960px) / 2);
+  }
+
+  .layout-church-2 .layout-church-content {
+    position: relative;
+    z-index: 0;
+    max-width: 860px;
+    width: 100%;
+    padding: 3.4375rem 0 3.4375rem;
+    padding-left: 38%;
+  }
+} */
+
+@media screen and (max-width: 500px) {
+  .layout-church-media {
+    min-height: 18.75rem;
+  }
+
+  .about-church button {
+    margin-top: 2rem;
+    font-size: small;
+    border-radius: 0%;
+  }
+  
+  .about-church p {
+    font-size: medium;
+  }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  .layout-church-media {
+    min-height: 38.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .about-church {
+    background-color: #f8f8f8;
+  }
+
+  .layout-church {
+    display: flex;
+  }
+
+  .layout-church-2 {
+    justify-content: flex-end;
+  }
+  
+  .layout-church-2 .layout-church-media {
+    position: absolute;
+    right: 60%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: calc(100vw - 60% - (100vw - 1200px) / 2);
+  }
+
+  .layout-church-2 .layout-church-content {
+    position: relative;
+    z-index: 0;
+    max-width: 860px;
+    width: 100%;
+    padding: 3.4375rem 0 3.4375rem;
+    padding-left: 25%;
+  }
+
+}
+
+

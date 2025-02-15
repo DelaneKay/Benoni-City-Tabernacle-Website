@@ -1,0 +1,187 @@
+.navbar {
+    /*background-color: transparent;  Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+    padding-top: 1rem;
+    z-index: 1030; /* Ensure it's on top of other content */
+    position: fixed;
+  }
+
+  .navbar-transparent {
+    background-color: transparent !important;
+    border-bottom: none;
+  }
+  
+  .navbar-transparent .nav-link {
+    color: #ffffff;
+    margin: 0rem 0.391rem;
+  }
+  
+  /* Solid navbar (applied when scrolled or on other pages) */
+  .navbar-solid {
+    background-color: white !important;  /* Example solid color, adjust as necessary */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-solid .nav-link{
+    color: black;
+    margin: 0rem 0.391rem;
+  }
+
+  /*.navbar .nav-link {
+    color: #ffffff;
+    margin: 0rem 0.391rem;
+  }*/
+
+  .navbar .nav-link:hover {
+    color: #CF4A46;
+  }
+
+  .active-link {
+    color: #CF4A46 !important; /* Highlight the active link */
+  }
+
+  .navbar.scrolled {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar.scrolled .nav-link {
+   color: black;
+  }
+
+  .navbar.scrolled .nav-link:hover {
+    color: #CF4A46;
+   }
+
+  .navbar.scrolled button:hover {
+    background-color: #CF4A46;
+    color: white;
+    border-color: #CF4A46;
+  }
+
+  .navbar button:hover {
+    background-color: #CF4A46;
+    color: white;
+    border-color: #CF4A46;
+  }
+
+  .navbar button {
+    background-color: #ffffff;
+    color: black;
+    border-color: #ffffff;
+  }
+
+  .nav-section button {
+    border-radius: 0%;
+  }
+
+  .logo {
+    height: 4.125rem;
+    width: auto;
+    background-color: white; 
+  }
+  
+  .right-aligned {
+    justify-content: flex-end;
+  }
+  
+  
+  .navbar.active {
+    background-color: #CF4A46;
+  }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+
+}
+
+/* Responsive styles for screens from  400px to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+}
+
+/* Responsive styles for screens from  600px to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    color: #000000;
+  }
+
+   .navbar button {
+    font-size: 1rem;
+    width: auto;
+   }
+}
+
+/* Responsive styles for screens from  900px to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  
+  .navbar {
+    background-color: white; /* Background color when scrolled */
+    font-size: 0.75rem;
+    text-align: center;
+    z-index: 1030; /* Ensure it's on top of other content */
+
+  }
+  
+  .navbar button {
+    font-size: 0.75rem
+   }
+
+
+   .navbar .nav-link {
+    color: black;
+    margin: 0rem 0.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar button {
+    font-size: 0.8rem
+   }
+
+   .navbar {
+    font-size: 0.8rem;
+   }
+
+   .navbar .nav-link {
+    margin: 0rem 0.6rem;
+  }
+}
+

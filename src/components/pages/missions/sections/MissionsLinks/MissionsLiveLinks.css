@@ -1,0 +1,16 @@
+.missions-live-links-bar {
+    background-color: #1B2125;; /* Dark background */
+    padding: 2rem 0; /* Padding around the bar */
+  }
+  
+  .missions-live-link {
+    color: #ffffff; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  .missions-live-link:hover {
+    color: #ffffff; /* White text */
+    cursor: pointer;
+  }

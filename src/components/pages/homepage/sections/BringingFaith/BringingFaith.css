@@ -1,0 +1,269 @@
+/* Bringing Faith Section */
+.faith {
+    background-color: #1B2125;
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .testimonial-section {
+    position: relative;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .background-image {
+    position: absolute;
+    width: 66%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-left: 25%;
+    margin-top: -2rem;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-left: 2rem;
+  }
+  
+  .vertical-line {
+    width: 2.5px;
+    height: 6.2rem;
+    background-color: #fff;
+  }
+  
+  .testimonial {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background-color: #CF4A46; /* Replace with the appropriate color */
+    padding: 20px;
+    border-radius: 0%;
+    color: #fff; /* Replace with the appropriate text color */
+    text-align: center;
+    width: 83%;
+    margin-top: 60%;
+    margin-left: 3.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: -1.3rem;
+    padding-top: 0.4rem;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    margin-top: -0.5rem;
+  }
+  
+  .author img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .author span {
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  .carousel-indicators {
+    bottom: 1rem;
+  }
+
+  /* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+
+  .faith {
+    padding-top: 2rem;
+    padding-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .background-image {
+    display: none;
+  }
+  
+  .testimonial {
+   display: none;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 768px */
+@media screen and (min-width: 400px) and (max-width: 767.20px){
+
+  .faith {
+    padding-top: 2rem;
+    padding-bottom: 0%;
+  }
+
+  .background-image {
+    display: none;
+  }
+  
+  .testimonial {
+   display: none;
+  }
+}
+
+/* Responsive styles for screens from 768px up to 900px */
+@media screen and (min-width: 767.20px) and (max-width: 900px){
+
+  .faith {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .background-image {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-left: 8%;
+    margin-top: -1.55rem;
+  }
+  
+  .testimonial {
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background-color: #CF4A46; /* Replace with the appropriate color */
+    padding: 20px;
+    border-radius: 0%;
+    color: #fff; /* Replace with the appropriate text color */
+    text-align: center;
+    width: 96%;
+    margin-top: 100%;
+    margin-left: -0.9rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.875rem;
+    text-align: left;
+    margin-left: -0.65rem;
+    padding-top: 0.4rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .vertical-line {
+    width: 3px;
+    height: 5.5rem;
+    background-color: #fff;
+  }
+
+  .author {
+    margin-top: -0.5rem;
+  }
+  
+  .author span {
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+  
+}
+
+/* Responsive styles for screens from 900px up to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .faith {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .background-image {
+    position: absolute;
+    width: 67%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-left: 18%;
+    margin-top: -2rem;
+  }
+  
+  .testimonial {
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background-color: #CF4A46; /* Replace with the appropriate color */
+    padding: 20px;
+    border-radius: 0%;
+    color: #fff; /* Replace with the appropriate text color */
+    text-align: center;
+    width: 80%;
+    margin-top: 75%;
+    margin-left: 2rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.875rem;
+    text-align: left;
+    margin-left: -0.65rem;
+    padding-top: 0.4rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .vertical-line {
+    width: 3px;
+    height: 5.5rem;
+    background-color: #fff;
+  }
+
+  .author {
+    margin-top: -0.5rem;
+  }
+  
+  .author span {
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+}
+
+  
+
+
+  

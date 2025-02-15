@@ -1,0 +1,222 @@
+
+  .meet-our-team h2 {
+    margin-top: 4rem;
+  }
+  
+  .team-member {
+    position: relative;
+    transition: transform 0.3s ease; /* Transition for smooth expand effect */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    height: 80%; /* Set a fixed height */
+    border-radius: 0%;
+    transition: transform 0.3s ease; /* Transition for smooth expand effect */
+  }
+  
+  .team-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the card */
+    border-radius: 0%;
+  }
+  
+  .team-member:hover .image-container {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, -0.2));
+    color: #f1f1f1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+  
+  .text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .team-card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0;
+    position: relative;
+    text-align: left;
+    padding-right: 1rem;
+  }
+  
+  .vertical-line-team {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: #CF4A46;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow-icon {
+    color: #CF4A46;
+    font-size: 20px;
+  }
+  
+  .arrow-button:hover .arrow-icon {
+    color: #B33E3A;
+  }
+
+   /* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+
+/* Responsive styles for screens from 900px up to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  .meet-our-team h2 {
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    margin-top: 0rem;
+  }
+
+  .image-container {
+    height: 95%; 
+  }
+
+  .team-member:hover .image-container {
+    transform: none; 
+  }
+
+  .image-container .overlay {
+    visibility: visible;
+    opacity: 1; /* Make the overlay fully visible */
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+    visibility: visible;
+  }
+}
+  
+  

@@ -1,0 +1,88 @@
+/* What We Offer Section */
+.container-custom {
+    text-align: center;
+    padding: 3.125rem 0;
+    background-color: #f8f8f8; /* Light background color */
+  }
+  
+  .title-custom {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 1.875rem;
+    color: #111827; /* Black text color */
+    padding: 2rem 0;
+  }
+  
+
+  .card-custom {
+    border: none;
+    margin-bottom: 1.25rem;
+    background-color: #f8f8f8;
+  }
+  
+  .card-img-custom {
+    border-radius: 0;
+    height: auto;
+    display: block;
+  }
+  
+  .card-title-custom {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111827; /* Black text color */
+    margin-top: 0.625rem;
+    position: relative;
+  }
+  
+  .card-title-custom::after {
+    content: '';
+    display: block;
+    width: 1.875rem;
+    height: 1px;
+    background-color: #CF4A46; /* Black line color */
+    margin: 0.625rem auto 0;
+  }
+  
+  .card-subtitle-custom {
+    font-size: 0.875rem;
+    color: #CF4A46; /* Orange-red text color */
+    margin-top: 0.625rem;
+  }
+
+  .card-title-custom:hover {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #CF4A46; /* Black text color */
+    margin-top: 0.625rem;
+    position: relative;
+    transform: scale(1.1);
+  }
+
+  /* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {
+  .card-title-custom:hover {
+    transform: scale(0);
+  }
+}
+
+/* Responsive styles for screens from 400px up to 600px */
+@media screen and (min-width: 400px) and (max-width: 600px){
+  .card-title-custom:hover {
+    transform: scale(0);
+  }
+}
+
+/* Responsive styles for screens from 600px up to 900px */
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .card-title-custom:hover {
+    transform: scale(0);
+  }
+}
+
+/* Responsive styles for screens from 900px up to 1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+  
+}
+
+  
+  

@@ -1,0 +1,48 @@
+.sermon-series-bar {
+    background-color: #1B2125;; /* Dark background */
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw; /* Set width to the viewport width */
+    color: white;
+    text-align: center;
+    transform: translateX(-50%); /* Center the element horizontally */
+    left: 49%;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) and (orientation: landscape) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+    .sermon-series-bar {
+      left: 50%;
+    }
+  }
+
+  /* Landscape mode for medium devices */
+@media screen and (min-width: 600px) and (max-width: 992px) and (orientation: landscape) {
+  .sermon-series-bar {
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .sermon-series-bar {
+    left: 50%;
+  }
+}
+
+
+  
+  

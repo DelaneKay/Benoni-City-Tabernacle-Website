@@ -1,0 +1,228 @@
+.app-section {
+    position: relative;
+  }
+  
+  .layout {
+    position: relative;
+    background-color: #f8f8f8;
+  }
+  
+  /*.layout-2 {
+    display: flex;
+    justify-content: flex-end;
+  }*/
+  
+  .layout-media {
+    min-height: 28.75rem;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .layout-content {
+    padding: 1.25rem 0.9375rem;
+  }
+  
+  /*.layout-content::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    background-color: inherit;
+    content: '';
+  }*/
+
+  .text-block-1 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .text-block-1 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .text-block-1 p {
+    font-size: 1rem;
+  }
+  
+  .list-marked {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .list-marked .list-item {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .list-marked .list-item:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .store-button {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0%;
+    transition: transform 0.3s;
+  }
+  
+  .store-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .apple-button {
+    background-color: #fff;
+  }
+  
+  .play-button {
+    background-color: #fff;
+  }
+  
+  .store-button .store-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #CF4A46;
+  }
+
+  .store-check-icon {
+    margin-right: 0.5rem;
+    color: #CF4A46;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .layout-media {
+      min-height: 18.75rem;
+    }
+
+    .text-block-1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .text-block-1 h2 {
+      font-size: 2rem;
+    }
+     
+    .store-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .store-button:hover {
+      transform: translateY(0px);
+    }
+    
+    .store-button .store-icon {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+  
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 900px){
+    .layout-media {
+      min-height: 28.75rem;
+    }
+
+    .text-block-1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .text-block-1 h2 {
+      font-size: 2rem;
+    }
+     
+    .store-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .store-button:hover {
+      transform: translateY(0px);
+    }
+    
+    .store-button .store-icon {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1200px){
+    .layout-media {
+      min-height: 38.75rem;
+    }
+
+    .text-block-1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .text-block-1 h2 {
+      font-size: 2rem;
+    }
+     
+    .store-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .store-button:hover {
+      transform: translateY(0px);
+    }
+    
+    .store-button .store-icon {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+  
+    .app-section {
+      background-color: #f8f8f8;
+    }
+  
+    .layout {
+      display: flex;
+    }
+  
+    .layout-2 {
+      justify-content: flex-end;
+    }
+    
+    .layout-2 .layout-media {
+      position: absolute;
+      right: 60%;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      width: calc(100vw - 60% - (100vw - 1200px) / 2);
+    }
+  
+    .layout-2 .layout-content {
+      position: relative;
+      z-index: 0;
+      max-width: 860px;
+      width: 100%;
+      padding: 3.4375rem 0 3.4375rem;
+      padding-left: 25%;
+    }
+  
+  }
