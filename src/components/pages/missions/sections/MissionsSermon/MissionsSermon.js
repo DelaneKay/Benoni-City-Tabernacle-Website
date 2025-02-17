@@ -2,39 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import axios from 'axios';
+import { useOutletContext } from 'react-router-dom';
 import './MissionsSermon.css';
 
 const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc';
 const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ';
 
 const MissionsSermon = () => {
-    const [latestVideoId, setLatestVideoId] = useState('');
-
-    // Function to fetch the latest video from the YouTube API
-    const fetchLatestVideo = async () => {
-        try {
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
-            params: {
-            key: YOUTUBE_API_KEY,
-            channelId: CHANNEL_ID,
-            part: 'snippet,id',
-            order: 'date',
-            maxResults: 1
-            }
-        });
-
-        const video = response.data.items[0];
-        if (video.id.videoId) {
-            setLatestVideoId(video.id.videoId);
-        }
-        } catch (error) {
-        console.error('Error fetching latest video: ', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchLatestVideo(); // Fetch the latest video when the component mounts
-    }, []);
+    const { youtubeData } = useOutletContext();
+      const { videos } = youtubeData;
+      // Assume the first video is the latest sermon if available
+      const latestVideoId =
+        videos && videos.length > 0 ? videos[0].snippet.resourceId.videoId : null;
 
   return (
     <section>
