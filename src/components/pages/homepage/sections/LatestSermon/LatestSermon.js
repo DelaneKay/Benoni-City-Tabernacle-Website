@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
 import { useOutletContext } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton';
 import './LatestSermon.css';
 
 const LatestSermon = () => {
@@ -26,15 +27,12 @@ const LatestSermon = () => {
           </Col>
           <Col xs={12} md={12} lg={9} xl={9}>
             <div className='react-player-wrapper'>
-              {latestVideoId ? (
-                <ReactPlayer
-                  url={`https://www.youtube.com/watch?v=${latestVideoId}`}
-                  controls={true}
-                  width="100%"
-                />
-              ) : (
-                <p>Patiently wait as we load the video</p>
-              )}
+              <Suspense fallback={<Skeleton height="100%" width="100%" />}>
+                  <ReactPlayer 
+                    url={`https://www.youtube.com/watch?v=${latestVideoId}`}
+                    controls={true}
+                    width="100%" />
+                </Suspense>
             </div>
           </Col>
         </Row>

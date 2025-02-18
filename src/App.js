@@ -1,7 +1,7 @@
 import './App.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
-import { Homepage, Missionary, RootLayout, Sermons, SundaySchool, SundaySchoolJunior, WilliamBranham } from './components/pages';
+import { AboutUs, Homepage, Missionary, RootLayout, Sermons, SundaySchool, SundaySchoolJunior, WilliamBranham } from './components/pages';
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
       <Route path='/missionary' element={<Missionary/>}></Route>
       <Route path='/SundaySchool/junior' element={<SundaySchoolJunior/>}></Route>
       <Route path='/william-branham' element={<WilliamBranham/>}></Route>
+      <Route path='/about-us' element={<AboutUs/>}></Route>
     </Route>
   ))
 

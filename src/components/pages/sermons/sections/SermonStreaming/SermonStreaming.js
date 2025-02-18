@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react'
+import React, { useEffect, useState, useCallback, useRef, Suspense } from 'react'
 import { Container, Row, Col, Pagination, Table, Card } from 'react-bootstrap'
 import ReactPlayer from 'react-player'
 import { useOutletContext } from 'react-router-dom'
 import "./SermonStreaming.css"
 import SermonSeriesBar from '../SermonSeriesBar/SermonSeriesBar'
+import Skeleton from 'react-loading-skeleton';
 
 // Format date as YY-MMDD
 const formatDate = (publishedAt) => {
@@ -279,13 +280,14 @@ const SermonStreaming = () => {
                     </h3>
                   </div>
                   <div ref={playerRef}>
-                    <ReactPlayer
-                      url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
-                      className="react-player"
-                      width="100%"
-                      height="auto"
-                      controls
-                    />
+                    <Suspense fallback={<Skeleton height="100%" width="100%" />}>
+                        <ReactPlayer 
+                          url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
+                          className="react-player"
+                          width="100%"
+                          height="auto"
+                          controls />
+                    </Suspense>
                   </div>
                 </Col>
               </Row>
