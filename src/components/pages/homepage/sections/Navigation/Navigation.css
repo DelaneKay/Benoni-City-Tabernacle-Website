@@ -79,6 +79,7 @@
     height: 4.125rem;
     width: auto;
     background-color: white; 
+    border-radius: 50%;
   }
   
   .right-aligned {

@@ -8,13 +8,18 @@ import Loader from '../bctloader/Loader'
 const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc'
 const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ'
 
+const YOUTUBE_API_KEY_CLAYVILLE = 'AIzaSyC1l8V5uCdqmh2Io1I49RBh1UHJxZhLkOE'
+const CHANNEL_ID_CLAYVILLE = 'UClounyqDDsdPH94l5RYXjMw'
+
 const RootLayout = () => {
   const [videos, setVideos] = useState([])
   const [playlists, setPlaylists] = useState([])
   const [availableYears, setAvailableYears] = useState([])
+  const [videosClayville, setVideosClayville] = useState([])
+  const [availableYearsClayville, setAvailableYearsClayville] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  // Fetch global uploads (videos)
+  // Fetch global uploads (videos) - Main Channel
   useEffect(() => {
     const fetchAllVideos = async () => {
       setIsLoading(true)
@@ -69,6 +74,60 @@ const RootLayout = () => {
       }
     }
     fetchAllVideos()
+  }, [])
+
+  // Fetch Clayville channel uploads (videos)
+  useEffect(() => {
+    const fetchAllVideosClayville = async () => {
+      try {
+        const channelResponse = await axios.get(
+          'https://www.googleapis.com/youtube/v3/channels',
+          {
+            params: {
+              key: YOUTUBE_API_KEY_CLAYVILLE,
+              id: CHANNEL_ID_CLAYVILLE,
+              part: 'contentDetails',
+            },
+          }
+        )
+
+        const uploadsPlaylistId =
+          channelResponse.data.items[0].contentDetails.relatedPlaylists.uploads
+
+        let allVideosClayville = []
+        let nextPageToken = ''
+
+        do {
+          const playlistResponse = await axios.get(
+            'https://www.googleapis.com/youtube/v3/playlistItems',
+            {
+              params: {
+                key: YOUTUBE_API_KEY_CLAYVILLE,
+                playlistId: uploadsPlaylistId,
+                part: 'snippet',
+                maxResults: 50,
+                pageToken: nextPageToken,
+              },
+            }
+          )
+          allVideosClayville = [...allVideosClayville, ...playlistResponse.data.items]
+          nextPageToken = playlistResponse.data.nextPageToken
+        } while (nextPageToken)
+
+        setVideosClayville(allVideosClayville)
+        const yearsClayville = [
+          ...new Set(
+            allVideosClayville.map((video) =>
+              new Date(video.snippet.publishedAt).getFullYear()
+            )
+          ),
+        ]
+        setAvailableYearsClayville(yearsClayville.sort((a, b) => b - a))
+      } catch (error) {
+        console.error('Error fetching Clayville videos:', error)
+      }
+    }
+    fetchAllVideosClayville()
   }, [])
 
   // Fetch playlists
@@ -128,6 +187,8 @@ const RootLayout = () => {
     playlists,
     availableYears,
     fetchSeriesVideos,
+    videosClayville,
+    availableYearsClayville,
   }
 
   return (

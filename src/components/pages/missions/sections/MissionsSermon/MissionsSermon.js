@@ -5,15 +5,13 @@ import Skeleton from 'react-loading-skeleton';
 import { useOutletContext } from 'react-router-dom';
 import './MissionsSermon.css';
 
-const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc';
-const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ';
 
 const MissionsSermon = () => {
     const { youtubeData } = useOutletContext();
-      const { videos } = youtubeData;
+      const { videosClayville } = youtubeData;
       // Assume the first video is the latest sermon if available
       const latestVideoId =
-        videos && videos.length > 0 ? videos[0].snippet.resourceId.videoId : null;
+        videosClayville && videosClayville.length > 0 ? videosClayville[0].snippet.resourceId.videoId : null;
 
   return (
     <section>
