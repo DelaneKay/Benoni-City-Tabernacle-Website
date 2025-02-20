@@ -1,8 +1,20 @@
 import React from 'react';
 import './AboutChurch.css';
 import { Button } from 'react-bootstrap';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const AboutChurch = () => {
+
+  const navigate = useNavigate();
+  
+    const goToSermonsPage = () => {
+      navigate('/sermons');
+    };
+
+    const goToProphetPage = () => {
+      navigate('/william-branham');
+    };
+
   return (
     <section className='about-church'>
       <div className="container">
@@ -15,11 +27,14 @@ const AboutChurch = () => {
             <div>
                 <Button 
                   variant="danger"  
-                  size="lg">OUR SERMONS</Button>
+                  size="lg"
+                  onClick={goToSermonsPage}>OUR SERMONS</Button>
                 <Button 
                   style={{marginLeft: '1.5rem'}} 
                   variant="outline-dark" 
-                  size="lg">OUR SERVICES</Button>
+                  size="lg"
+                  onClick={goToProphetPage}>OUR PROPHET</Button>
+                  <Outlet/>
               </div>
           </div>
         </div>
