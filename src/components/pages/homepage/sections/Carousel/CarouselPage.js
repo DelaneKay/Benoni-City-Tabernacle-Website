@@ -9,6 +9,15 @@ import '../Carousel/CarouselPage.css'
 import Navigation from '../Navigation/Navigation';
 
 const CarouselPage = () => {
+
+    // Function to handle "Watch Now" button click
+  const handleWatchNow = () => {
+    const seemoreSection = document.getElementById('church-info'); // Reference the SermonStreaming section by its id
+    if (seemoreSection) {
+      seemoreSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Fragment>
         <Carousel slide={true} controls={false}>
@@ -24,7 +33,7 @@ const CarouselPage = () => {
                     <h1 >A SOUL SAVING STATION</h1>
                     <p>We are a Word based church with no creed but Christ, no law but love and no book but the Bible.</p>
                     <br/>
-                    <Button variant="light">SEE MORE</Button>
+                    <Button variant="light" onClick={handleWatchNow}>SEE MORE</Button>
                     <br/><br/><br/><br/><br/><br/>
                     <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                     <IoLocationOutline size={60} style={{ marginRight: '10px' }}/>
@@ -48,7 +57,7 @@ const CarouselPage = () => {
                     <h1>CONNECT WITH BIBLE TRUTHS</h1>
                     <p>At our church, we help you understand the times we are living in by sharing the teachings of William Branham and preaching the present-day truth.</p>
                     <br/>
-                    <Button variant="light">SEE MORE</Button>
+                    <Button variant="light" onClick={handleWatchNow}>SEE MORE</Button>
                     <br/><br/><br/><br/><br/><br/>
                     <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                     <IoLocationOutline size={60} style={{ marginRight: '10px' }}/>
@@ -72,7 +81,7 @@ const CarouselPage = () => {
                     <h1>WHERE THE EAGLES GATHER</h1>
                     <p>We aim to deepen your understanding through insightful preaching. Together, we strive to grow in faith and wisdom, preparing ourselves for the 2nd Coming.</p>
                     <br/>
-                    <Button variant="light">SEE MORE</Button>
+                    <Button variant="light" onClick={handleWatchNow}>SEE MORE</Button>
                     <br/><br/><br/><br/><br/><br/>
                     <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                     <IoLocationOutline size={60} style={{ marginRight: '10px' }}/>

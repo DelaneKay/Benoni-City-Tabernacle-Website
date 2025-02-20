@@ -18,7 +18,9 @@ const Homepage = () => {
         <header style={{ position: 'relative' }}>
             <CarouselPage/>
         </header>
-        <ChurchInfo/>
+        <section id='church-info'>
+          <ChurchInfo/>
+        </section>
         <AboutChurch/>
         <OurMinistries/>
         <LatestSermon/>
