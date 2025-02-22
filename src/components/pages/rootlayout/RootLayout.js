@@ -11,12 +11,17 @@ const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ'
 const YOUTUBE_API_KEY_CLAYVILLE = 'AIzaSyC1l8V5uCdqmh2Io1I49RBh1UHJxZhLkOE'
 const CHANNEL_ID_CLAYVILLE = 'UClounyqDDsdPH94l5RYXjMw'
 
+const YOUTUBE_API_KEY_SUNDAY_SCHOOL = 'AIzaSyAuCr5jyTjT12nPdI_l9kkcgvnyJzclYME'
+const CHANNEL_ID_SUNDAY_SCHOOL = 'UCXbWTjiR03IOZ9qzx5rRotQ'
+
 const RootLayout = () => {
   const [videos, setVideos] = useState([])
   const [playlists, setPlaylists] = useState([])
   const [availableYears, setAvailableYears] = useState([])
   const [videosClayville, setVideosClayville] = useState([])
   const [availableYearsClayville, setAvailableYearsClayville] = useState([])
+  const [videosSundaySchool, setVideosSundaySchool] = useState([])
+  const [availableYearsSundaySchool, setAvailableYearsSundaySchool] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
   // Fetch global uploads (videos) - Main Channel
@@ -130,71 +135,63 @@ const RootLayout = () => {
     fetchAllVideosClayville()
   }, [])
 
-  // Fetch playlists
+  // Fetch Sunday School channel uploads (videos)
   useEffect(() => {
-    const fetchPlaylists = async () => {
+    const fetchAllVideosSundaySchool = async () => {
       try {
-        const response = await axios.get(
-          'https://www.googleapis.com/youtube/v3/playlists',
+        const channelResponse = await axios.get(
+          'https://www.googleapis.com/youtube/v3/channels',
           {
             params: {
-              part: 'snippet,contentDetails',
-              channelId: CHANNEL_ID,
-              maxResults: 50,
-              key: YOUTUBE_API_KEY,
+              key: YOUTUBE_API_KEY_SUNDAY_SCHOOL,
+              id: CHANNEL_ID_SUNDAY_SCHOOL,
+              part: 'contentDetails',
             },
           }
         )
-        setPlaylists(response.data.items)
+
+        const uploadsPlaylistId =
+          channelResponse.data.items[0].contentDetails.relatedPlaylists.uploads
+
+        let allVideosSundaySchool = []
+        let nextPageToken = ''
+
+        do {
+          const playlistResponse = await axios.get(
+            'https://www.googleapis.com/youtube/v3/playlistItems',
+            {
+              params: {
+                key: YOUTUBE_API_KEY_SUNDAY_SCHOOL,
+                playlistId: uploadsPlaylistId,
+                part: 'snippet',
+                maxResults: 50,
+                pageToken: nextPageToken,
+              },
+            }
+          )
+          allVideosSundaySchool = [...allVideosSundaySchool, ...playlistResponse.data.items]
+          nextPageToken = playlistResponse.data.nextPageToken
+        } while (nextPageToken)
+
+        setVideosSundaySchool(allVideosSundaySchool)
+        const yearsSundaySchool = [
+          ...new Set(
+            allVideosSundaySchool.map((video) =>
+              new Date(video.snippet.publishedAt).getFullYear()
+            )
+          ),
+        ]
+        setAvailableYearsSundaySchool(yearsSundaySchool.sort((a, b) => b - a))
       } catch (error) {
-        console.error('Error fetching playlists:', error)
+        console.error('Error fetching Sunday School videos:', error)
       }
     }
-    fetchPlaylists()
+    fetchAllVideosSundaySchool()
   }, [])
-
-  // Helper function to fetch series videos on demand
-  const fetchSeriesVideos = async (playlistId) => {
-    try {
-      let seriesVideos = []
-      let nextPageToken = ''
-      do {
-        const response = await axios.get(
-          'https://www.googleapis.com/youtube/v3/playlistItems',
-          {
-            params: {
-              key: YOUTUBE_API_KEY,
-              playlistId: playlistId,
-              part: 'snippet',
-              maxResults: 50,
-              pageToken: nextPageToken,
-            },
-          }
-        )
-        seriesVideos = [...seriesVideos, ...response.data.items]
-        nextPageToken = response.data.nextPageToken
-      } while (nextPageToken)
-      return seriesVideos
-    } catch (error) {
-      console.error('Error fetching series videos:', error)
-      return []
-    }
-  }
-
-  // Package data and helper into a single object
-  const youtubeData = {
-    videos,
-    playlists,
-    availableYears,
-    fetchSeriesVideos,
-    videosClayville,
-    availableYearsClayville,
-  }
 
   return (
     <>
       {isLoading ? (
-        // Preloader UI
         <Loader />
       ) : (
         <>
@@ -202,7 +199,19 @@ const RootLayout = () => {
             <Navigation />
           </header>
           <main>
-            <Outlet context={{ youtubeData }} /> {/* Pass data to child components */}
+            <Outlet
+              context={{
+                youtubeData: {
+                  videos,
+                  playlists,
+                  availableYears,
+                  videosClayville,
+                  availableYearsClayville,
+                  videosSundaySchool,
+                  availableYearsSundaySchool,
+                },
+              }}
+            /> {/* Pass data to child components */}
           </main>
           <footer>
             <Footer />

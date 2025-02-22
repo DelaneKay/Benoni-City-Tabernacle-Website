@@ -1,6 +1,6 @@
 import React from 'react';
 import './JuniorVideoWelcome.css';
-import JuniorVideo from '../../../../../media/sundayschool/College-Two-Cities-Church.mp4';
+import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.mp4';
 import { Container } from 'react-bootstrap';
 
 const JuniorVideoWelcome = () => {
@@ -15,7 +15,7 @@ const JuniorVideoWelcome = () => {
         {/* Overlay */}
         <div className="video-overlay">
           <div className="overlay-content">
-            <h1>Welcome to Junior Sunday School</h1>
+            <h1>Sunday School Presentations Corner</h1>
             <p>We are glad to have you here!</p>
             <button className="btn btn-outline-light">Learn More</button>
           </div>

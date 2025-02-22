@@ -2,6 +2,7 @@ import './App.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
 import { AboutUs, Homepage, Missionary, RootLayout, Sermons, SundaySchool, SundaySchoolJunior, WilliamBranham } from './components/pages';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 function App() {
 
@@ -20,7 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <SkeletonTheme baseColor='#313131' highlightColor='#525252'>
+        <RouterProvider router={router}/>
+      </SkeletonTheme>
     </div>
   );
 }

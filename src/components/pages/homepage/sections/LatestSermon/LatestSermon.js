@@ -1,11 +1,19 @@
 import React, { Suspense } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import ReactPlayer from 'react-player';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import './LatestSermon.css';
 
+
 const LatestSermon = () => {
+
+  const navigate = useNavigate();
+
+  const goToSermonsPage = () => {
+    navigate('/sermons');
+  };
+
   const { youtubeData } = useOutletContext();
   const { videos } = youtubeData;
   // Assume the first video is the latest sermon if available
@@ -21,7 +29,7 @@ const LatestSermon = () => {
             <p>
               Explore &amp; watch our latest sermons by our pastor and other various preachers.
             </p>
-            <Button variant="danger" size="lg">
+            <Button variant="danger" size="lg" onClick={goToSermonsPage}>
               MORE SERMONS
             </Button>
           </Col>
@@ -33,7 +41,7 @@ const LatestSermon = () => {
                     controls={true}
                     width="100%" />
                 </Suspense>
-            </div>
+            </div> 
           </Col>
         </Row>
       </Container>
