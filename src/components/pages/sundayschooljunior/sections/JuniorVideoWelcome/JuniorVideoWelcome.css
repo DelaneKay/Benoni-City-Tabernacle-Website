@@ -45,6 +45,7 @@
   .overlay-content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    padding: 0 22rem;
   }
   
   .overlay-content button {

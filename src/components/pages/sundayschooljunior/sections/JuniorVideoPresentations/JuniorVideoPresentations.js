@@ -41,6 +41,12 @@ const JuniorVideoPresentations = () => {
                 </div> 
             </Col>
             </Row>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <hr/>
         </Container>
     </section>
   )
