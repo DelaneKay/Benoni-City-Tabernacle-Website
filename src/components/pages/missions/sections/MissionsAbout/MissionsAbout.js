@@ -2,15 +2,13 @@ import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
 import MissionsImage from '../../../../../media/missions/clayville-logo-1.png';
 import './MissionsAbout.css'
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 const MissionsAbout = () => {
 
-    const navigate = useNavigate();
-
-    const goToYoutube = () => {
-        navigate('www.youtube.com');
-    }; 
+    const goToYoutubePage = () => {
+      window.open('https://www.youtube.com/@clayviewspokenword7940', '_blank')
+  }; 
 
   return (
     <section>
@@ -37,7 +35,7 @@ const MissionsAbout = () => {
                 </p>
                 <div className="text-start">
                     <Button className='btn-missions' variant="outline-danger" size="lg"
-                    onClick={goToYoutube}>
+                    onClick={goToYoutubePage}>
                     Watch More
                     </Button>
                     <Outlet/>

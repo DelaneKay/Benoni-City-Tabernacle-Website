@@ -8,8 +8,10 @@ const Missionary = () => {
   return (
     <>
       <MissionsWelcome/>
-      <MissionsLiveLinks/>
-      <MissionsSermon/>
+      <section id='sermon-clayville'>
+        <MissionsLiveLinks/>
+        <MissionsSermon />
+      </section>
       <MissionsAbout/>
     </>
   )

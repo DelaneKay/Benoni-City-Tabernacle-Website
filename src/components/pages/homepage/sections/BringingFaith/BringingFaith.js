@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image, Carousel } from 'react-bootstrap';
 import backgroundImage from '../../../../../media/homepage/img8.jpg';
-import profileImage from '../../../../../media/homepage/img7.jpg';
+import { Outlet, useNavigate } from 'react-router-dom';
 import './BringingFaith.css'
 
 const testimonials = [
@@ -20,6 +20,13 @@ const testimonials = [
 ];
 
 const BringingFaith = () => {
+
+  const navigate = useNavigate();
+    
+      const goToAboutPage = () => {
+        navigate('/about-us');
+      };
+
   return (
     <section className='faith'>
       <Container>
@@ -28,7 +35,7 @@ const BringingFaith = () => {
             <h2>BRINGING THE ENDTIME MESSAGE TO YOUR LIFE FOR OVER 8 YEARS</h2>
             <p>Our church is not just a gathering place; it is a sanctuary where seekers of truth find solace, where the weary find rest, and where the lost find direction. </p>
             <p>We invite all who are earnestly seeking truth to come and worship with us, to experience the transformative power of God's presence and the prophetic legacy that continues to shape our faith journey. Together, let us prepare ourselves for the coming of our Lord, knowing that in Him, we find hope, peace, and eternal salvation. </p>
-            <Button variant="outline-light" style={{borderRadius: '0%'}}>Learn More</Button>
+            <Button variant="outline-light" style={{borderRadius: '0%'}} onClick={goToAboutPage}>Learn More</Button>
           </Col>
           <Col xs={12} md={6} lg={6} className="testimonial-section">
             <Image src={backgroundImage} fluid className="background-image" />

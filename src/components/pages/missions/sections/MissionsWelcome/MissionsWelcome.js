@@ -7,9 +7,9 @@ const SermonsWelcome = () => {
 
   // Function to handle "Watch Now" button click
   const handleWatchNow = () => {
-    const streamingSection = document.getElementById('sermon-streaming'); // Reference the SermonStreaming section by its id
-    if (streamingSection) {
-      streamingSection.scrollIntoView({ behavior: 'smooth' });
+    const clayvilleSection = document.getElementById('sermon-clayville'); // Reference the Sermonclayville section by its id
+    if (clayvilleSection) {
+      clayvilleSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -26,7 +26,7 @@ const SermonsWelcome = () => {
           <div className="missions-overlay-content">
             <h1>Welcome to our Missions Corner</h1>
             <p>BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed the birth of sister churches, including Clayville Spoken Word Ministry, as part of its mission to spread the End-Time Message.</p>
-            {/* "Watch Now" button triggers scrolling to the live streaming section */}
+            {/* "Watch Now" button triggers scrolling to the live clayville section */}
             <button className="btn btn-outline-light" onClick={handleWatchNow}>
               Learn More
             </button>

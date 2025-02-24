@@ -8,7 +8,7 @@ const MissionsLiveLinks = () => {
         <Container>
         <Row className="justify-content-center">
             <Col xs="auto" md={3}>
-            <a href="https://www.youtube.com/@BenoniCityTabernacle" className="missions-live-link">Watch on YouTube</a>
+            <a href="https://www.youtube.com/@clayviewspokenword7940" className="missions-live-link">Watch on YouTube</a>
             </Col>
             <Col xs="auto" md={3}>
             <a href="#youtube" className="missions-live-link">Watch on Website</a>

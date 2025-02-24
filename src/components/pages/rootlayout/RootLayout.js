@@ -72,6 +72,19 @@ const RootLayout = () => {
           ),
         ]
         setAvailableYears(years.sort((a, b) => b - a))
+
+      // Fetch playlists for the main channel
+      const playlistResponse = await axios.get('https://www.googleapis.com/youtube/v3/playlists', {
+        params: {
+          part: 'snippet,contentDetails',
+          channelId: CHANNEL_ID, // Replace with the correct channel ID
+          maxResults: 50,
+          key: YOUTUBE_API_KEY, // Replace with the correct API key
+        },
+      });
+
+      setPlaylists(playlistResponse.data.items); // Set the playlists data into state
+      
       } catch (error) {
         console.error('Error fetching videos:', error)
       } finally {
@@ -80,6 +93,7 @@ const RootLayout = () => {
     }
     fetchAllVideos()
   }, [])
+
 
   // Fetch Clayville channel uploads (videos)
   useEffect(() => {

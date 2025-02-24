@@ -4,6 +4,11 @@ import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-
 import './WilliamBranhamSecond.css'
 
 const WilliamBranhamSecond = () => {
+
+    const goToMessenger = () => {
+        window.open('https://themessage.com/messenger7', '_blank')
+    };
+
   return (
     <section className='william-branham-second-section'>
         <Container>
@@ -135,7 +140,7 @@ const WilliamBranhamSecond = () => {
                 William Marrion Branham
                 </h6>
                 <h4 className="mb-4">The Endtime Moses in the Third Exodus</h4>
-                <Button className='btn-sunday-school' variant="outline-danger" size="lg">
+                <Button className='btn-sunday-school' variant="outline-danger" size="lg" onClick={goToMessenger}>
                 Learn More
                 </Button>
             </div>

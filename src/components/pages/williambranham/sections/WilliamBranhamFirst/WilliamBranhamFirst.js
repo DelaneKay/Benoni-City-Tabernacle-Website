@@ -4,6 +4,11 @@ import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-
 import './WilliamBranhamFirst.css'
 
 const WilliamBranhamFirst = () => {
+
+    const goToMessenger = () => {
+        window.open('https://themessage.com/messenger', '_blank')
+    };
+
   return (
     <section className='william-branham-first-section'>
       <Container>
@@ -69,7 +74,7 @@ const WilliamBranhamFirst = () => {
                 William Marrion Branham
                 </h6>
                 <h4 className="mb-4">The Messenger to Laodecian Age</h4>
-                <Button className='btn-sunday-school' variant="outline-danger" size="lg">
+                <Button className='btn-sunday-school' variant="outline-danger" size="lg" onClick={goToMessenger}>
                 Learn More
                 </Button>
             </div>

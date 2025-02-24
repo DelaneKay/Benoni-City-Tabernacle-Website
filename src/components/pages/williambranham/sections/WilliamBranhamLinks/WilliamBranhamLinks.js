@@ -8,16 +8,16 @@ const WilliamBranhamLinks = () => {
         <Container>
         <Row className="justify-content-center">
             <Col xs="auto" md={3}>
-            <a href="https://www.youtube.com/@BenoniCityTabernacle" className="william-branham-link">Watch on YouTube</a>
+            <a href="https://branham.org/home" className="william-branham-link">Branham.org</a>
             </Col>
             <Col xs="auto" md={3}>
-            <a href="#youtube" className="william-branham-link">Watch on Website</a>
+            <a href="https://themessage.com/en/home" className="william-branham-link">TheMessage.com</a>
             </Col>
             <Col xs="auto" md={3}>
-            <a href="#youtube" className="william-branham-link">Watch on our Apple app</a>
+            <a href="https://table.branham.org/#/en/main" className="william-branham-link">The Table</a>
             </Col>
             <Col xs="auto" md={3}>
-            <a href="#youtube" className="william-branham-link">Watch on our Android app</a>
+            <a href="https://branham.org/en/MessageAudio" className="william-branham-link">Audio Sermons</a>
             </Col>
         </Row>
         </Container>

@@ -10,8 +10,10 @@ const WilliamBranham = () => {
   return (
     <>
       <WilliamBranhamWelcome/>
-      <WilliamBranhamLinks/>
-      <WilliamBranhamFirst/>
+      <section id='prophet'>
+        <WilliamBranhamLinks/>
+        <WilliamBranhamFirst/>
+      </section>
       <WilliamBranhamSecond/>
       <WilliamBranhamThird/>
     </>

@@ -7,9 +7,9 @@ const WilliamBranhamWelcome = () => {
 
      // Function to handle "Watch Now" button click
   const handleWatchNow = () => {
-    const streamingSection = document.getElementById('sermon-streaming'); // Reference the SermonStreaming section by its id
-        if (streamingSection) {
-        streamingSection.scrollIntoView({ behavior: 'smooth' });
+    const prophetSection = document.getElementById('prophet'); // Reference the Sermonprophet section by its id
+        if (prophetSection) {
+        prophetSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -29,7 +29,7 @@ const WilliamBranhamWelcome = () => {
             <p>
                 William Branham was a prophet sent by God. His ministry was marked by supernatural vindication, deep spiritual revelations, and a prophetic voice that prepared us for the soon return of our Lord 
             </p>
-            {/* "Watch Now" button triggers scrolling to the live streaming section */}
+            {/* "Watch Now" button triggers scrolling to the live prophet section */}
             <button className="btn btn-outline-light" onClick={handleWatchNow}>
               Learn More
             </button>

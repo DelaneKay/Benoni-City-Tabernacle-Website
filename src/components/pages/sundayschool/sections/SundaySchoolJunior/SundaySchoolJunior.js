@@ -9,7 +9,7 @@ const SundaySchoolJunior = () => {
   const navigate = useNavigate();
 
   const goToJuniorPage = () => {
-    navigate('/SundaySchool/junior');
+    navigate('/sunday-school/presentations');
   };
 
   return (
