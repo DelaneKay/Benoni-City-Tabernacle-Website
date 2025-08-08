@@ -6,7 +6,7 @@ import './WilliamBranhamThird.css'
 const WilliamBranhamThird = () => {
 
     const goToMessenger = () => {
-        window.open('https://themessage.com/messenger2', '_blank')
+        window.open('https://themessage.com/messenger', '_blank')
     };
 
   return (

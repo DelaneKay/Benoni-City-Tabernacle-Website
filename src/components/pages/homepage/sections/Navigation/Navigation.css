@@ -7,7 +7,7 @@
   }
 
   .navbar-transparent {
-    background-color: transparent !important;
+    background-color: transparent;
     border-bottom: none;
   }
   
@@ -94,10 +94,15 @@
 /* Responsive styles for screens up to 400px */
 @media screen and (max-width: 400px) {
   .navbar {
-    background-color: white; /* Background color when scrolled */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background-color: white; /* Set background color to white by default */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
     font-size: 1rem;
     text-align: center;
+  }
+
+  /* Override the transparent background for small screens */
+  .navbar.navbar-transparent {
+    background-color: white !important; /* Force white background */
   }
 
   .navbar .nav-link {
@@ -115,10 +120,15 @@
 /* Responsive styles for screens from  400px to 600px */
 @media screen and (min-width: 400px) and (max-width: 600px) {
   .navbar {
-    background-color: white; /* Background color when scrolled */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    background-color: white; /* Set background color to white by default */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visibility */
     font-size: 1rem;
     text-align: center;
+  }
+
+  /* Override the transparent background for small screens */
+  .navbar.navbar-transparent {
+    background-color: white !important; /* Force white background */
   }
 
   .navbar .nav-link {
@@ -154,7 +164,7 @@
 @media screen and (min-width: 900px) and (max-width: 1200px) {
   
   .navbar {
-    background-color: white; /* Background color when scrolled */
+    background-color: white !important; ; /* Background color when scrolled */
     font-size: 0.75rem;
     text-align: center;
     z-index: 1030; /* Ensure it's on top of other content */

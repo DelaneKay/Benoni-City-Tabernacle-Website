@@ -2,8 +2,16 @@ import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
 import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-2.jpg';
 import './SundaySchoolSenior.css'
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const SundaySchoolSenior = () => {
+
+  const navigate = useNavigate();
+  
+    const goToJuniorPage = () => {
+      navigate('/sunday-school/presentations');
+    };
+
   return (
     <section className='sunday-school-senior-section'>
       <Container>
@@ -32,7 +40,7 @@ const SundaySchoolSenior = () => {
                 Senior Class
                 </h6>
                 <h4 className="mb-4">Tomorrow's Church</h4>
-                <Button className='btn-sunday-school' variant="outline-danger" size="lg">
+                <Button className='btn-sunday-school' variant="outline-danger" size="lg" onClick={goToJuniorPage}>
                 Learn More
                 </Button>
             </div>
