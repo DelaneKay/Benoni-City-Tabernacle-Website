@@ -17,16 +17,22 @@ const formatDate = (publishedAt) => {
 
 // Extract sermon title and speaker from video title
 const extractTitleAndSpeaker = (title) => {
-  const regex = /^(.*?)\s*-\s*(.*)$/
-  const matches = title.match(regex)
-  if (matches) {
-    const sermonTitle = matches[1].trim()
-    const speaker = matches[2].trim()
-    return { sermonTitle, speaker }
+  // Normalize dashes (replace en-dash, em-dash with normal dash)
+  const normalizedTitle = title.replace(/[–—]/g, "-");
+
+  // Find the last dash
+  const lastDashIndex = normalizedTitle.lastIndexOf("-");
+
+  if (lastDashIndex !== -1) {
+    const sermonTitle = normalizedTitle.slice(0, lastDashIndex).trim();
+    const speaker = normalizedTitle.slice(lastDashIndex + 1).trim();
+    return { sermonTitle, speaker };
   } else {
-    return { sermonTitle: title, speaker: 'Unknown Speaker' }
+    return { sermonTitle: title.trim(), speaker: "Unknown Speaker" };
   }
-}
+};
+
+
 
 const VIDEOS_PER_PAGE = 10
 
