@@ -16,10 +16,10 @@ const LiveLinks = () => {
             <a href="#website" className="live-link">Watch Live on Website</a>
           </Col>
           <Col xs="auto" md={3}>
-            <a href="#apple" className="live-link">Watch Live on our Apple app</a>
+            <a href="#apple" className="live-link">Watch Live on Apple</a>
           </Col>
           <Col xs="auto" md={3}>
-            <a href="#android" className="live-link">Watch Live on our Android app</a>
+            <a href="#android" className="live-link">Watch Live on Android</a>
           </Col>
         </Row>
 
