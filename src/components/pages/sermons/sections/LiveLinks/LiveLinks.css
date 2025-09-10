@@ -15,6 +15,67 @@
     cursor: pointer;
   }
 
+  .desktop-live-links {
+    display: flex;
+  }
+  
+  .mobile-live-links {
+    display: none;
+  }
+  
+  /* Responsive styles for screens up to 900px */
+  @media screen and (max-width: 900px) {
+    .desktop-live-links {
+      display: none; /* hide old row layout */
+    }
+  
+    .mobile-live-links {
+      display: block; /* show new icon layout */
+      text-align: center;
+    }
+  
+    .live-title {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .live-card {
+      text-align: center;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: left;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .live-link {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .live-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #f04e4e; /* match ministries red */
+    }
+    
+    .live-name {
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+    
+  }
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+
+
+}
+
   
   
   
