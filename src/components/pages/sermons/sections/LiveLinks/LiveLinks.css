@@ -36,8 +36,9 @@
   
     .live-title {
       color: #fff;
-      font-size: 1.15rem;
+      font-size: 1.5rem;
       margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
     }
   
     .live-card {
@@ -48,6 +49,7 @@
       align-items: center;
       justify-content: left;
       transition: all 0.3s ease-in-out;
+      margin: 0 2.5rem;
     }
     
     .live-link {
@@ -59,7 +61,7 @@
     }
     
     .live-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
       color: #f04e4e; /* match ministries red */
     }
