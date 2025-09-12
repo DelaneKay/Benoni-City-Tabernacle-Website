@@ -40,6 +40,7 @@
 @media screen and (max-width: 400px) {
   .sunday-school-presentation-container {
     padding-top: 4rem;
+    padding-bottom: 0.5rem;
   }
 
   .sunday-school-presentation button {
@@ -71,6 +72,7 @@
 @media screen and (min-width: 400px) and (max-width: 600px){
   .sunday-school-presentation-container {
     padding-top: 4rem;
+    padding-bottom: 0.5rem;
   }
 
   .sunday-school-presentation button {
@@ -102,6 +104,7 @@
 @media screen and (min-width: 600px) and (max-width: 900px){
   .sunday-school-presentation-container {
     padding-top: 2rem;
+    padding-bottom: 0.5rem;
   }
 
   .sunday-school-presentation button {
@@ -145,6 +148,7 @@
 
   .sunday-school-presentation h1 {
     font-size: 2.5rem;
+    margin-right: 0.5rem;
   }
 
   .react-player-wrapper {

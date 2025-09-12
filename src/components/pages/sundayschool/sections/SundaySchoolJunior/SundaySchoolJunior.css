@@ -24,16 +24,38 @@
   }
   
 @media screen and (min-width: 400px) and (max-width: 600px) {
-  
+
+    .sunday-school-junior-left-col{
+        padding-right: 0.5rem;
+    }
+    
+    .btn-sunday-school {
+        border-radius: 0%;
+    }
   
   }
+
   
 @media screen and (min-width: 600px) and (max-width: 900px) {
 
+    .sunday-school-junior-left-col{
+        padding-right: 3rem;
+    }
+    
+    .btn-sunday-school {
+        border-radius: 0%;
+    }
   
   }
   
 @media screen and (min-width: 900px) and (max-width: 1200px) {
-  
+    
+    .sunday-school-junior-left-col{
+        padding-right: 3rem;
+    }
+    
+    .btn-sunday-school {
+        border-radius: 0%;
+    }
 
   }

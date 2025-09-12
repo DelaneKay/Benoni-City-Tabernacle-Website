@@ -20,8 +20,8 @@ const JuniorVideoPresentations = () => {
   return (
     <section>
         <Container className='sunday-school-presentation-container'>
-            <Row className='sunday-school-presentation-row'>
-            <Col xs={12} md={12} lg={3} xl={3}>
+            <Row>
+            <Col xs={12} md={12} lg={3} xl={3} >
                 <h2>Sunday School Presentations</h2>
                 <p>
                 Explore &amp; watch our sunday school presentations from both the Junior and the Senior classes.

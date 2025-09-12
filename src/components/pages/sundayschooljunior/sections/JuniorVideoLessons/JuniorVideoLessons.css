@@ -39,6 +39,11 @@
 /* Responsive styles for screens up to 400px */
 @media screen and (max-width: 400px) {
 
+  .sunday-school-lessons-container {
+    padding-bottom: 3rem;
+    margin-top: -5rem;
+}
+
   .sunday-school-lessons button {
     font-size: small;
   }
@@ -66,6 +71,11 @@
 
 /* Responsive styles for screens from 400px up to 600px */
 @media screen and (min-width: 400px) and (max-width: 600px){
+
+  .sunday-school-lessons-container {
+    padding-bottom: 3rem;
+    margin-top: -5rem;
+}
 
   .sunday-school-lessons button {
     font-size: small;
@@ -95,6 +105,11 @@
 /* Responsive styles for screens from 600px up to 900px */
 @media screen and (min-width: 600px) and (max-width: 900px){
 
+  .sunday-school-lessons-container {
+    padding-bottom: 3rem;
+    margin-top: -5rem;
+}
+
   .sunday-school-lessons button {
     font-size: small;
   }
@@ -122,6 +137,10 @@
 
 /* Responsive styles for screens from 900px up to 1200px */
 @media screen and (min-width: 900px) and (max-width: 1200px){
+
+  .sunday-school-lessons-container {
+    margin-top: -12rem;
+}
   .sunday-school-lessons button {
     font-size: large;
   }

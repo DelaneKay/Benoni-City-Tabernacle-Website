@@ -129,6 +129,52 @@
 
 }
 
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+  .sunday-school-overlay-content {
+    padding-top: 6rem;
+  }
+  
+  .sunday-school-overlay-content h1 {
+    font-size: 3.5rem;
+    padding: 0 2rem;
+  }
+  
+  .sunday-school-overlay-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    padding: 0 3rem;
+  }
+  
+  .sunday-school-overlay-content button {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Landscape mode for medium devices */
+@media screen and (min-width: 600px) and (max-width: 992px) and (orientation: landscape) {
+
+  .sunday-school-overlay-content {
+    padding-top: 6rem;
+  }
+  
+  .sunday-school-overlay-content h1 {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .sunday-school-overlay-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    padding: 0 2rem;
+  }
+  
+  .sunday-school-overlay-content button {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (min-width: 900px) and (max-width: 1200px) {
 
   .sunday-school-overlay-content {
