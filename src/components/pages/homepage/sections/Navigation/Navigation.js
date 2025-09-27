@@ -110,7 +110,7 @@ const Navigation = () => {
                 >
                   ABOUT US
                 </Nav.Link>
-                  <Button variant='light' onClick={() => setExpanded(false)}>ONLINE GIVING</Button>
+                  <Button className='nav-btn' variant='light' onClick={() => setExpanded(false)}>ONLINE GIVING</Button>
                 </Nav>
             </Navbar.Collapse>
           </Container>
