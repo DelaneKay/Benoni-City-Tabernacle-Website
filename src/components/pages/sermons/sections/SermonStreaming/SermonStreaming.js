@@ -65,6 +65,15 @@ const SermonStreaming = () => {
     'Guest Speakers',
   ]
 
+  const scrollToPlayer = () => {
+      if (playerRef.current) {
+        playerRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  
+  
+  
+
   // Initialize when global videos update
   useEffect(() => {
     if (videos && videos.length > 0) {
@@ -277,23 +286,21 @@ const SermonStreaming = () => {
             return (
               <Row className="justify-content-center my-5 mb-4">
                 <Col xs={12} md={10}>
-                  <div className="sermon-header mb-1">
-                    <h3 className="sermon-title">{sermonTitle}</h3>
-                    <h3 className="sermon-title speaker-info">
-                      <i>
-                        {speaker} {formattedDate}
-                      </i>
-                    </h3>
-                  </div>
-                  <div ref={playerRef}>
-                    <Suspense fallback={<Skeleton height="100%" width="100%" />}>
-                        <ReactPlayer 
-                          url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
-                          className="react-player"
-                          width="100%"
-                          height="auto"
-                          controls />
-                    </Suspense>
+                  <div ref={playerRef} className="player-wrapper-with-spacer">
+                    <div className="player-spacer" aria-hidden="true"></div>
+                    <div className="player-header">
+                      <h3 className="sermon-title">{sermonTitle}</h3>
+                      <h3 className="sermon-title speaker-info">
+                        <i>{speaker} {formattedDate}</i>
+                      </h3>
+                    </div>
+                    <ReactPlayer
+                      url={`https://www.youtube.com/watch?v=${currentVideo.snippet.resourceId.videoId}`}
+                      className="react-player"
+                      width="100%"
+                      height="auto"
+                      controls
+                    />
                   </div>
                 </Col>
               </Row>
@@ -362,14 +369,16 @@ const SermonStreaming = () => {
                       </td>
                       <td>{speaker}</td>
                       <td>
-                        <a
-                          href={`https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <span
+                          onClick={() => {
+                            setCurrentVideo(video);
+                            scrollToPlayer();
+                          }}
                           className="sermon-table-watch"
+                          style={{ cursor: 'pointer', color: '#CF4A46', textDecoration: 'underline' }}
                         >
                           Watch
-                        </a>
+                        </span>
                       </td>
                     </tr>
                   )

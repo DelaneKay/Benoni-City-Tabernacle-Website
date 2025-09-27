@@ -13,6 +13,24 @@
   border-bottom: 3px solid #cf4a46;
 }
 
+.player-container {
+  scroll-margin-top: 100px; /* adjusts only when scrolled into view */
+}
+
+.player-wrapper-with-spacer {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.player-spacer {
+  height: 120px; /* Matches or exceeds navbar height */
+  margin-top: -120px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+
 /* Video Player Styling */
 .react-player {
   aspect-ratio: 16/9;
