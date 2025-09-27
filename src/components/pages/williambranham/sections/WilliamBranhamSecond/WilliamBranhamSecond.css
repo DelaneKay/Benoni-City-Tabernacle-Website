@@ -11,3 +11,48 @@
 .btn-william-branham-second {
     border-radius: 0%;
 }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {  
+
+    .william-branham-second-section{
+        margin-top: -8rem;
+        padding-bottom: 1rem;
+    }
+    
+    .william-branham-second-left-col{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+  }
+  
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .william-branham-second-left-col{
+        margin-top: -10rem;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+  }
+  
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+    .william-branham-second-left-col{
+        margin-top: -10rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }  
+  
+  }
+  
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    
+    .william-branham-second-left-col{
+        margin-top: -10rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+  }

@@ -76,7 +76,7 @@
   }
 
   .sermon-overlay-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0 3rem;
   }
 }
@@ -88,12 +88,12 @@
   }
 
   .sermon-overlay-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0 2rem;
   }
 
   .sermon-overlay-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 0 3rem;
   }
 
@@ -106,21 +106,21 @@
 @media screen and (min-width: 600px) and (max-width: 900px) {
 
   .sermon-overlay-content {
-    padding-top: 5rem;
+    padding-top: 6rem;
   }
 
   .sermon-overlay-content h1 {
-    font-size: 4rem;
-    padding: 0 2rem;
+    font-size: 3.5rem;
+    padding: 0 3rem;
   }
 
   .sermon-overlay-content p {
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 0 3rem;
   }
 
   .sermon-overlay-content button {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
 }
@@ -128,27 +128,21 @@
 @media screen and (min-width: 900px) and (max-width: 1200px) {
 
   .sermon-overlay-content {
-    padding-top: 5rem;
+    padding-top: 7rem;
   }
 
   .sermon-overlay-content h1 {
-    padding: 0 10rem;
+    padding: 0 8rem;
+    font-size: 2.5rem;
   }
   
   .sermon-overlay-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    padding: 0 10rem;
+    font-size: 1.2rem;
+    padding: 0 8rem;
   }
   
   .sermon-overlay-content button {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-    border: 2px solid white;
-    background: transparent;
-    color: white;
-    transition: background-color 0.3s ease;
-    border-radius: 0%;
+    font-size: 1.2rem;
   }
 
 }

@@ -62,7 +62,7 @@ const WilliamBranhamFirst = () => {
             </Col>
 
             {/* Right Column */}
-            <Col xs={12} md={4} className="text-center">
+            <Col xs={12} md={4} className="text-center william-first-image">
             <img
                 src={SeniorImage}
                 alt="Senior Class"

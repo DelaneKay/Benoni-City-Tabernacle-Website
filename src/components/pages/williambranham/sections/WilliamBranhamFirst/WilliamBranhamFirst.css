@@ -11,3 +11,67 @@
 .btn-william-branham-first {
     border-radius: 0%;
 }
+
+/* Responsive styles for screens up to 400px */
+@media screen and (max-width: 400px) {  
+
+    .william-branham-first-section{
+        padding-bottom: 1rem;
+    }
+    
+    .william-branham-first-left-col{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+  }
+  
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .william-branham-first-left-col{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+  }
+  
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+    .william-branham-first-left-col{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }  
+
+    .william-first-image {
+        padding-top: 7rem;
+    }
+  
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+    .william-branham-first-left-col{
+        padding-top: 7rem;
+    }
+
+    .william-first-image {
+        padding-top: 7rem;
+    }
+  }
+  
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    
+    .william-branham-first-left-col{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
+    .william-branham-first-left-col{
+        padding-top: 7rem;
+    }
+
+    .william-first-image {
+        padding-top: 7rem;
+    }
+  }
