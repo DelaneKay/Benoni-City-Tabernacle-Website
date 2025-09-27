@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
 
 // Logo
@@ -19,6 +19,8 @@ const Navigation = () => {
 
   // Get the current location (route)
   const location = useLocation();
+
+  const navigate = useNavigate();
 
   // Set whether the navbar should be transparent based on the route
   const isHomePage = location.pathname === '/'; // Make transparent on HomePage
@@ -110,7 +112,10 @@ const Navigation = () => {
                 >
                   ABOUT US
                 </Nav.Link>
-                  <Button className='nav-btn' variant='light' onClick={() => setExpanded(false)}>ONLINE GIVING</Button>
+                  <Button className='nav-b' variant='light' onClick={() => {
+                    setExpanded(false);
+                    navigate('/online-giving');
+                  }}>ONLINE GIVING</Button>
                 </Nav>
             </Navbar.Collapse>
           </Container>

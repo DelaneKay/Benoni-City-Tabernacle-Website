@@ -7,3 +7,4 @@ export { default as SundaySchoolJunior } from "./sundayschooljunior/SundaySchool
 export { default as WilliamBranham } from "./williambranham/WilliamBranham"
 export { default as AboutUs } from "./aboutus/AboutUs"
 export { default as LiveStream} from "./sermons/sections/Livestream/Livestream"
+export { default as OnlineGiving} from "./onlinegiving/OnlineGiving"

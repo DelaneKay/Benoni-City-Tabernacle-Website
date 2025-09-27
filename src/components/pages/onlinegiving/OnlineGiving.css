@@ -1,0 +1,70 @@
+.navbar-background-placeholder {
+    height: 100px;
+    background-color: #0f1113;
+  }
+  
+  .giving-wrapper {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+  }
+  
+  .giving-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 0rem 2rem;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .shadow-card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 4px 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .giving-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #b93a38;
+  }
+  
+  .giving-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .giving-option-title {
+    color: #b93a38;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .giving-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .giving-box {
+    background-color: #fefefe;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.07);
+    text-align: center;
+  }
+  
+  .giving-box-title {
+    font-size: 1.5rem;
+    color: #b93a38;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .giving-box-text {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
