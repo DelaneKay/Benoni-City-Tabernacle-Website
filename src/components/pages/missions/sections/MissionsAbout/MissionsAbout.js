@@ -45,7 +45,7 @@ const MissionsAbout = () => {
                 <img
                     src={MissionsImage}
                     alt="Junior Class"
-                    className="img-fluid mb-4"
+                    className="img-fluid mb-4 missions-img"
                     style={{    
                         objectFit: 'cover',  
                         width: 'auto'}}
