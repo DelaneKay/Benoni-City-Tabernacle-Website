@@ -1,0 +1,58 @@
+.navbar-background-placeholder {
+    background-color: #181d21; /* Same as footer */
+    height: 100px; /* Adjust to your navbar height */
+    width: 100%;
+  }
+  
+  .livestream-container {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .livestream-box {
+    width: 90%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .livestream-placeholder {
+    text-align: center;
+  }
+  
+  .watch-live-title {
+    color: red;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .countdown-text {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .countdown-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 8px;
+  }
+  
+  .service-type {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .footer-padding-placeholder {
+    height: 80px; /* Match padding below the livestream section */
+    background-color: white;
+  }
+  

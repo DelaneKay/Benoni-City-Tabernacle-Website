@@ -8,6 +8,9 @@
     text-align: center;
     text-decoration: none;
     font-size: 1.05rem;
+    position: relative;
+    z-index: 20 !important;
+    pointer-events: auto !important;
   }
 
   .live-link:hover {
@@ -17,10 +20,16 @@
 
   .desktop-live-links {
     display: flex;
+    position: relative;
+    z-index: 15;
+    pointer-events: auto;
   }
   
   .mobile-live-links {
     display: none;
+    position: relative;
+    z-index: 15;
+    pointer-events: auto;
   }
   
   /* Responsive styles for screens up to 900px */

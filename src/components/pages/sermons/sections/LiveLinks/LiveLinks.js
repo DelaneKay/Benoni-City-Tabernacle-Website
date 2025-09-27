@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaYoutube, FaGlobe, FaApple, FaAndroid } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import "./LiveLinks.css"
 
 const LiveLinks = () => {
@@ -13,10 +14,10 @@ const LiveLinks = () => {
             <a href="https://www.youtube.com/@BenoniCityTabernacle" className="live-link">Watch Live on YouTube</a>
           </Col>
           <Col xs="auto" md={3}>
-            <a href="#website" className="live-link">Watch Live on Website</a>
+            <Link to="/watch-live" className="live-link">Watch Live on Website</Link>
           </Col>
           <Col xs="auto" md={3}>
-            <a href="#apple" className="live-link">Watch Live on Apple</a>
+            <a href="https://www.youtube.com/@BenoniCityTabernacle" className="live-link">Watch Live on Apple</a>
           </Col>
           <Col xs="auto" md={3}>
             <a href="#android" className="live-link">Watch Live on Android</a>
@@ -38,10 +39,10 @@ const LiveLinks = () => {
 
             <Col xs={6} md={3}>
               <div className="live-card">
-                <a href="#website" className="live-link">
+                <Link to="/watch-live" className="live-link">
                   <FaGlobe className="live-icon" />
                   <span className="live-name">Website</span>
-                </a>
+                </Link>
               </div>
             </Col>
 
