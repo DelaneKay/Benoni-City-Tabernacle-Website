@@ -4,6 +4,8 @@ import Navigation from '../homepage/sections/Navigation/Navigation'
 import Footer from '../homepage/sections/Footer/Footer'
 import axios from 'axios'
 import Loader from '../bctloader/Loader'
+import ScrollToTop from '../../utils/ScrollToTop'; // Adjust path if needed
+
 
 const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc'
 const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ'
@@ -211,6 +213,7 @@ const RootLayout = () => {
         <>
           <header>
             <Navigation />
+            <ScrollToTop />
           </header>
           <main>
             <Outlet
