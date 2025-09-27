@@ -1,0 +1,109 @@
+.vision-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f8f8f8;
+  }
+  
+  .vision-left-col {
+    padding-right: 7rem;
+  }
+  
+  .btn-vision {
+    border-radius: 0%;
+  }
+  
+  /* Responsive styles for screens up to 400px */
+  @media screen and (max-width: 400px) {
+  
+    .vision-section {
+      padding-bottom: 1rem;
+      padding-top: 2rem;
+    }
+  
+    .vision-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+  
+  }
+  
+  /* Small devices (portrait tablets and large phones, 400px–600px) */
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .vision-section {
+        padding-top: 2rem;
+      }
+  
+    .vision-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }  
+  
+  }
+  
+  /* Medium devices (landscape tablets, 600px–900px) */
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+  
+    .vision-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .vision-section {
+        padding-top: 2rem;
+      }
+  
+    .vision-image {
+      padding-top: 7rem;
+    }
+  
+  }
+  
+  /* Medium landscape devices */
+  @media screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+  
+    .vision-left-col {
+      padding-top: 7rem;
+    }
+
+    .vision-section {
+        padding-top: 2rem;
+      }
+  
+    .vision-image {
+      padding-top: 7rem;
+    }
+  
+  }
+  
+  /* Larger tablets and smaller desktops (900px–1200px) */
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+  
+    .vision-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .vision-section {
+        padding-top: 0rem;
+      }
+  
+  }
+  
+  /* Larger tablets/desktops in landscape */
+  @media screen and (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
+  
+    .vision-left-col {
+      padding-top: 7rem;
+    }
+  
+    .vision-image {
+      padding-top: 7rem;
+    }
+
+    .vision-section {
+        padding-top: 0rem;
+      }
+  
+  }
+  

@@ -1,0 +1,17 @@
+.about-us-live-links-bar {
+    background-color: #1B2125; /* Dark background */
+    padding: 2rem 0; /* Padding around the bar */
+  }
+  
+  .about-us-live-link {
+    color: #ffffff; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+  
+  .about-us-live-link:hover {
+    color: #ffffff; /* Keeps white on hover */
+    cursor: pointer;
+  }
+  

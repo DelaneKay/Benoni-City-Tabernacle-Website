@@ -1,0 +1,109 @@
+.history-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f8f8f8;
+  }
+  
+  .history-left-col {
+    padding-right: 7rem;
+  }
+  
+  .btn-history {
+    border-radius: 0%;
+  }
+  
+  /* Responsive styles for screens up to 400px */
+  @media screen and (max-width: 400px) {
+  
+    .history-section {
+      padding-bottom: 1rem;
+      margin-top: -10rem;
+      margin-bottom: -5rem;
+    }
+  
+    .history-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+  
+  }
+  
+  /* Small devices (400px–600px) */
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+  
+    .history-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .history-section {
+        margin-top: -12rem;
+        margin-bottom: -5rem;
+      }
+  
+  }
+  
+  /* Medium devices (600px–900px) */
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+  
+    .history-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .history-section {
+        margin-top: -12rem;
+        margin-bottom: -5rem;
+      }
+
+  
+  }
+  
+  /* Landscape tablets (600px–900px) */
+  @media screen and (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+  
+    .history-left-col {
+      padding-top: 7rem;
+    }
+
+    .history-section {
+        margin-top: -12rem;
+        margin-bottom: -5rem;
+      }
+
+  
+  }
+  
+  /* Larger tablets (900px–1200px) */
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+  
+    .history-left-col {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    .history-section {
+        margin-top: -12rem;
+        margin-bottom: -5rem;
+      }
+  
+  }
+  
+  /* Larger tablets in landscape (900px–1200px) */
+  @media screen and (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
+  
+    .history-left-col {
+      padding-top: 7rem;
+    }
+  
+    .history-image {
+      padding-top: 7rem;
+    }
+
+    .history-section {
+        margin-top: -17rem;
+        margin-bottom: -5rem;
+      }
+  
+  }
+  
