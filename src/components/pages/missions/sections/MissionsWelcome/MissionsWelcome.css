@@ -5,6 +5,40 @@
   overflow: hidden;
 }
 
+/* Base (mobile-first): show IMAGE, hide VIDEO */
+.hero-video { display: none; }
+.hero-image {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Desktop (≥1025px): show VIDEO, hide IMAGE */
+@media (min-width: 1025px) {
+  .hero-video { display: block; }
+  .hero-image { display: none; }
+}
+
+/* Tablets (768–1024px) */
+/* Portrait → image (mobile-like) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-video { display: none; }
+  .hero-image { display: block; }
+}
+
+/* Landscape → video (desktop-like) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero-video { display: block; }
+  .hero-image { display: none; }
+}
+
+/* Video positioning */
 .missions-video-background {
   position: absolute;
   top: 50%;
@@ -13,21 +47,18 @@
   height: 100vh;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Keep the video behind other content */
+  z-index: -1;
 }
 
-/* Overlay Container */
+/* Overlay */
 .missions-video-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1; /* Ensures it appears above the video */
+  z-index: 1;
 }
 
 /* Overlay content */
@@ -36,18 +67,8 @@
   color: white;
   padding-top: 10rem;
 }
-
-.missions-overlay-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.missions-overlay-content p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  padding: 0 22rem;
-}
-
+.missions-overlay-content h1 { font-size: 3rem; margin-bottom: 20px; }
+.missions-overlay-content p  { font-size: 1.5rem; margin-bottom: 30px; padding: 0 22rem; }
 .missions-overlay-content button {
   font-size: 1.2rem;
   padding: 10px 20px;
@@ -57,137 +78,35 @@
   transition: background-color 0.3s ease;
   border-radius: 0%;
 }
+.missions-overlay-content button:hover { background-color: white; color: black; }
 
-.missions-overlay-content button:hover {
-  background-color: white;
-  color: black;
+/* ≤400px */
+@media (max-width: 400px) {
+  .missions-overlay-content { padding-top: 5rem; }
+  .missions-overlay-content h1 { font-size: 2rem; padding: 0 2rem; }
+  .missions-overlay-content p  { font-size: 1.1rem; padding: 0 3rem; }
 }
 
-/* Responsive styles for screens up to 400px */
-@media screen and (max-width: 400px) {  
-  
-  .missions-overlay-content {
-    padding-top: 5rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 2rem;
-    padding: 0 2rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.1rem;
-    padding: 0 3rem;
-  }
-  
+/* 400–600px */
+@media (min-width: 400px) and (max-width: 600px) {
+  .missions-overlay-content { padding-top: 5rem; }
+  .missions-overlay-content h1 { font-size: 2rem; padding: 0 2rem; }
+  .missions-overlay-content p  { font-size: 1.3rem; padding: 0 3rem; }
+  .missions-overlay-content button { font-size: 1.5rem; }
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px) {
-
-  .missions-overlay-content {
-    padding-top: 5rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 2rem;
-    padding: 0 2rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 3rem;
-  }
-
-  .missions-overlay-content button {
-    font-size: 1.5rem;
-  }
-
+/* 600–900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  .missions-overlay-content { padding-top: 6rem; }
+  .missions-overlay-content h1 { font-size: 3.5rem; padding: 0 3rem; }
+  .missions-overlay-content p  { font-size: 1.3rem; padding: 0 3rem; }
+  .missions-overlay-content button { font-size: 1.5rem; }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
-
-  .missions-overlay-content {
-    padding-top: 6rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 3.5rem;
-    padding: 0 3rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 3rem;
-  }
-
-  .missions-overlay-content button {
-    font-size: 1.5rem;
-  }
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 900px) {
-
-  .missions-overlay-content {
-    padding-top: 6rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 3.5rem;
-    padding: 0 3rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 3rem;
-  }
-
-  .missions-overlay-content button {
-    font-size: 1.5rem;
-  }
-
-}
-
-/* Landscape mode for medium devices */
-@media screen and (min-width: 600px) and (max-width: 992px) and (orientation: landscape) {
-
-  .missions-overlay-content {
-    padding-top: 6rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 2rem;
-    padding: 0 2rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 2rem;
-  }
-
-  .missions-overlay-content button {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1200px) {
-
-  .missions-overlay-content {
-    padding-top: 7rem;
-  }
-  
-  .missions-overlay-content h1 {
-    font-size: 2.5rem;
-    padding: 0 8rem;
-  }
-  
-  .missions-overlay-content p {
-    font-size: 1.2rem;
-    padding: 0 8rem;
-  }
-
-  .missions-overlay-content button {
-    font-size: 1.2rem;
-  }
-
+/* 900–1200px */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .missions-overlay-content { padding-top: 7rem; }
+  .missions-overlay-content h1 { font-size: 2.5rem; padding: 0 8rem; }
+  .missions-overlay-content p  { font-size: 1.2rem; padding: 0 8rem; }
+  .missions-overlay-content button { font-size: 1.2rem; }
 }
