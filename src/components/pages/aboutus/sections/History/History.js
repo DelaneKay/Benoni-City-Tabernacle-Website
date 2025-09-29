@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import HistoryImage from '../../../../../media/aboutus/rev-mum-2.jpg'; // Replace with actual image
+import HistoryImage from '../../../../../media/aboutus/rev-mum-2.webp'; // Replace with actual image
 import './History.css';
 
 const History = () => {

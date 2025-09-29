@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './JuniorVideoWelcome.css';
-import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.mp4';
-import JuniorHeroMobile from '../../../../../media/sundayschool/senior.jpg'; // add this image
+import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.webm';
+import JuniorHeroMobile from '../../../../../media/sundayschool/senior.webp'; // add this image
 
 const JuniorVideoWelcome = () => {
   return (

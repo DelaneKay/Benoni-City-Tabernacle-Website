@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './MissionsWelcome.css';
-import MissionsVideo from '../../../../../media/missions/clayville-video.mp4';
-import MissionsMobileHero from '../../../../../media/missions/clayville-2.png'; // add this image
+import MissionsVideo from '../../../../../media/missions/clayville-video.webm';
+import MissionsMobileHero from '../../../../../media/missions/clayville-2.webp'; // add this image
 
 const MissionsWelcome = () => {
   const handleWatchNow = () => {

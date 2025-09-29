@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-2.jpg';
+import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-2.webp';
 import './SundaySchoolSenior.css'
 import { Outlet, useNavigate } from 'react-router-dom';
 

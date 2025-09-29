@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import SeniorImage from '../../../../../media/WMB/wmb-2.jpg';
+import SeniorImage from '../../../../../media/WMB/wmb-2.webp';
 import './WilliamBranhamFirst.css'
 
 const WilliamBranhamFirst = () => {

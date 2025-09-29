@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import VisionImage from '../../../../../media/aboutus/unnamed.jpg'; // Replace with actual vision-related image
+import VisionImage from '../../../../../media/aboutus/unnamed.webp'; // Replace with actual vision-related image
 import './Vision.css'; // Create and style based on WilliamBranhamFirst.css
 
 const Vision = () => {

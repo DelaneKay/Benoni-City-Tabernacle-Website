@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './SundaySchoolWelcome.css';
-import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.mp4';
-import SundaySchoolHeroMobile from '../../../../../media/sundayschool/tanya-2.jpg'; // add this image
+import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.webm';
+import SundaySchoolHeroMobile from '../../../../../media/sundayschool/tanya-2.webp'; // add this image
 
 const SundaySchoolWelcome = () => {
   const handleLearnMore = () => {

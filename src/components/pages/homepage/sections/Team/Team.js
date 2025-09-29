@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import './Team.css';
-import Img1 from '../../../../../media/homepage/img8.jpg';
-import Img2 from '../../../../../media/homepage/img9.jpg';
+import Img1 from '../../../../../media/homepage/img8.webp';
+import Img2 from '../../../../../media/homepage/img9.webp';
 
 const Team = () => {
 

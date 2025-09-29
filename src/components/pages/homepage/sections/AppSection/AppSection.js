@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import { MdCheck } from "react-icons/md";
-import Image from '../../../../../media/homepage/img10.jpg';
+import Image from '../../../../../media/homepage/img10.webp';
 import './AppSection.css';
 import { Button } from 'react-bootstrap';
 

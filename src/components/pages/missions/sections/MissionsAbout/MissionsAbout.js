@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import MissionsImage from '../../../../../media/missions/clayville-logo-1.png';
+import MissionsImage from '../../../../../media/missions/clayville-logo-1.webp';
 import './MissionsAbout.css'
 import { Outlet } from 'react-router-dom';
 

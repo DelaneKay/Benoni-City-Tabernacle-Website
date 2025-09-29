@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image, Carousel } from 'react-bootstrap';
-import backgroundImage from '../../../../../media/homepage/img8.jpg';
+import backgroundImage from '../../../../../media/homepage/img8.webp';
 import { Outlet, useNavigate } from 'react-router-dom';
 import './BringingFaith.css'
 

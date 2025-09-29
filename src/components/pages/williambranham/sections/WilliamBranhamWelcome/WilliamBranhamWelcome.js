@@ -1,8 +1,8 @@
 import React from 'react';
 import './WilliamBranhamWelcome.css';
 import { Container } from 'react-bootstrap';
-import MissionsVideo from '../../../../../media/WMB/WMB-video.mp4';
-import WMBHeroMobile from '../../../../../media/WMB/wmb-1.jpg'; // add this image
+import MissionsVideo from '../../../../../media/WMB/WMB-video.webm';
+import WMBHeroMobile from '../../../../../media/WMB/wmb-1.webp'; // add this image
 
 const WilliamBranhamWelcome = () => {
   const handleWatchNow = () => {

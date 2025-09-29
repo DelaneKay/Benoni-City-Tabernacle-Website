@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.mp4'; // adjust if needed
-import AboutUsHeroMobile from '../../../../../media/aboutus/rev-mom.jpg'; // ✅ add a lightweight mobile image
+import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.webm'; // adjust if needed
+import AboutUsHeroMobile from '../../../../../media/aboutus/rev-mom.webp'; // ✅ add a lightweight mobile image
 import './AboutUsWelcome.css';
 
 const AboutUsWelcome = () => {
