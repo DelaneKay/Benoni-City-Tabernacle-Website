@@ -23,6 +23,10 @@
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
+
+    .william-branham-first-section hr {
+        display: none;
+    }
     
   }
   
@@ -31,6 +35,10 @@
     .william-branham-first-left-col{
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+    }
+
+    .william-branham-first-section hr {
+        display: none;
     }
   }
   
@@ -44,6 +52,10 @@
     .william-first-image {
         padding-top: 7rem;
     }
+
+    .william-branham-first-section hr {
+        display: none;
+    }
   
   }
 
@@ -55,6 +67,10 @@
     .william-first-image {
         padding-top: 7rem;
     }
+
+    .william-branham-first-section hr {
+        display: none;
+    }
   }
   
 @media screen and (min-width: 900px) and (max-width: 1200px) {
@@ -62,6 +78,10 @@
     .william-branham-first-left-col{
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+    }
+
+    .william-branham-first-section hr {
+        display: none;
     }
     
   }
@@ -73,5 +93,9 @@
 
     .william-first-image {
         padding-top: 7rem;
+    }
+
+    .william-branham-first-section hr {
+        display: none;
     }
   }

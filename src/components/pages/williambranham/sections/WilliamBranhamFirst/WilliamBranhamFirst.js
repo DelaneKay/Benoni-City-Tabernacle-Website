@@ -80,11 +80,6 @@ const WilliamBranhamFirst = () => {
             </div>
             </Col>
         </Row>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <hr/>
       </Container>
     </section>
   )

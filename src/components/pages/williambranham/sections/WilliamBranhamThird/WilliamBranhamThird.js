@@ -131,9 +131,6 @@ const WilliamBranhamThird = () => {
                 </div>
                 </Col>
             </Row>
-            <br/>
-            <br/>
-            <hr/>
         </Container>
     </section>
   )

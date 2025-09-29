@@ -1,5 +1,4 @@
 .william-branham-second-section{
-    padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: #f8f8f8;
 }
@@ -23,6 +22,10 @@
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
+
+    .william-branham-second-section hr {
+        display: none;
+    }
     
   }
   
@@ -33,6 +36,10 @@
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
+
+    .william-branham-second-section hr {
+        display: none;
+    }
   }
   
 @media screen and (min-width: 600px) and (max-width: 900px) {
@@ -41,6 +48,10 @@
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }  
+
+    .william-branham-second-section hr {
+        display: none;
+    }
   
   }
   
@@ -49,6 +60,10 @@
     .william-branham-second-left-col{
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+    }
+
+    .william-branham-second-section hr {
+        display: none;
     }
     
   }

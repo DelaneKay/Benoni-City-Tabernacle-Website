@@ -146,9 +146,6 @@ const WilliamBranhamSecond = () => {
             </div>
             </Col>
         </Row>
-        <br/>
-        <br/>
-        <hr/>
         </Container>
     </section>
   )
