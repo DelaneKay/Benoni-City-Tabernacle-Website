@@ -19,6 +19,13 @@
   z-index: -1;
 }
 
+/* Force IMAGE on phones in landscape (small height) */
+@media screen and (orientation: landscape) and (max-height: 480px) {
+  .hero-video { display: none !important; }
+  .hero-image { display: block !important; }
+}
+
+
 /* ===== Desktop (≥1025px): show VIDEO, hide IMAGE ===== */
 @media (min-width: 1025px) {
   .hero-video { display: block; }

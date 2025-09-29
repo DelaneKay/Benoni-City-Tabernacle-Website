@@ -29,6 +29,56 @@
     max-width: 68.75rem;
   }
 
+
+  /* Make slides fill the viewport without stretching */
+.carousel-picture,
+.carousel-img {
+  display: block;
+  width: 100%;
+}
+
+.carousel-img {
+  height: 100vh;         /* full viewport height */
+  object-fit: cover;     /* no stretching; crops safely */
+  object-position: center;
+}
+
+/* Ensure slide is a positioned container */
+.carousel-item {
+  position: relative;
+}
+
+/* Keep the image under the overlay */
+.carousel-picture,
+.carousel-img {
+  position: relative;
+  z-index: 0;
+}
+
+/* Dark overlay on every slide */
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);   /* uniform tint */
+  /* Or try a soft gradient:
+     background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.30) 40%, rgba(0,0,0,.55) 100%); */
+  z-index: 1;
+  pointer-events: none;           /* don’t block buttons/links */
+}
+
+/* Make sure captions sit above the overlay */
+.carousel-caption {
+  position: absolute;             /* you already have this */
+  z-index: 2;                     /* add this to float above the overlay */
+}
+
+
+/* Optional: reduce height on very short viewports (phone landscape) */
+@media (orientation: landscape) and (max-height: 480px) {
+  .carousel-img { height: 70vh; }
+}
+
 /* Responsive styles for screens up to 400px */
 @media screen and (max-width: 400px) {
   /* Adjusting the carousel height to be more mobile-friendly */

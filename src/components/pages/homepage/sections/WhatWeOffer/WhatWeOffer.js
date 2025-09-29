@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import image1 from '../../../../../media/homepage/img5.jpg';
-import image2 from '../../../../../media/homepage/img2.jpg';
-import image3 from '../../../../../media/homepage/img3.jpg';
-import image4 from '../../../../../media/homepage/img5.jpg';
+import image1 from '../../../../../media/homepage/message-3.jpg';
+import image2 from '../../../../../media/homepage/message-bible.jpg';
+import image3 from '../../../../../media/homepage/message-4.png';
+import image4 from '../../../../../media/homepage/message-2.jpg';
 import './WhatWeOffer.css'
 
 const WhatWeOffer = () => {

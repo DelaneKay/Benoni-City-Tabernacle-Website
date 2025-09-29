@@ -16,7 +16,6 @@
 @media screen and (max-width: 400px) {  
 
     .william-branham-third-section{
-        margin-top: -5rem;
         padding-bottom: 1rem;
     }
     
@@ -30,7 +29,6 @@
 @media screen and (min-width: 400px) and (max-width: 600px) {
 
     .william-branham-third-left-col{
-        margin-top: -8rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
@@ -40,7 +38,6 @@
 @media screen and (min-width: 600px) and (max-width: 900px) {
 
     .william-branham-third-left-col{
-        margin-top: -8rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
@@ -51,7 +48,6 @@
 @media screen and (min-width: 900px) and (max-width: 1200px) {
     
     .william-branham-first-left-col{
-        margin-top: -8rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
