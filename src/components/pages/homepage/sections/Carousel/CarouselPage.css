@@ -38,8 +38,10 @@
 }
 
 .carousel-img {
-  height: 100vh;         /* full viewport height */
-  object-fit: cover;     /* no stretching; crops safely */
+  height: 100vh !important;   /* fallback */
+  height: 100dvh !important;  /* actual browser viewport height */
+  width: 100%;
+  object-fit: cover;
   object-position: center;
 }
 

@@ -1,6 +1,7 @@
 .missions-video-background-container {
   position: relative;
-  height: 100vh;
+  height: 100vh;        /* fallback */
+  height: 100dvh;       /* real browser viewport height */
   width: 100vw;
   overflow: hidden;
 }
@@ -44,7 +45,7 @@
   top: 50%;
   left: 50%;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -59,6 +60,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  min-height: 100dvh;       /* ensure overlay spans fully */
 }
 
 /* Overlay content */
