@@ -10,11 +10,11 @@ const testimonials = [
     author: "Rev. William M. Branham",
   },
   {
-    text: "Now, the Coming is so imminent, the Second Coming of Jesus, He’s gathering His Elected together. I believe that. Oh, they’ll come from the East and West. Where the carcass is, the eagles gather.",
+    text: "Heavenly Father, we’re at the closing just before a great meeting closes, I should say. We’re standing before You, crowded in this little building, 'Where the carcass is the eagles will gather,' hungry-hearted people.",
     author: "Rev. William M. Branham",
   },
   {
-    text: "Now, the Coming is so imminent, the Second Coming of Jesus, He’s gathering His Elected together. I believe that. Oh, they’ll come from the East and West. Where the carcass is, the eagles gather.",
+    text: "And that’s the Word of God: borned in the world, foreordained to this condemnation. So we just have to have that. But where the carcass is the eagles will be gathered. Where God is moving people come to worship God.",
     author: "Rev. William M. Branham",
   },
 ];
@@ -40,21 +40,25 @@ const BringingFaith = () => {
           <Col xs={12} md={6} lg={6} className="testimonial-section">
             <Image src={backgroundImage} fluid className="background-image" />
             <div className="carousel-wrapper testimonial">
-                <Carousel indicators={false} controls={false}>
-                {testimonials.map((testimonial, index) => (
-                    <Carousel.Item key={index}>
-                    <div>
-                        <Row className="testimonial-content">
-                        <Col md={1} style={{marginTop: '0.5rem'}}><div className="vertical-line"></div></Col>
-                        <Col ><p className="testimonial-text">{testimonial.text}</p></Col>
-                        </Row>
-                        <div className="author">
-                          <span>{testimonial.author}</span>
-                        </div>
+            <Carousel className="no-overlay-carousel" indicators={false} controls={false}>
+              {testimonials.map((testimonial, index) => (
+                <Carousel.Item key={index}>
+                  <div>
+                    <Row className="testimonial-content">
+                      <Col md={1} style={{ marginTop: '0.5rem' }}>
+                        <div className="vertical-line"></div>
+                      </Col>
+                      <Col>
+                        <p className="testimonial-text">{testimonial.text}</p>
+                      </Col>
+                    </Row>
+                    <div className="author">
+                      <span>{testimonial.author}</span>
                     </div>
-                    </Carousel.Item>
-                ))}
-                </Carousel>
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
             </div>
             </Col>
         </Row>

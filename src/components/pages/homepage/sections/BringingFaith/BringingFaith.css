@@ -53,6 +53,27 @@
     z-index: 1;
     padding-left: 2rem;
   }
+
+    /* Kill hero overlay ONLY for the testimonial carousel */
+  .no-overlay-carousel .carousel-item::after {
+    content: none !important;     /* disables pseudo-element overlay */
+    background: none !important;
+  }
+
+  /* If you ever used a real overlay element in markup, hide it here too */
+  .no-overlay-carousel .carousel-overlay {
+    display: none !important;
+  }
+
+  /* Ensure internal UI is fully interactive (belt-and-suspenders) */
+  .no-overlay-carousel .carousel-caption,
+  .no-overlay-carousel .carousel-control-prev,
+  .no-overlay-carousel .carousel-control-next,
+  .no-overlay-carousel .carousel-indicators {
+    z-index: initial;
+    pointer-events: auto;
+  }
+
   
   .vertical-line {
     width: 2.5px;
