@@ -1,7 +1,7 @@
 import React from 'react';
 import './WilliamBranhamWelcome.css';
 import { Container } from 'react-bootstrap';
-import MissionsVideo from '../../../../../media/WMB/WMB-video.webm';
+import MissionsVideo from '../../../../../media/WMB/WMB-video-1.webm';
 import WMBHeroMobile from '../../../../../media/WMB/wmb-1.webp'; // add this image
 
 const WilliamBranhamWelcome = () => {
