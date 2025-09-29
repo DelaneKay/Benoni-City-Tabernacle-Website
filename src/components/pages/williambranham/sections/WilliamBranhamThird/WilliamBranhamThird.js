@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import SeniorImage from '../../../../../media/sundayschool/senior-sunday-school-2.jpg';
+import SeniorImage from '../../../../../media/WMB/wmb-6.jpg';
 import './WilliamBranhamThird.css'
 
 const WilliamBranhamThird = () => {
@@ -124,7 +124,7 @@ const WilliamBranhamThird = () => {
                     <h6 className="text-uppercase" style={{ color: 'rgba(207, 74, 70)' }}>
                     William Marrion Branham
                     </h6>
-                    <h4 className="mb-4">The Endtime Moses in the Third Exodus</h4>
+                    <h4 className="mb-4">The Endtime Elijah Turning the Hearts of the Children </h4>
                     <Button className='btn-sunday-school' variant="outline-danger" size="lg" onClick={goToMessenger}>
                     Learn More
                     </Button>
