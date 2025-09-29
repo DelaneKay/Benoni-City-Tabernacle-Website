@@ -73,6 +73,28 @@
   z-index: 2;                     /* add this to float above the overlay */
 }
 
+/* Ensure stacking is sane */
+.carousel,
+.carousel-item { position: relative; }
+
+/* Overlay (pseudo-element) version */
+.carousel-item::after {
+  pointer-events: none;        /* ← key line */
+}
+
+/* If you used a real <div class="carousel-overlay"> */
+.carousel-overlay {
+  pointer-events: none;        /* ← key line */
+}
+
+/* Make sure captions/indicators/controls sit above */
+.carousel-caption { z-index: 2; position: absolute; }
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;                  /* above the overlay */
+}
+
 
 /* Optional: reduce height on very short viewports (phone landscape) */
 @media (orientation: landscape) and (max-height: 480px) {
