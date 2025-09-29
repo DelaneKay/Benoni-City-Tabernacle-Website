@@ -112,7 +112,7 @@ const Navigation = () => {
                 >
                   ABOUT US
                 </Nav.Link>
-                  <Button className='nav-b' variant='light' onClick={() => {
+                  <Button className='nav-btn' variant='light' onClick={() => {
                     setExpanded(false);
                     navigate('/online-giving');
                   }}>ONLINE GIVING</Button>

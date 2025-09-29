@@ -5,6 +5,40 @@
   overflow: hidden;
 }
 
+/* Base (mobile-first): show IMAGE, hide VIDEO */
+.hero-video { display: none; }
+.hero-image {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* ===== Desktop (≥1025px): show VIDEO, hide IMAGE ===== */
+@media (min-width: 1025px) {
+  .hero-video { display: block; }
+  .hero-image { display: none; }
+}
+
+/* ===== Tablets (768–1024px) ===== */
+/* Portrait: behave like mobile (IMAGE) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-video { display: none; }
+  .hero-image { display: block; }
+}
+
+/* Landscape: behave like desktop (VIDEO) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero-video { display: block; }
+  .hero-image { display: none; }
+}
+
+
 .sermon-video-background {
   position: absolute;
   top: 50%;
@@ -13,21 +47,18 @@
   height: 100vh;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Keep the video behind other content */
+  z-index: -1;
 }
 
 /* Overlay Container */
 .sermon-video-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1; /* Ensures it appears above the video */
+  z-index: 1;
 }
 
 /* Overlay content */
@@ -36,113 +67,41 @@
   color: white;
   padding-top: 10rem;
 }
-
-.sermon-overlay-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.sermon-overlay-content p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  padding: 0 22rem;
-}
-
+.sermon-overlay-content h1 { font-size: 3rem; margin-bottom: 20px; }
+.sermon-overlay-content p  { font-size: 1.5rem; margin-bottom: 30px; padding: 0 22rem; }
 .sermon-overlay-content button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  transition: background-color 0.3s ease;
-  border-radius: 0%;
+  font-size: 1.2rem; padding: 10px 20px; border: 2px solid white;
+  background: transparent; color: white; transition: background-color 0.3s ease; border-radius: 0%;
+}
+.sermon-overlay-content button:hover { background-color: white; color: black; }
+
+/* ≤400px */
+@media (max-width: 400px) {
+  .sermon-overlay-content { padding-top: 5rem; }
+  .sermon-overlay-content h1 { font-size: 2rem; padding: 0 2rem; }
+  .sermon-overlay-content p  { font-size: 1.1rem; padding: 0 3rem; }
 }
 
-.sermon-overlay-content button:hover {
-  background-color: white;
-  color: black;
+/* 400–600px */
+@media (min-width: 400px) and (max-width: 600px) {
+  .sermon-overlay-content { padding-top: 5rem; }
+  .sermon-overlay-content h1 { font-size: 2rem; padding: 0 2rem; }
+  .sermon-overlay-content p  { font-size: 1.3rem; padding: 0 3rem; }
+  .sermon-overlay-content button { font-size: 1.5rem; }
 }
 
-/* Responsive styles for screens up to 400px */
-@media screen and (max-width: 400px) {  
-
-  .sermon-overlay-content {
-    padding-top: 5rem;
-  }
-
-  .sermon-overlay-content h1 {
-    font-size: 2rem;
-    padding: 0 2rem;
-  }
-
-  .sermon-overlay-content p {
-    font-size: 1.1rem;
-    padding: 0 3rem;
-  }
+/* 600–900px (still considered mobile in our logic; image shows) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .sermon-overlay-content { padding-top: 6rem; }
+  .sermon-overlay-content h1 { font-size: 3.5rem; padding: 0 3rem; }
+  .sermon-overlay-content p  { font-size: 1.3rem; padding: 0 3rem; }
+  .sermon-overlay-content button { font-size: 1.5rem; }
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px) {
-
-  .sermon-overlay-content {
-    padding-top: 5rem;
-  }
-
-  .sermon-overlay-content h1 {
-    font-size: 2rem;
-    padding: 0 2rem;
-  }
-
-  .sermon-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 3rem;
-  }
-
-  .sermon-overlay-content button {
-    font-size: 1.5rem;
-  }
-
-}
-
-@media screen and (min-width: 600px) and (max-width: 900px) {
-
-  .sermon-overlay-content {
-    padding-top: 6rem;
-  }
-
-  .sermon-overlay-content h1 {
-    font-size: 3.5rem;
-    padding: 0 3rem;
-  }
-
-  .sermon-overlay-content p {
-    font-size: 1.3rem;
-    padding: 0 3rem;
-  }
-
-  .sermon-overlay-content button {
-    font-size: 1.5rem;
-  }
-
-}
-
-@media screen and (min-width: 900px) and (max-width: 1200px) {
-
-  .sermon-overlay-content {
-    padding-top: 7rem;
-  }
-
-  .sermon-overlay-content h1 {
-    padding: 0 8rem;
-    font-size: 2.5rem;
-  }
-  
-  .sermon-overlay-content p {
-    font-size: 1.2rem;
-    padding: 0 8rem;
-  }
-  
-  .sermon-overlay-content button {
-    font-size: 1.2rem;
-  }
-
+/* 900–1200px */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .sermon-overlay-content { padding-top: 7rem; }
+  .sermon-overlay-content h1 { padding: 0 8rem; font-size: 2.5rem; }
+  .sermon-overlay-content p  { font-size: 1.2rem; padding: 0 8rem; }
+  .sermon-overlay-content button { font-size: 1.2rem; }
 }
