@@ -22,9 +22,8 @@ const Navigation = () => {
   // Get the current location (route)
   const location = useLocation();
 
-  // Set whether the navbar should be transparent based on the route
-  const isHomePage = location.pathname === '/'; // Make transparent on HomePage
-  const useHeroLogo = isHomePage && !scrolled
+  // Use the white logo on any page while the navbar is still in its top, unscrolled state
+  const useHeroLogo = !scrolled
   
   const isActive = (path) => {
     return location.pathname === path ? 'active-link' : ''; // Return 'active-link' class if the current path matches

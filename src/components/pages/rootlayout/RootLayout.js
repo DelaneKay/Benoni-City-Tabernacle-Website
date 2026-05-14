@@ -15,10 +15,17 @@ const YOUTUBE_API_KEY_SUNDAY_SCHOOL = 'AIzaSyAuCr5jyTjT12nPdI_l9kkcgvnyJzclYME'
 const CHANNEL_ID_SUNDAY_SCHOOL = 'UCXbWTjiR03IOZ9qzx5rRotQ'
 const HOMEPAGE_LATEST_CACHE_KEY = 'bct-homepage-main-latest'
 const HOMEPAGE_LATEST_CACHE_TTL_MS = 1000 * 60 * 10
+const MAIN_YOUTUBE_API_KEYS = [
+  YOUTUBE_API_KEY,
+  YOUTUBE_API_KEY_CLAYVILLE,
+  YOUTUBE_API_KEY_SUNDAY_SCHOOL,
+]
 
 const youtubeCache = {
   mainLatest: null,
   mainLatestPromise: null,
+  mainRecentArchive: null,
+  mainRecentArchivePromise: null,
   mainArchive: null,
   mainArchivePromise: null,
   mainPlaylists: null,
@@ -29,6 +36,14 @@ const youtubeCache = {
   sundaySchoolLatestPromise: null,
   seriesVideos: {},
   seriesVideosPromises: {},
+}
+
+function normalizePathname(pathname = '') {
+  if (!pathname || pathname === '/') {
+    return '/'
+  }
+
+  return pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
 }
 
 async function fetchUploadsPlaylistId(apiKey, channelId) {
@@ -113,6 +128,44 @@ async function fetchSeriesVideosByPlaylistId(apiKey, playlistId) {
   return allVideos
 }
 
+async function tryApiKeys(apiKeys, fetcher) {
+  let lastError = null
+
+  for (const apiKey of apiKeys) {
+    try {
+      return await fetcher(apiKey)
+    } catch (error) {
+      lastError = error
+    }
+  }
+
+  throw lastError || new Error('All YouTube API keys failed.')
+}
+
+async function fetchMainLatestUploads(maxResults = 1) {
+  return tryApiKeys(MAIN_YOUTUBE_API_KEYS, (apiKey) =>
+    fetchLatestUploads(apiKey, CHANNEL_ID, maxResults)
+  )
+}
+
+async function fetchMainAllUploads() {
+  return tryApiKeys(MAIN_YOUTUBE_API_KEYS, (apiKey) =>
+    fetchAllUploads(apiKey, CHANNEL_ID)
+  )
+}
+
+async function fetchMainPlaylists() {
+  return tryApiKeys(MAIN_YOUTUBE_API_KEYS, (apiKey) =>
+    fetchChannelPlaylists(apiKey, CHANNEL_ID)
+  )
+}
+
+async function fetchMainSeriesVideos(playlistId) {
+  return tryApiKeys(MAIN_YOUTUBE_API_KEYS, (apiKey) =>
+    fetchSeriesVideosByPlaylistId(apiKey, playlistId)
+  )
+}
+
 function extractYears(videos) {
   return [
     ...new Set(
@@ -177,8 +230,9 @@ function writePersistentCache(cacheKey, data) {
 
 const RootLayout = () => {
   const location = useLocation()
+  const normalizedPathname = normalizePathname(location.pathname)
   const initialHomepageCache =
-    location.pathname === '/'
+    normalizedPathname === '/'
       ? readPersistentCache(HOMEPAGE_LATEST_CACHE_KEY, HOMEPAGE_LATEST_CACHE_TTL_MS)
       : null
   const initialHomepageVideos = initialHomepageCache?.data || []
@@ -192,7 +246,7 @@ const RootLayout = () => {
   const [videosSundaySchool, setVideosSundaySchool] = useState([])
   const [availableYearsSundaySchool, setAvailableYearsSundaySchool] = useState([])
   const [isLoading, setIsLoading] = useState(() => {
-    const pathname = location.pathname
+    const pathname = normalizedPathname
 
     if (pathname === '/' && initialHomepageVideos.length > 0) {
       return false
@@ -208,7 +262,7 @@ const RootLayout = () => {
   })
 
   const routeNeeds = useMemo(() => {
-    const pathname = location.pathname
+    const pathname = normalizedPathname
     const needsMainLatest = pathname === '/'
     const needsMainArchive = pathname === '/sermons'
     const needsClayvilleLatest =
@@ -227,7 +281,7 @@ const RootLayout = () => {
         needsClayvilleLatest ||
         needsSundaySchoolLatest,
     }
-  }, [location.pathname])
+  }, [normalizedPathname])
 
   useEffect(() => {
     let cancelled = false
@@ -276,7 +330,7 @@ const RootLayout = () => {
           const latestVideos = youtubeCache.mainArchive?.length
             ? youtubeCache.mainArchive.slice(0, 1)
             : await loadCachedResource('mainLatest', 'mainLatestPromise', () =>
-                fetchLatestUploads(YOUTUBE_API_KEY, CHANNEL_ID, 1)
+                fetchMainLatestUploads(1)
               )
 
           if (cancelled) {
@@ -295,22 +349,48 @@ const RootLayout = () => {
         }
 
         if (routeNeeds.needsMainArchive) {
-          const [allVideos, allPlaylists] = await Promise.all([
-            loadCachedResource('mainArchive', 'mainArchivePromise', () =>
-              fetchAllUploads(YOUTUBE_API_KEY, CHANNEL_ID)
-            ),
-            loadCachedResource('mainPlaylists', 'mainPlaylistsPromise', () =>
-              fetchChannelPlaylists(YOUTUBE_API_KEY, CHANNEL_ID)
-            ),
-          ])
+          let recentVideos = []
+          let allPlaylists = []
+
+          try {
+            recentVideos = await loadCachedResource(
+              'mainRecentArchive',
+              'mainRecentArchivePromise',
+              () => fetchMainLatestUploads(50)
+            )
+
+            if (!recentVideos.length) {
+              recentVideos = await fetchMainLatestUploads(50)
+
+              if (recentVideos.length) {
+                youtubeCache.mainRecentArchive = recentVideos
+              }
+            }
+          } catch (recentVideosError) {
+            console.warn('Recent sermons failed to load for the sermons page.', recentVideosError)
+            recentVideos = []
+          }
+
+          try {
+            allPlaylists = await loadCachedResource('mainPlaylists', 'mainPlaylistsPromise', () =>
+              fetchMainPlaylists()
+            )
+          } catch (playlistError) {
+            console.warn('Sermon playlists failed to load; continuing without series cards.', playlistError)
+            allPlaylists = youtubeCache.mainPlaylists || []
+          }
 
           if (cancelled) {
             return
           }
 
-          setVideos(allVideos)
+          if (!recentVideos.length && !allPlaylists.length) {
+            throw new Error('No sermons or playlists could be loaded for the sermons page.')
+          }
+
+          setVideos(recentVideos)
           setPlaylists(allPlaylists)
-          setAvailableYears(extractYears(allVideos))
+          setAvailableYears(extractYears(recentVideos))
           setVideosClayville([])
           setAvailableYearsClayville([])
           setVideosSundaySchool([])
@@ -398,10 +478,7 @@ const RootLayout = () => {
     }
 
     if (!youtubeCache.seriesVideosPromises[playlistId]) {
-      youtubeCache.seriesVideosPromises[playlistId] = fetchSeriesVideosByPlaylistId(
-        YOUTUBE_API_KEY,
-        playlistId
-      )
+      youtubeCache.seriesVideosPromises[playlistId] = fetchMainSeriesVideos(playlistId)
         .then((result) => {
           youtubeCache.seriesVideos[playlistId] = result
           return result
