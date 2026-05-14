@@ -1,0 +1,366 @@
+.baptisms-hero {
+  position: relative;
+  min-height: 72vh;
+  overflow: hidden;
+}
+
+.baptisms-hero-image {
+  width: 100%;
+  height: 72vh;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.baptisms-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.baptisms-hero-copy {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.baptisms-hero-copy h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.baptisms-hero-copy p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  padding: 0 22rem;
+}
+
+.baptisms-intro-section,
+.baptisms-gallery-section,
+.baptisms-archive-section {
+  padding: 4.5rem 0;
+}
+
+.baptisms-gallery-section,
+.baptisms-archive-section {
+  margin-top: 2.5rem;
+}
+
+.baptisms-intro-section {
+  background: #ffffff;
+}
+
+.baptisms-gallery-section {
+  background: #f8f8f8;
+}
+
+.baptisms-archive-section {
+  background: #ffffff;
+}
+
+.baptisms-intro-line {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  max-width: 780px;
+}
+
+.baptisms-summary-tile {
+  background: #ffffff;
+  border-radius: 0;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 18px 36px rgba(27, 33, 37, 0.12);
+  height: 100%;
+  border-top: 4px solid #cf4a46;
+}
+
+.baptisms-summary-tile-alt {
+  background: #f8f8f8;
+}
+
+.baptisms-summary-number {
+  display: inline-block;
+  color: #9b1c31;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.baptisms-summary-stat {
+  font-size: 2.8rem;
+  line-height: 1;
+  color: #13294b;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+
+.baptisms-summary-tile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.baptisms-summary-tile p {
+  margin-bottom: 0;
+  color: rgba(19, 41, 75, 0.8);
+}
+
+.baptisms-section-heading h2,
+.baptisms-archive-header h3 {
+  margin-bottom: 0;
+}
+
+.baptisms-section-heading {
+  margin-bottom: 2rem;
+}
+
+.baptisms-section-heading span {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #9b1c31;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.baptisms-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.baptisms-archive-group + .baptisms-archive-group {
+  margin-top: 3rem;
+}
+
+.baptisms-archive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.baptisms-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.baptisms-photo-tile {
+  border: 0;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 18px 36px rgba(27, 33, 37, 0.12);
+  border-bottom: 4px solid #cf4a46;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.baptisms-photo-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 44px rgba(27, 33, 37, 0.18);
+}
+
+.baptisms-photo-tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.98) contrast(1.02);
+}
+
+.baptisms-photo-tile-featured img {
+  aspect-ratio: 4 / 5;
+}
+
+.baptisms-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 15, 28, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 2rem;
+}
+
+.baptisms-lightbox-content {
+  max-width: min(900px, 100%);
+  max-height: 100%;
+}
+
+.baptisms-lightbox-content img {
+  width: 100%;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
+}
+
+.baptisms-lightbox-caption {
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.baptisms-lightbox-close,
+.baptisms-lightbox-nav {
+  position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-radius: 0;
+  padding: 0.7rem 1rem;
+}
+
+.baptisms-lightbox-close {
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.baptisms-lightbox-prev {
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.baptisms-lightbox-next {
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.baptisms-archive-actions {
+  margin-top: 1.25rem;
+}
+
+.baptisms-view-more {
+  border: 1px solid #cf4a46;
+  background: transparent;
+  color: #cf4a46;
+  border-radius: 0;
+  padding: 0.75rem 1.1rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.baptisms-view-more:hover {
+  background-color: #cf4a46;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 991px) {
+  .baptisms-featured-grid,
+  .baptisms-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .baptisms-hero-copy {
+    padding-top: 7rem;
+  }
+
+  .baptisms-hero-copy h1 {
+    font-size: 2.5rem;
+  }
+
+  .baptisms-hero-copy p {
+    font-size: 1.2rem;
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .baptisms-hero,
+  .baptisms-hero-image {
+    min-height: 62vh;
+    height: 62vh;
+  }
+
+  .baptisms-featured-grid,
+  .baptisms-archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .baptisms-archive-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .baptisms-hero-copy {
+    padding-top: 5rem;
+  }
+
+  .baptisms-hero-copy h1 {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+
+  .baptisms-hero-copy p {
+    font-size: 1.1rem;
+    padding: 0 3rem;
+  }
+
+  .baptisms-lightbox {
+    padding: 1rem;
+  }
+
+  .baptisms-gallery-section,
+  .baptisms-archive-section {
+    margin-top: 1.5rem;
+  }
+
+  .baptisms-summary-tile {
+    margin-bottom: 1rem;
+  }
+
+  .baptisms-lightbox-prev,
+  .baptisms-lightbox-next {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+
+  .baptisms-lightbox-prev {
+    left: 1rem;
+  }
+
+  .baptisms-lightbox-next {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .baptisms-hero-copy {
+    padding-top: 5rem;
+  }
+
+  .baptisms-hero-copy h1 {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+
+  .baptisms-hero-copy p {
+    font-size: 1.3rem;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .baptisms-hero-copy {
+    padding-top: 6rem;
+  }
+
+  .baptisms-hero-copy h1 {
+    font-size: 3.5rem;
+    padding: 0 3rem;
+  }
+
+  .baptisms-hero-copy p {
+    font-size: 1.3rem;
+    padding: 0 3rem;
+  }
+}

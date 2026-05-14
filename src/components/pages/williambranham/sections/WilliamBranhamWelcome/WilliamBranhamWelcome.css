@@ -59,6 +59,13 @@
   min-height: 100dvh;
 }
 
+/* Image layouts should anchor from the top so the subject stays visible below the navbar. */
+.hero-image.william-branham-image-background {
+  top: 0;
+  transform: translateX(-50%);
+  object-position: center 14%;
+}
+
 /* Overlay Container */
 .william-branham-video-overlay {
   position: absolute;

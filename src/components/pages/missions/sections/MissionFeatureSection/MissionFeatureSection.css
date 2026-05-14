@@ -1,0 +1,44 @@
+.mission-feature-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mission-feature-section-gray {
+  background-color: #f8f8f8;
+}
+
+.mission-feature-left-col {
+  padding-right: 7rem;
+}
+
+.mission-feature-eyebrow {
+  color: rgba(207, 74, 70);
+}
+
+.btn-mission-feature {
+  border-radius: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .mission-feature-left-col {
+    padding-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .mission-feature-left-col {
+    padding-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .mission-feature-left-col {
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .mission-feature-left-col {
+    padding-right: 3rem;
+  }
+}

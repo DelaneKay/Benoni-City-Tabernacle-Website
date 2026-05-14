@@ -4,11 +4,11 @@ import './MissionsWelcome.css';
 import MissionsVideo from '../../../../../media/missions/clayville-video.webm';
 import MissionsMobileHero from '../../../../../media/missions/clayville-2.webp'; // add this image
 
-const MissionsWelcome = () => {
+const MissionsWelcome = ({ targetId = 'mission-links' }) => {
   const handleWatchNow = () => {
-    const clayvilleSection = document.getElementById('sermon-clayville'); // keep your existing target id
-    if (clayvilleSection) clayvilleSection.scrollIntoView({ behavior: 'smooth' });
-  };
+    const missionLinksSection = document.getElementById(targetId)
+    if (missionLinksSection) missionLinksSection.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <section className="missions-video-background-container">
@@ -44,7 +44,7 @@ const MissionsWelcome = () => {
             <h1>Welcome to our Missions Corner</h1>
             <p>
               BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed
-              the birth of sister churches, including Clayville Spoken Word Ministry, as part of its
+              the birth of sister churches, including Harvest Time Tabernacle, as part of its
               mission to spread the End-Time Message.
             </p>
             <button className="btn btn-outline-light" onClick={handleWatchNow}>
@@ -54,7 +54,7 @@ const MissionsWelcome = () => {
         </div>
       </Container>
     </section>
-  );
-};
+  )
+}
 
-export default MissionsWelcome;
+export default MissionsWelcome

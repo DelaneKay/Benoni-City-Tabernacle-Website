@@ -1,58 +1,173 @@
 .navbar-background-placeholder {
-    background-color: #181d21; /* Same as footer */
-    height: 100px; /* Adjust to your navbar height */
-    width: 100%;
+  height: 100px;
+  background-color: #1b2125;
+}
+
+.watch-live-status-band {
+  background-color: #1b2125;
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.watch-live-page-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.watch-live-page-copy {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  max-width: 760px;
+}
+
+.watch-live-status-card {
+  background: #ffffff;
+  color: #13294b;
+  padding: 1.5rem;
+  border-top: 4px solid #cf4a46;
+  box-shadow: 0 18px 36px rgba(27, 33, 37, 0.12);
+}
+
+.watch-live-status-label,
+.watch-live-info-kicker,
+.watch-live-pill {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #9b1c31;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.watch-live-status-heading {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+}
+
+.watch-live-status-meta {
+  margin-bottom: 0;
+}
+
+.watch-live-player-section {
+  background: #ffffff;
+  padding: 3rem 0;
+}
+
+.watch-live-player-shell {
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  background: #0f1113;
+  box-shadow: 0 18px 36px rgba(27, 33, 37, 0.12);
+  overflow: hidden;
+}
+
+.watch-live-offline-state {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #10151b 0%, #1b2125 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.watch-live-offline-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.watch-live-offline-copy {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.watch-live-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.watch-live-primary-link {
+  display: inline-block;
+  padding: 0.85rem 1.2rem;
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+}
+
+.watch-live-primary-link:hover {
+  background-color: #ffffff;
+  color: #1b2125;
+}
+
+.watch-live-info-section {
+  background: #f8f8f8;
+  padding: 3rem 0;
+  margin-top: 2.5rem;
+}
+
+.watch-live-info-tile {
+  background: #ffffff;
+  padding: 1.5rem;
+  height: 100%;
+  border-top: 4px solid #cf4a46;
+  box-shadow: 0 18px 36px rgba(27, 33, 37, 0.12);
+}
+
+.watch-live-info-tile-gray {
+  background: #f8f8f8;
+}
+
+.watch-live-info-tile h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.watch-live-info-tile p {
+  margin-bottom: 0;
+  color: rgba(19, 41, 75, 0.85);
+}
+
+@media screen and (max-width: 767px) {
+  .watch-live-status-band,
+  .watch-live-player-section,
+  .watch-live-info-section {
+    padding: 2rem 0;
   }
-  
-  .livestream-container {
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .livestream-box {
-    width: 90%;
-    max-width: 1000px;
-    aspect-ratio: 16 / 9;
-    background-color: #f5f5f5;
-    border: 2px dashed #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .livestream-placeholder {
-    text-align: center;
-  }
-  
-  .watch-live-title {
-    color: red;
-    font-weight: bold;
+
+  .watch-live-page-title {
     font-size: 2rem;
-    margin-bottom: 20px;
   }
-  
-  .countdown-text {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: #333;
+
+  .watch-live-page-copy,
+  .watch-live-offline-copy {
+    font-size: 1rem;
   }
-  
-  .countdown-time {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: red;
-    margin-bottom: 8px;
+
+  .watch-live-status-card {
+    margin-top: 1.5rem;
   }
-  
-  .service-type {
-    font-size: 1.2rem;
-    color: #333;
+
+  .watch-live-player-shell {
+    aspect-ratio: auto;
+    min-height: 320px;
   }
-  
-  .footer-padding-placeholder {
-    height: 80px; /* Match padding below the livestream section */
-    background-color: white;
+
+  .watch-live-offline-title {
+    font-size: 1.6rem;
   }
-  
+
+  .watch-live-info-section {
+    margin-top: 1.5rem;
+  }
+
+  .watch-live-info-tile {
+    margin-bottom: 1rem;
+  }
+}

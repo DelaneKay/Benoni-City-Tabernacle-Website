@@ -1,6 +1,7 @@
 .william-branham-third-section{
     padding-bottom: 3rem;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    margin-top: 2.5rem;
 }
 
 .william-branham-third-left-col{
@@ -16,6 +17,7 @@
 
     .william-branham-third-section{
         padding-bottom: 1rem;
+        margin-top: 1.5rem;
     }
     
     .william-branham-third-left-col{
