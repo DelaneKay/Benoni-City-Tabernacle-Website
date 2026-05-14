@@ -1,15 +1,17 @@
 import React, { useEffect, useState }  from 'react';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
 
 // Logo
 import BCTLogo from '../../../../../media/homepage/bct-logo1.png'
+import BCTLogoWhite from '../../../../../media/homepage/footer-logo-transparent.png'
 
 // CSS
 import '../Navigation/Navigation.css'
 
 const Navigation = () => {
+  const ONLINE_GIVING_URL = 'https://offering.benonicitytabernacle.co.za/'
 
   // State to track navbar expansion
   const [expanded, setExpanded] = useState(false);
@@ -20,10 +22,9 @@ const Navigation = () => {
   // Get the current location (route)
   const location = useLocation();
 
-  const navigate = useNavigate();
-
   // Set whether the navbar should be transparent based on the route
   const isHomePage = location.pathname === '/'; // Make transparent on HomePage
+  const useHeroLogo = isHomePage && !scrolled
   
   const isActive = (path) => {
     return location.pathname === path ? 'active-link' : ''; // Return 'active-link' class if the current path matches
@@ -50,7 +51,7 @@ const Navigation = () => {
         >
           <Container className='nav-section'>
             <Navbar.Brand href="#home">
-              <img src={BCTLogo} alt="BCT" className="logo" />
+              <img src={useHeroLogo ? BCTLogoWhite : BCTLogo} alt="BCT" className={`logo ${useHeroLogo ? 'logo-hero' : ''}`} />
             </Navbar.Brand>
 
              {/* Navbar toggle button */}
@@ -114,7 +115,7 @@ const Navigation = () => {
                 </Nav.Link>
                   <Button className='nav-btn' variant='light' onClick={() => {
                     setExpanded(false);
-                    navigate('/online-giving');
+                    window.location.assign(ONLINE_GIVING_URL);
                   }}>ONLINE GIVING</Button>
                 </Nav>
             </Navbar.Collapse>

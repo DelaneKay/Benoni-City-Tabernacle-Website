@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import './Consultation.css';
 
 
@@ -8,34 +8,22 @@ const Consultation = () => {
     <section className="consultation-section">
       <Container className='consultation-section-container'>
         <div className='consultation-headings'>
-            <h2>FREE CONSULTATION</h2>
-            <h5>Get an appointment with one of our leaders</h5>
+            <h2>
+              PRAYER REQUEST
+              <span className="consultation-heading-break">SECTION</span>
+            </h2>
+            <p>Share your request with us and we will stand with you in prayer.</p>
         </div>
-        
-        <Form >
-          <Row >
-            <Col xs={12} md={12} lg={3}>
-              <Form.Group controlId="name">
-                <Form.Control type="text" placeholder="Your Name*" />
-              </Form.Group>
-            </Col>
-            <Col xs={12} md={12} lg={3}>
-              <Form.Group controlId="email">
-                <Form.Control type="email" placeholder="Your E-mail*" />
-              </Form.Group>
-            </Col>
-            <Col xs={12} md={12} lg={3}>
-              <Form.Group controlId="phone">
-                <Form.Control type="tel" placeholder="Your Phone*" />
-              </Form.Group>
-            </Col>
-            <Col xs={12} md={12} lg={3}>
-              <Button variant="primary" type="submit" className="btn-appointment">
-              Contact us
-              </Button>
-            </Col>
-          </Row>
-        </Form>
+
+        <div className="consultation-action">
+          <Button
+            variant="primary"
+            className="btn-appointment"
+            onClick={() => window.location.assign('https://prayerrequest.benonicitytabernacle.co.za/')}
+          >
+            Submit Prayer Request
+          </Button>
+        </div>
       </Container>
     </section>
   )

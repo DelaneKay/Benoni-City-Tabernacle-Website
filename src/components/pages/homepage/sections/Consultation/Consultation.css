@@ -3,27 +3,32 @@
     background-color: #CF4A46;
     padding: 4.5rem 0;
   }
+
+.consultation-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
   
-  .consultation-section h2 {
+.consultation-section h2 {
     color: #fff;
     font-size: 2.25rem;
     margin-bottom: 0.625rem;
   }
-  
-  .consultation-section h5 {
-    color: #fff;
-    font-size: 1.125rem;
-    margin-top: 0.8rem;
-    margin-left: 16.25%;
+
+  .consultation-heading-break {
+    display: block;
   }
   
-  .consultation-section .form-control {
-    border-radius: 0;
-    border: none;
-    margin-bottom: 1.25rem;
-    padding: 0.538rem;
-    font-size: 1rem;
-    margin-top: 1.25rem;
+  .consultation-section p {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0;
+  }
+
+  .consultation-action {
+    margin-top: 0;
   }
   
   .consultation-section .btn-appointment {
@@ -31,10 +36,9 @@
     color: black;
     border-radius: 0;
     border: none;
-    padding: 0.538rem 5rem;
+    padding: 0.85rem 2rem;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    margin-top: 1.25rem;
   }
   
   .consultation-section .btn-appointment:hover {
@@ -52,11 +56,10 @@
     text-align: center;
   }
   
-  .consultation-section h5 {
+  .consultation-section p {
     color: #fff;
     font-size: 1.125rem;
     margin-top: 0.5rem;
-    margin-left: 0%;
     text-align: center;
   }
   
@@ -64,6 +67,14 @@
     background-color: #1B2125;
     color: white;
     width: 100%;
+  }
+
+  .consultation-action {
+    text-align: center;
+  }
+
+  .consultation-section-container {
+    gap: 0.5rem;
   }
   
 }
@@ -78,11 +89,10 @@
     text-align: center;
   }
   
-  .consultation-section h5 {
+  .consultation-section p {
     color: #fff;
     font-size: 1.125rem;
     margin-top: 0.5rem;
-    margin-left: 0%;
     text-align: center;
   }
   
@@ -90,6 +100,14 @@
     background-color: #1B2125;
     color: white;
     width: 100%;
+  }
+
+  .consultation-action {
+    text-align: center;
+  }
+
+  .consultation-section-container {
+    gap: 0.5rem;
   }
   
 }
@@ -105,11 +123,10 @@
     text-align: center;
   }
   
-  .consultation-section h5 {
+  .consultation-section p {
     color: #fff;
     font-size: 1.125rem;
     margin-top: 0.5rem;
-    margin-left: 0%;
     text-align: center;
   }
   
@@ -118,11 +135,25 @@
     color: white;
     width: 100%;
   }
+
+  .consultation-action {
+    text-align: center;
+  }
+
+  .consultation-section-container {
+    gap: 0.5rem;
+  }
   
 }
 
 /* Responsive styles for screens from 600px up to 900px */
 @media screen and (min-width: 900px) and (max-width: 1200px){
+  .consultation-section-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
   
   .consultation-section h2 {
     color: #fff;
@@ -133,27 +164,50 @@
 
   .consultation-headings {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: 1;
   }
   
-  .consultation-section h5 {
+  .consultation-section p {
     color: #fff;
     font-size: 1.125rem;
     margin-top: 0.5rem;
-    margin-left: 10%;
   }
   
   .consultation-section .btn-appointment {
     background-color: #1B2125;
     color: white;
-    width: 100%;
-    padding: 0.538rem 4rem;
+    padding: 0.85rem 2rem;
     font-size: 1rem;
+  }
+
+  .consultation-action {
+    text-align: right;
+    flex-shrink: 0;
   }
 }
 
 /* Responsive styles for screens from 1200px */
 @media screen and (min-width: 1200px) {
+  .consultation-section-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
   .consultation-headings {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex: 1;
+  }
+
+  .consultation-action {
+    text-align: right;
+    flex-shrink: 0;
   }
 }

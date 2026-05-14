@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaYoutube, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 import './Footer.css'
-import logo from '../../../../../media/homepage/bct-logo.png'; // Replace with your logo path
+import logo from '../../../../../media/homepage/footer-logo-transparent.png';
 
 const Footer = () => {
 
@@ -13,7 +13,9 @@ const Footer = () => {
       <Container className='footer-container'>
         <Row className="text-center">
           <Col>
-            <img src={logo} alt="Charia Logo" className="footer-logo" />
+            <div className="footer-logo-frame">
+              <img src={logo} alt="Benoni City Tabernacle Logo" className="footer-logo" />
+            </div>
           </Col>
         </Row>
         <Row className="justify-content-center row-links">
