@@ -2,8 +2,8 @@ import React from 'react'
 import MissionsWelcome from './sections/MissionsWelcome/MissionsWelcome'
 import MissionsLiveLinks from './sections/MissionsLinks/MissionsLiveLinks'
 import MissionFeatureSection from './sections/MissionFeatureSection/MissionFeatureSection'
-import HarvestImage from '../../../media/missions/clayville-logo-1.webp'
-import RestoredWordImage from '../../../media/missions/clayville-2.webp'
+import HarvestImage from '../../../media/missions/harvest-time-logo.png'
+import RestoredWordImage from '../../../media/missions/restored-word-logo.png'
 import BaptismsImage from '../../../media/homepage/bct-logo.png'
 
 const Missionary = () => {
@@ -20,6 +20,7 @@ const Missionary = () => {
           ]}
           image={HarvestImage}
           imageAlt="Harvest Time Tabernacle"
+          imageClassName="mission-feature-logo-image"
           eyebrow="Harvest Time"
           subtitle="A Growing Sister Work"
           buttonLabel="Learn More"
@@ -29,11 +30,12 @@ const Missionary = () => {
       <MissionFeatureSection
         title="Restored Word Daveyton Tabernacle"
         paragraphs={[
-          'Restored Word Daveyton Tabernacle will have its own ministry page linked from the Missions Corner. This section is a placeholder for the assembly story, fellowship updates, and outreach burden in Daveyton.',
-          'As content is gathered, this portion can grow into a fuller testimony page with ministry history, service highlights, and community-centered updates for the work taking place there.',
+          'Restored-Word Daveyton Tabernacle is a non-denominational church established by Pastor Adio Maadza on the foundation that was laid by Paul, and it stands as a sister church of Benoni City Tabernacle.',
+          'Believing in the full revealed Word of the day, the assembly continues to endure in winning souls to Christ and holding Christ as preached by Br Branham.',
         ]}
         image={RestoredWordImage}
         imageAlt="Restored Word Daveyton Tabernacle placeholder"
+        imageClassName="mission-feature-logo-image mission-feature-logo-image-restored"
         eyebrow="Restored Word"
         subtitle="Daveyton Tabernacle"
         buttonLabel="Learn More"
@@ -43,11 +45,12 @@ const Missionary = () => {
       <MissionFeatureSection
         title="BCT Baptisms"
         paragraphs={[
-          'BCT Baptisms now has a dedicated place in the Missions Corner structure. This section is a placeholder for baptism testimonies, announcements, and future practical guidance for believers preparing to take this step.',
-          'It gives the ministry a clear route for sharing upcoming baptism updates, photographs, and reports as this part of the site is expanded.',
+          'Benoni City Tabernacle Baptisms is a special section dedicated to sharing photographs of believers who have made the decision to give their lives to Christ and be born again. It captures moments of joy, fellowship, and celebration as the church rejoices together with those taking this important step of faith.',
+          'Through these shared moments, the ministry reflects the love, unity, and thanksgiving of the church as souls come to the Lord and begin their new walk with Christ.',
         ]}
         image={BaptismsImage}
         imageAlt="BCT Baptisms placeholder"
+        imageClassName="mission-feature-logo-image mission-feature-logo-image-baptisms"
         eyebrow="BCT"
         subtitle="Baptisms"
         buttonLabel="Learn More"

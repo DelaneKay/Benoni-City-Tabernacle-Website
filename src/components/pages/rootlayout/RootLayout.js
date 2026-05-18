@@ -10,12 +10,20 @@ const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc'
 const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ'
 const YOUTUBE_API_KEY_CLAYVILLE = 'AIzaSyC1l8V5uCdqmh2Io1I49RBh1UHJxZhLkOE'
 const CHANNEL_ID_CLAYVILLE = 'UClounyqDDsdPH94l5RYXjMw'
+const YOUTUBE_API_KEY_RESTORED = 'AIzaSyBXB0-qpRU3LUBV32E2anoXQWBYRSeUmIs'
+const CHANNEL_ID_RESTORED = 'UCnh-KrC3TB3HetwnYNOnMRw'
 
 const YOUTUBE_API_KEY_SUNDAY_SCHOOL = 'AIzaSyAuCr5jyTjT12nPdI_l9kkcgvnyJzclYME'
 const CHANNEL_ID_SUNDAY_SCHOOL = 'UCXbWTjiR03IOZ9qzx5rRotQ'
 const HOMEPAGE_LATEST_CACHE_KEY = 'bct-homepage-main-latest'
 const HOMEPAGE_LATEST_CACHE_TTL_MS = 1000 * 60 * 10
 const MAIN_YOUTUBE_API_KEYS = [
+  YOUTUBE_API_KEY,
+  YOUTUBE_API_KEY_CLAYVILLE,
+  YOUTUBE_API_KEY_SUNDAY_SCHOOL,
+]
+const RESTORED_YOUTUBE_API_KEYS = [
+  YOUTUBE_API_KEY_RESTORED,
   YOUTUBE_API_KEY,
   YOUTUBE_API_KEY_CLAYVILLE,
   YOUTUBE_API_KEY_SUNDAY_SCHOOL,
@@ -32,6 +40,8 @@ const youtubeCache = {
   mainPlaylistsPromise: null,
   clayvilleLatest: null,
   clayvilleLatestPromise: null,
+  restoredLatest: null,
+  restoredLatestPromise: null,
   sundaySchoolLatest: null,
   sundaySchoolLatestPromise: null,
   seriesVideos: {},
@@ -166,6 +176,12 @@ async function fetchMainSeriesVideos(playlistId) {
   )
 }
 
+async function fetchRestoredLatestUploads(maxResults = 1) {
+  return tryApiKeys(RESTORED_YOUTUBE_API_KEYS, (apiKey) =>
+    fetchLatestUploads(apiKey, CHANNEL_ID_RESTORED, maxResults)
+  )
+}
+
 function extractYears(videos) {
   return [
     ...new Set(
@@ -243,6 +259,8 @@ const RootLayout = () => {
   )
   const [videosClayville, setVideosClayville] = useState([])
   const [availableYearsClayville, setAvailableYearsClayville] = useState([])
+  const [videosRestored, setVideosRestored] = useState([])
+  const [availableYearsRestored, setAvailableYearsRestored] = useState([])
   const [videosSundaySchool, setVideosSundaySchool] = useState([])
   const [availableYearsSundaySchool, setAvailableYearsSundaySchool] = useState([])
   const [isLoading, setIsLoading] = useState(() => {
@@ -265,20 +283,21 @@ const RootLayout = () => {
     const pathname = normalizedPathname
     const needsMainLatest = pathname === '/'
     const needsMainArchive = pathname === '/sermons'
-    const needsClayvilleLatest =
-      pathname === '/missionary/harvest-time-tabernacle' ||
-      pathname === '/missionary/restored-word-daveyton-tabernacle'
+    const needsClayvilleLatest = pathname === '/missionary/harvest-time-tabernacle'
+    const needsRestoredLatest = pathname === '/missionary/restored-word-daveyton-tabernacle'
     const needsSundaySchoolLatest = pathname === '/sunday-school/presentations'
 
     return {
       needsMainLatest,
       needsMainArchive,
       needsClayvilleLatest,
+      needsRestoredLatest,
       needsSundaySchoolLatest,
       requiresYoutubeData:
         needsMainLatest ||
         needsMainArchive ||
         needsClayvilleLatest ||
+        needsRestoredLatest ||
         needsSundaySchoolLatest,
     }
   }, [normalizedPathname])
@@ -292,6 +311,8 @@ const RootLayout = () => {
       setAvailableYears([])
       setVideosClayville([])
       setAvailableYearsClayville([])
+      setVideosRestored([])
+      setAvailableYearsRestored([])
       setVideosSundaySchool([])
       setAvailableYearsSundaySchool([])
     }
@@ -318,6 +339,8 @@ const RootLayout = () => {
             setAvailableYears(extractYears(cachedLatest.data))
             setVideosClayville([])
             setAvailableYearsClayville([])
+            setVideosRestored([])
+            setAvailableYearsRestored([])
             setVideosSundaySchool([])
             setAvailableYearsSundaySchool([])
             setIsLoading(false)
@@ -343,6 +366,8 @@ const RootLayout = () => {
           setAvailableYears(extractYears(latestVideos))
           setVideosClayville([])
           setAvailableYearsClayville([])
+          setVideosRestored([])
+          setAvailableYearsRestored([])
           setVideosSundaySchool([])
           setAvailableYearsSundaySchool([])
           return
@@ -393,6 +418,8 @@ const RootLayout = () => {
           setAvailableYears(extractYears(recentVideos))
           setVideosClayville([])
           setAvailableYearsClayville([])
+          setVideosRestored([])
+          setAvailableYearsRestored([])
           setVideosSundaySchool([])
           setAvailableYearsSundaySchool([])
           return
@@ -419,6 +446,31 @@ const RootLayout = () => {
           setAvailableYears([])
           setVideosClayville(latestClayvilleVideos)
           setAvailableYearsClayville(extractYears(latestClayvilleVideos))
+          setVideosRestored([])
+          setAvailableYearsRestored([])
+          setVideosSundaySchool([])
+          setAvailableYearsSundaySchool([])
+          return
+        }
+
+        if (routeNeeds.needsRestoredLatest) {
+          const latestRestoredVideos = await loadCachedResource(
+            'restoredLatest',
+            'restoredLatestPromise',
+            () => fetchRestoredLatestUploads(1)
+          )
+
+          if (cancelled) {
+            return
+          }
+
+          setVideos([])
+          setPlaylists([])
+          setAvailableYears([])
+          setVideosClayville([])
+          setAvailableYearsClayville([])
+          setVideosRestored(latestRestoredVideos)
+          setAvailableYearsRestored(extractYears(latestRestoredVideos))
           setVideosSundaySchool([])
           setAvailableYearsSundaySchool([])
           return
@@ -445,6 +497,8 @@ const RootLayout = () => {
           setAvailableYears([])
           setVideosClayville([])
           setAvailableYearsClayville([])
+          setVideosRestored([])
+          setAvailableYearsRestored([])
           setVideosSundaySchool(latestSundaySchoolVideos)
           setAvailableYearsSundaySchool(extractYears(latestSundaySchoolVideos))
         }
@@ -510,6 +564,8 @@ const RootLayout = () => {
                   availableYears,
                   videosClayville,
                   availableYearsClayville,
+                  videosRestored,
+                  availableYearsRestored,
                   videosSundaySchool,
                   availableYearsSundaySchool,
                   fetchSeriesVideos,

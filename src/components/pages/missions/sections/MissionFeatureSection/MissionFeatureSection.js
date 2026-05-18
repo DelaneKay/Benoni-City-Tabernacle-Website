@@ -8,6 +8,7 @@ const MissionFeatureSection = ({
   paragraphs,
   image,
   imageAlt,
+  imageClassName = '',
   eyebrow,
   subtitle,
   buttonLabel,
@@ -36,7 +37,7 @@ const MissionFeatureSection = ({
             <img
               src={image}
               alt={imageAlt}
-              className="img-fluid mb-4"
+              className={`img-fluid mb-4 ${imageClassName}`.trim()}
               style={{ objectFit: 'cover', width: '100%' }}
             />
             <div className="text-start">

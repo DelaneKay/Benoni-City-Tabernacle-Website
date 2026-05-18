@@ -19,15 +19,55 @@
   border-radius: 0;
 }
 
+.mission-feature-logo-image {
+  width: 100%;
+  max-width: 22rem;
+  object-fit: contain !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-feature-logo-image-restored {
+  max-width: 15rem;
+}
+
+.mission-feature-logo-image-baptisms {
+  max-width: 14rem;
+}
+
 @media screen and (max-width: 400px) {
   .mission-feature-left-col {
     padding-right: 0.5rem;
+  }
+
+  .mission-feature-logo-image {
+    max-width: 14rem;
+  }
+
+  .mission-feature-logo-image-restored {
+    max-width: 10.5rem;
+  }
+
+  .mission-feature-logo-image-baptisms {
+    max-width: 10rem;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 600px) {
   .mission-feature-left-col {
     padding-right: 0.5rem;
+  }
+
+  .mission-feature-logo-image {
+    max-width: 15rem;
+  }
+
+  .mission-feature-logo-image-restored {
+    max-width: 11.5rem;
+  }
+
+  .mission-feature-logo-image-baptisms {
+    max-width: 11rem;
   }
 }
 

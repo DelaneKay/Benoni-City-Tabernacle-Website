@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
-import MissionsImage from '../../../../../media/missions/clayville-logo-1.webp';
+import MissionsImage from '../../../../../media/missions/harvest-time-logo.png';
 import './MissionsAbout.css'
 import { Outlet } from 'react-router-dom';
 
@@ -44,10 +44,10 @@ const MissionsAbout = () => {
             <Col xs={12} md={2}>
                 <img
                     src={MissionsImage}
-                    alt="Junior Class"
+                    alt="Harvest Time Tabernacle"
                     className="img-fluid mb-4 missions-img"
                     style={{    
-                        objectFit: 'cover',  
+                        objectFit: 'contain',  
                         width: 'auto'}}
                 />
                 

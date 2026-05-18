@@ -4,6 +4,16 @@
     padding-right: 6.5rem;
 }
 
+.missions-img {
+    max-width: 15rem;
+    max-height: 20rem;
+}
+
+.missions-img-restored {
+    max-width: 12rem;
+    max-height: 16rem;
+}
+
 .btn-missions {
     border-radius: 0%;
 }
