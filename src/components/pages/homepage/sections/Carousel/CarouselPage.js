@@ -5,9 +5,9 @@ import { IoLocationOutline } from "react-icons/io5";
 import '../Carousel/CarouselPage.css';
 
 // Slide 1 variants
-import Img1Desktop from '../../../../../media/homepage/carousel-1.jpeg';
-import Img1Tablet  from '../../../../../media/homepage/carousel-1.jpeg';
-import Img1Mobile  from '../../../../../media/homepage/carousel-1.jpeg';
+import Img1Desktop from '../../../../../media/homepage/carousel-1-v2.jpeg';
+import Img1Tablet  from '../../../../../media/homepage/carousel-1-v2.jpeg';
+import Img1Mobile  from '../../../../../media/homepage/carousel-1-v2.jpeg';
 
 // Slide 2 variants
 import Img2Desktop from '../../../../../media/homepage/carousel-2.jpeg';
@@ -15,9 +15,9 @@ import Img2Tablet  from '../../../../../media/homepage/carousel-2.jpeg';
 import Img2Mobile  from '../../../../../media/homepage/carousel-2.jpeg';
 
 // Slide 3 variants
-import Img3Desktop from '../../../../../media/homepage/carousel-3-final.jpeg';
-import Img3Tablet  from '../../../../../media/homepage/carousel-3-final.jpeg';
-import Img3Mobile  from '../../../../../media/homepage/carousel-3-final.jpeg';
+import Img3Desktop from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
+import Img3Tablet  from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
+import Img3Mobile  from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
 
 const CarouselPage = () => {
   const handleWatchNow = () => {
