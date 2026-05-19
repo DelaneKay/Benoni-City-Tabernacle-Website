@@ -43,10 +43,12 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  background: #111;
 }
 
 .carousel-img-slide-1 {
-  object-position: center 32%;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .carousel-img-slide-2 {
@@ -54,7 +56,8 @@
 }
 
 .carousel-img-slide-3 {
-  object-position: center 38%;
+  object-fit: contain;
+  object-position: center center;
 }
 
 /* Ensure slide is a positioned container */
@@ -117,7 +120,7 @@
 
 @media screen and (max-width: 1024px) {
   .carousel-img-slide-1 {
-    object-position: center 28%;
+    object-position: center center;
   }
 
   .carousel-img-slide-2 {
@@ -125,7 +128,7 @@
   }
 
   .carousel-img-slide-3 {
-    object-position: center 42%;
+    object-position: center center;
   }
 }
 
