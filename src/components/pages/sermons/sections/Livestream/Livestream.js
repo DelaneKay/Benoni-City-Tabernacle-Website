@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ReactPlayer from 'react-player/youtube'
 import { Col, Container, Row } from 'react-bootstrap'
-import watchLiveSunset from '../../../../media/Sermons/watch-live-sunset.jpg'
+import watchLiveSunset from '../../../../../media/Sermons/watch-live-sunset.jpg'
 import './Livestream.css'
 
 const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc'
@@ -328,8 +328,6 @@ const Livestream = () => {
 
   return (
     <>
-      <div className="navbar-background-placeholder" style={heroBackgroundStyle} />
-
       <section className="watch-live-status-band" style={heroBackgroundStyle}>
         <Container>
           <Row className="align-items-center">

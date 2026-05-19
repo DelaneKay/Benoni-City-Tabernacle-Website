@@ -1,17 +1,12 @@
-.navbar-background-placeholder,
 .watch-live-status-band {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.navbar-background-placeholder {
-  height: 100px;
-}
-
 .watch-live-status-band {
   color: #ffffff;
-  padding: 3rem 0;
+  padding: 9rem 0 3rem;
 }
 
 .watch-live-page-title {
@@ -144,6 +139,10 @@
   .watch-live-player-section,
   .watch-live-info-section {
     padding: 2rem 0;
+  }
+
+  .watch-live-status-band {
+    padding-top: 7rem;
   }
 
   .watch-live-page-title {
