@@ -43,7 +43,7 @@ const CarouselPage = () => {
             />
             {/* Desktop default: 1920×1080 */}
             <img
-              className="d-block w-100 carousel-img"
+              className="d-block w-100 carousel-img carousel-img-slide-1"
               src={Img1Desktop}
               alt="Welcome to Benoni City Tabernacle (BCT)"
               loading="eager"
@@ -75,7 +75,7 @@ const CarouselPage = () => {
             <source media="(max-width: 600px) and (orientation: portrait)" srcSet={Img2Mobile} />
             <source media="(max-width: 1024px)" srcSet={Img2Tablet} />
             <img
-              className="d-block w-100 carousel-img"
+              className="d-block w-100 carousel-img carousel-img-slide-2"
               src={Img2Desktop}
               alt="Connect with Bible Truths"
               loading="lazy"
@@ -107,7 +107,7 @@ const CarouselPage = () => {
             <source media="(max-width: 600px) and (orientation: portrait)" srcSet={Img3Mobile} />
             <source media="(max-width: 1024px)" srcSet={Img3Tablet} />
             <img
-              className="d-block w-100 carousel-img"
+              className="d-block w-100 carousel-img carousel-img-slide-3"
               src={Img3Desktop}
               alt="Where the Eagles Gather"
               loading="lazy"

@@ -45,6 +45,18 @@
   object-position: center;
 }
 
+.carousel-img-slide-1 {
+  object-position: center 32%;
+}
+
+.carousel-img-slide-2 {
+  object-position: center 12%;
+}
+
+.carousel-img-slide-3 {
+  object-position: center 38%;
+}
+
 /* Ensure slide is a positioned container */
 .carousel-item {
   position: relative;
@@ -101,6 +113,20 @@
 /* Optional: reduce height on very short viewports (phone landscape) */
 @media (orientation: landscape) and (max-height: 480px) {
   .carousel-img { height: 70vh; }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-img-slide-1 {
+    object-position: center 28%;
+  }
+
+  .carousel-img-slide-2 {
+    object-position: center 16%;
+  }
+
+  .carousel-img-slide-3 {
+    object-position: center 42%;
+  }
 }
 
 /* Responsive styles for screens up to 400px */
