@@ -10,6 +10,17 @@ import BCTLogoWhite from '../../../../../media/homepage/footer-logo-transparent.
 // CSS
 import '../Navigation/Navigation.css'
 
+const HERO_VIDEO_ROUTES = new Set([
+  '/about-us',
+  '/sermons',
+  '/sunday-school',
+  '/sunday-school/presentations',
+  '/missionary',
+  '/missionary/harvest-time-tabernacle',
+  '/missionary/restored-word-daveyton-tabernacle',
+  '/william-branham',
+])
+
 const Navigation = () => {
   const ONLINE_GIVING_URL = 'https://offering.benonicitytabernacle.co.za/'
 
@@ -18,12 +29,20 @@ const Navigation = () => {
 
   // State to track navbar scrolling
   const [scrolled, setScrolled] = useState(false);
+  const [isDesktopViewport, setIsDesktopViewport] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth >= 992 : true
+  );
 
   // Get the current location (route)
   const location = useLocation();
+  const normalizedPathname =
+    location.pathname !== '/' && location.pathname.endsWith('/')
+      ? location.pathname.slice(0, -1)
+      : location.pathname;
+  const heroUsesVideo = HERO_VIDEO_ROUTES.has(normalizedPathname);
 
-  // Use the white logo on any page while the navbar is still in its top, unscrolled state
-  const useHeroLogo = !scrolled
+  // Use the white logo only on desktop video-hero pages while the navbar is still at the top.
+  const useHeroLogo = !scrolled && isDesktopViewport && heroUsesVideo
   
   const isActive = (path) => {
     return location.pathname === path ? 'active-link' : ''; // Return 'active-link' class if the current path matches
@@ -34,8 +53,15 @@ const Navigation = () => {
       const offset = window.scrollY;
       setScrolled(offset > 50);
     };
+    const handleResize = () => {
+      setIsDesktopViewport(window.innerWidth >= 992);
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
 
