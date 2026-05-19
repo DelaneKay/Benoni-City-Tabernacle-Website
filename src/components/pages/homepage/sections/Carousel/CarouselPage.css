@@ -47,7 +47,7 @@
 }
 
 .carousel-img-slide-1 {
-  object-position: center 18%;
+  object-position: center 12%;
 }
 
 .carousel-img-slide-2 {
@@ -55,7 +55,7 @@
 }
 
 .carousel-img-slide-3 {
-  object-position: center 18%;
+  object-position: center 12%;
 }
 
 /* Ensure slide is a positioned container */
@@ -118,7 +118,7 @@
 
 @media screen and (max-width: 1024px) {
   .carousel-img-slide-1 {
-    object-position: center 22%;
+    object-position: center 16%;
   }
 
   .carousel-img-slide-2 {
@@ -126,7 +126,7 @@
   }
 
   .carousel-img-slide-3 {
-    object-position: center 22%;
+    object-position: center 16%;
   }
 }
 
