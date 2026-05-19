@@ -10,17 +10,6 @@ import BCTLogoWhite from '../../../../../media/homepage/footer-logo-transparent.
 // CSS
 import '../Navigation/Navigation.css'
 
-const HERO_VIDEO_ROUTES = new Set([
-  '/about-us',
-  '/sermons',
-  '/sunday-school',
-  '/sunday-school/presentations',
-  '/missionary',
-  '/missionary/harvest-time-tabernacle',
-  '/missionary/restored-word-daveyton-tabernacle',
-  '/william-branham',
-])
-
 const Navigation = () => {
   const ONLINE_GIVING_URL = 'https://offering.benonicitytabernacle.co.za/'
 
@@ -35,14 +24,9 @@ const Navigation = () => {
 
   // Get the current location (route)
   const location = useLocation();
-  const normalizedPathname =
-    location.pathname !== '/' && location.pathname.endsWith('/')
-      ? location.pathname.slice(0, -1)
-      : location.pathname;
-  const heroUsesVideo = HERO_VIDEO_ROUTES.has(normalizedPathname);
 
-  // Use the white logo only on desktop video-hero pages while the navbar is still at the top.
-  const useHeroLogo = !scrolled && isDesktopViewport && heroUsesVideo
+  // Keep mobile/tablet on the blue logo, but use the white logo on unscrolled desktop.
+  const useHeroLogo = !scrolled && isDesktopViewport
   
   const isActive = (path) => {
     return location.pathname === path ? 'active-link' : ''; // Return 'active-link' class if the current path matches
