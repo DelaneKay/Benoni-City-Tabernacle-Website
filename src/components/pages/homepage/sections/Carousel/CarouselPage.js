@@ -15,9 +15,9 @@ import Img2Tablet  from '../../../../../media/homepage/carousel-2.jpeg';
 import Img2Mobile  from '../../../../../media/homepage/carousel-2.jpeg';
 
 // Slide 3 variants
-import Img3Desktop from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
-import Img3Tablet  from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
-import Img3Mobile  from '../../../../../media/homepage/carousel-3-final-v2.jpeg';
+import Img3Desktop from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
+import Img3Tablet  from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
+import Img3Mobile  from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
 
 const CarouselPage = () => {
   const handleWatchNow = () => {
