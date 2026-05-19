@@ -7,17 +7,17 @@ import '../Carousel/CarouselPage.css';
 // Slide 1 variants
 import Img1Desktop from '../../../../../media/homepage/carousel-1-v3.jpeg';
 import Img1Tablet  from '../../../../../media/homepage/carousel-1-v3.jpeg';
-import Img1Mobile  from '../../../../../media/homepage/carousel-1-v3.jpeg';
+import Img1Mobile  from '../../../../../media/homepage/carousel-1-mobile-v1.jpg';
 
 // Slide 2 variants
 import Img2Desktop from '../../../../../media/homepage/carousel-2.jpeg';
 import Img2Tablet  from '../../../../../media/homepage/carousel-2.jpeg';
-import Img2Mobile  from '../../../../../media/homepage/carousel-2.jpeg';
+import Img2Mobile  from '../../../../../media/homepage/carousel-2-mobile-v1.jpg';
 
 // Slide 3 variants
 import Img3Desktop from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
 import Img3Tablet  from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
-import Img3Mobile  from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
+import Img3Mobile  from '../../../../../media/homepage/carousel-3-mobile-v1.jpg';
 
 const CarouselPage = () => {
   const handleWatchNow = () => {
