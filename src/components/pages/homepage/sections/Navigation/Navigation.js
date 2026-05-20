@@ -19,7 +19,7 @@ const Navigation = () => {
   // State to track navbar scrolling
   const [scrolled, setScrolled] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(() =>
-    typeof window !== 'undefined' ? window.innerWidth >= 992 : true
+    typeof window !== 'undefined' ? window.innerWidth >= 1200 : true
   );
 
   // Get the current location (route)
@@ -38,7 +38,7 @@ const Navigation = () => {
       setScrolled(offset > 50);
     };
     const handleResize = () => {
-      setIsDesktopViewport(window.innerWidth >= 992);
+      setIsDesktopViewport(window.innerWidth >= 1200);
     };
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
