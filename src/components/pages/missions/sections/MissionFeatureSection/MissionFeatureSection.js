@@ -22,6 +22,19 @@ const MissionFeatureSection = ({
       ? 'mission-feature-section mission-feature-section-gray'
       : 'mission-feature-section'
 
+  const handleButtonClick = () => {
+    if (!buttonTo) {
+      return
+    }
+
+    if (/^https?:\/\//i.test(buttonTo)) {
+      window.location.assign(buttonTo)
+      return
+    }
+
+    navigate(buttonTo)
+  }
+
   return (
     <section className={sectionClassName}>
       <Container>
@@ -47,7 +60,7 @@ const MissionFeatureSection = ({
                 className="btn-mission-feature"
                 variant="outline-danger"
                 size="lg"
-                onClick={() => navigate(buttonTo)}
+                onClick={handleButtonClick}
               >
                 {buttonLabel}
               </Button>

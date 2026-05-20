@@ -6,6 +6,8 @@ import HarvestImage from '../../../media/missions/harvest-time-logo.png'
 import RestoredWordImage from '../../../media/missions/restored-word-logo.png'
 import BaptismsImage from '../../../media/homepage/bct-logo.png'
 
+const BAPTISM_URL = 'https://baptism.benonicitytabernacle.co.za/'
+
 const Missionary = () => {
   return (
     <>
@@ -54,7 +56,7 @@ const Missionary = () => {
         eyebrow="BCT"
         subtitle="Baptisms"
         buttonLabel="Learn More"
-        buttonTo="/missionary/bct-baptisms"
+        buttonTo={BAPTISM_URL}
       />
     </>
   )

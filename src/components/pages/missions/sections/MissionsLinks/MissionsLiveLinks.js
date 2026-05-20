@@ -3,6 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import "./MissionsLiveLinks.css"
 
+const BAPTISM_URL = 'https://baptism.benonicitytabernacle.co.za/'
+
 const MissionsLiveLinks = () => {
   const navigate = useNavigate()
 
@@ -29,7 +31,7 @@ const MissionsLiveLinks = () => {
             <Col xs={12} md={4} className="sunday-school-presentations-live-col">
             <h4
               className="text-center missions-live-link"
-              onClick={() => navigate('/missionary/bct-baptisms')}
+              onClick={() => window.location.assign(BAPTISM_URL)}
             >
               BCT Baptisms
             </h4>
