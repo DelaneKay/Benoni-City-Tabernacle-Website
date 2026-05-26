@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './MissionsWelcome.css';
-import MissionsVideo from '../../../../../media/missions/clayville-video.webm';
+import MissionsVideo from '../../../../../media/missions/missions-video-20260526.mp4';
 import MissionsMobileHero from '../../../../../media/missions/clayville-2.webp'; // add this image
 
 const MissionsWelcome = ({ targetId = 'mission-links' }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './SermonsWelcome.css';
-import JuniorVideo from '../../../../../media/Sermons/BCT-video-2.webm';
+import JuniorVideo from '../../../../../media/Sermons/sermons-video-20260526.mp4';
 import MobileHero from '../../../../../media/Sermons/Pastor-1.webp'; // add a mobile-friendly image
 
 const SermonsWelcome = () => {
