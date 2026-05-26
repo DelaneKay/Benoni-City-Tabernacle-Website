@@ -1,7 +1,7 @@
 import React from 'react';
 import './WilliamBranhamWelcome.css';
 import { Container } from 'react-bootstrap';
-import MissionsVideo from '../../../../../media/WMB/WMB-video-1.webm';
+import MissionsVideo from '../../../../../media/WMB/WMB-video-optimized.mp4';
 import WMBHeroMobile from '../../../../../media/WMB/wmb-1.webp'; // add this image
 
 const WilliamBranhamWelcome = () => {
@@ -22,7 +22,7 @@ const WilliamBranhamWelcome = () => {
           loop
           muted
           playsInline
-          preload="none"
+          preload="metadata"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
