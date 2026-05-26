@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.webm'; // adjust if needed
+import AboutUsVideo from '../../../../../media/aboutus/about-us-video-20260526.mp4';
 import AboutUsHeroMobile from '../../../../../media/aboutus/rev-mom.webp'; // ✅ add a lightweight mobile image
 import './AboutUsWelcome.css';
 
@@ -20,13 +20,13 @@ const AboutUsWelcome = () => {
           loop
           muted
           playsInline
-          preload="none"
+          preload="metadata"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
           aria-hidden="true"
         >
-          <source src={JuniorVideo} type="video/mp4" />
+          <source src={AboutUsVideo} type="video/mp4" />
         </video>
 
         {/* Image (mobile + tablet portrait via CSS) */}
