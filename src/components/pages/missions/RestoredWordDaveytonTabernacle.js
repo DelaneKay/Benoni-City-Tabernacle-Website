@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import RestoredWordImage from '../../../media/missions/restored-word-logo.png'
 import RestoredWordVideo from '../../../media/missions/restored-word-video-20260527.mp4'
+import RestoredWordMobileHero from '../../../media/missions/restored-word-mobile-hero-v1.jpg'
 import MissionsLiveLinks from './sections/MissionsLinks/MissionsLiveLinks'
 import RestoredWordSermon from './sections/MissionsSermon/RestoredWordSermon'
 import MissionsWelcome from './sections/MissionsWelcome/MissionsWelcome'
@@ -16,7 +17,8 @@ const RestoredWordDaveytonTabernacle = () => {
       <MissionsWelcome
         targetId="restored-word-sermon"
         videoSrc={RestoredWordVideo}
-        mobileHeroSrc={RestoredWordImage}
+        mobileHeroSrc={RestoredWordMobileHero}
+        mobileHeroObjectPosition="68% center"
         title="Welcome to Restored Word Daveyton Tabernacle"
         description="Restored Word Daveyton Tabernacle continues to shine as a place of worship, restoration, and spiritual growth within the Daveyton community. Under the leadership of Pastor Adio Maadza, the ministry stands as a testimony of God's grace, drawing believers closer to Christ through the preaching of the revealed Word of God."
       />
