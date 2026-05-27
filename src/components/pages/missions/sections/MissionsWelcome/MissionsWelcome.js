@@ -10,6 +10,7 @@ const MissionsWelcome = ({
   videoSrc = MissionsVideo,
   mobileHeroSrc = MissionsMobileHero,
   mobileHeroObjectPosition = 'center center',
+  mobileHeroStyle = {},
   title = 'Welcome to our Missions Corner',
   description = `BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed
               the birth of sister churches, including Harvest Time Tabernacle and Restored Word
@@ -84,7 +85,10 @@ const MissionsWelcome = ({
           alt=""
           aria-hidden="true"
           loading="eager"
-          style={{ objectPosition: mobileHeroObjectPosition }}
+          style={{
+            objectPosition: mobileHeroObjectPosition,
+            ...mobileHeroStyle,
+          }}
           onLoad={() => {
             if (!shouldUseHeroVideoLayout()) markHeroMediaReady()
           }}
