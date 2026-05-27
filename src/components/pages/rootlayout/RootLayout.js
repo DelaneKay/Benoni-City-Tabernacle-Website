@@ -302,6 +302,27 @@ const RootLayout = () => {
     }
   }, [normalizedPathname])
 
+  const [isRouteTransitionLoading, setIsRouteTransitionLoading] = useState(
+    () => !routeNeeds.requiresYoutubeData
+  )
+
+  useEffect(() => {
+    if (routeNeeds.requiresYoutubeData) {
+      setIsRouteTransitionLoading(false)
+      return
+    }
+
+    setIsRouteTransitionLoading(true)
+
+    const timeoutId = window.setTimeout(() => {
+      setIsRouteTransitionLoading(false)
+    }, 650)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+    }
+  }, [normalizedPathname, routeNeeds.requiresYoutubeData])
+
   useEffect(() => {
     let cancelled = false
 
@@ -568,7 +589,7 @@ const RootLayout = () => {
 
   return (
     <>
-      {isLoading ? (
+      {isLoading || isRouteTransitionLoading ? (
         <Loader />
       ) : (
         <>
