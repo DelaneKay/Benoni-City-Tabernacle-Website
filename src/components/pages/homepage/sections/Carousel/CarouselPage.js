@@ -122,7 +122,7 @@ const CarouselPage = () => {
         <Carousel.Item>
           <picture className="carousel-picture">
             <source media="(max-width: 600px) and (orientation: portrait)" srcSet={Img2Mobile} />
-            <source media="(max-width: 1024px)" srcSet={Img2Tablet} />
+            <source media="(min-width: 601px) and (max-width: 1200px)" srcSet={Img2Tablet} />
             <img
               className="d-block w-100 carousel-img carousel-img-slide-2"
               src={Img2Desktop}
