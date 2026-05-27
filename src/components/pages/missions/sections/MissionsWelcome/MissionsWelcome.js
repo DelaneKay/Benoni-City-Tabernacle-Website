@@ -4,7 +4,7 @@ import './MissionsWelcome.css';
 import MissionsVideo from '../../../../../media/missions/missions-video-20260526.mp4';
 import MissionsMobileHero from '../../../../../media/missions/clayville-2.webp'; // add this image
 
-const MissionsWelcome = ({ targetId = 'mission-links' }) => {
+const MissionsWelcome = ({ targetId = 'mission-links', videoSrc = MissionsVideo }) => {
   const handleWatchNow = () => {
     const missionLinksSection = document.getElementById(targetId)
     if (missionLinksSection) missionLinksSection.scrollIntoView({ behavior: 'smooth' })
@@ -20,13 +20,13 @@ const MissionsWelcome = ({ targetId = 'mission-links' }) => {
           loop
           muted
           playsInline
-          preload="none"
+          preload="metadata"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
           aria-hidden="true"
         >
-          <source src={MissionsVideo} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
 
         {/* Image (shown on mobile + tablet portrait via CSS) */}

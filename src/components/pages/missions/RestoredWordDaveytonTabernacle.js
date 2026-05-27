@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import RestoredWordImage from '../../../media/missions/restored-word-logo.png'
+import RestoredWordVideo from '../../../media/missions/restored-word-video-20260527.mp4'
 import MissionsLiveLinks from './sections/MissionsLinks/MissionsLiveLinks'
 import RestoredWordSermon from './sections/MissionsSermon/RestoredWordSermon'
 import MissionsWelcome from './sections/MissionsWelcome/MissionsWelcome'
@@ -12,7 +13,7 @@ const RestoredWordDaveytonTabernacle = () => {
 
   return (
     <>
-      <MissionsWelcome targetId="restored-word-sermon" />
+      <MissionsWelcome targetId="restored-word-sermon" videoSrc={RestoredWordVideo} />
       <section id="restored-word-sermon">
         <MissionsLiveLinks />
         <RestoredWordSermon />
