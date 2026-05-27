@@ -1,8 +1,9 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Container, Button } from 'react-bootstrap';
 import { IoLocationOutline } from "react-icons/io5";
 import '../Carousel/CarouselPage.css';
+import { useHeroLoader } from '../../../../../utils/HeroLoaderContext';
 
 // Slide 1 variants
 import Img1Desktop from '../../../../../media/homepage/carousel-1-desktop-opt-v1.jpg';
@@ -20,6 +21,9 @@ import Img3Tablet  from '../../../../../media/homepage/carousel-3-tablet-opt-v1.
 import Img3Mobile  from '../../../../../media/homepage/carousel-3-mobile-opt-v1.jpg';
 
 const CarouselPage = () => {
+  const { markHeroMediaReady } = useHeroLoader();
+  const firstSlideImageRef = useRef(null);
+
   useEffect(() => {
     const preloadConfigs = [
       {
@@ -55,6 +59,12 @@ const CarouselPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (firstSlideImageRef.current?.complete) {
+      markHeroMediaReady();
+    }
+  }, [markHeroMediaReady]);
+
   const handleWatchNow = () => {
     const el = document.getElementById('church-info');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -78,12 +88,14 @@ const CarouselPage = () => {
             />
             {/* Desktop default: 1920×1080 */}
             <img
+              ref={firstSlideImageRef}
               className="d-block w-100 carousel-img carousel-img-slide-1"
               src={Img1Desktop}
               alt="Welcome to Benoni City Tabernacle (BCT)"
               loading="eager"
               fetchPriority="high"
               decoding="async"
+              onLoad={markHeroMediaReady}
             />
           </picture>
 

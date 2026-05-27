@@ -5,6 +5,7 @@ import Footer from '../homepage/sections/Footer/Footer'
 import axios from 'axios'
 import Loader from '../bctloader/Loader'
 import ScrollToTop from '../../utils/ScrollToTop'
+import { HeroLoaderContext } from '../../../utils/HeroLoaderContext'
 
 const YOUTUBE_API_KEY = 'AIzaSyBjmavsrJQ2B12Il4Ew29Je_JV3_Kdq3Qc'
 const CHANNEL_ID = 'UCvc5U-1XOSmGqjsulifW4LQ'
@@ -54,6 +55,19 @@ function normalizePathname(pathname = '') {
   }
 
   return pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
+}
+
+function routeUsesHeroMedia(pathname = '') {
+  return (
+    pathname === '/' ||
+    pathname === '/about-us' ||
+    pathname === '/missionary' ||
+    pathname === '/missionary/harvest-time-tabernacle' ||
+    pathname === '/missionary/restored-word-daveyton-tabernacle' ||
+    pathname === '/sunday-school' ||
+    pathname === '/sunday-school/presentations' ||
+    pathname === '/william-branham'
+  )
 }
 
 async function fetchUploadsPlaylistId(apiKey, channelId) {
@@ -302,12 +316,38 @@ const RootLayout = () => {
     }
   }, [normalizedPathname])
 
-  const [isRouteTransitionLoading, setIsRouteTransitionLoading] = useState(
-    () => !routeNeeds.requiresYoutubeData
+  const routeRequiresHeroReadyLoader = useMemo(
+    () => routeUsesHeroMedia(normalizedPathname),
+    [normalizedPathname]
+  )
+
+  const [isHeroMediaReady, setIsHeroMediaReady] = useState(
+    () => !routeRequiresHeroReadyLoader
   )
 
   useEffect(() => {
-    if (routeNeeds.requiresYoutubeData) {
+    if (!routeRequiresHeroReadyLoader) {
+      setIsHeroMediaReady(true)
+      return
+    }
+
+    setIsHeroMediaReady(false)
+
+    const timeoutId = window.setTimeout(() => {
+      setIsHeroMediaReady(true)
+    }, 6000)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+    }
+  }, [normalizedPathname, routeRequiresHeroReadyLoader])
+
+  const [isRouteTransitionLoading, setIsRouteTransitionLoading] = useState(
+    () => !routeNeeds.requiresYoutubeData && !routeRequiresHeroReadyLoader
+  )
+
+  useEffect(() => {
+    if (routeNeeds.requiresYoutubeData || routeRequiresHeroReadyLoader) {
       setIsRouteTransitionLoading(false)
       return
     }
@@ -321,7 +361,7 @@ const RootLayout = () => {
     return () => {
       window.clearTimeout(timeoutId)
     }
-  }, [normalizedPathname, routeNeeds.requiresYoutubeData])
+  }, [normalizedPathname, routeNeeds.requiresYoutubeData, routeRequiresHeroReadyLoader])
 
   useEffect(() => {
     let cancelled = false
@@ -587,11 +627,18 @@ const RootLayout = () => {
     return youtubeCache.seriesVideosPromises[playlistId]
   }
 
+  const showLoader =
+    isLoading ||
+    isRouteTransitionLoading ||
+    (routeRequiresHeroReadyLoader && !isHeroMediaReady)
+
   return (
-    <>
-      {isLoading || isRouteTransitionLoading ? (
-        <Loader />
-      ) : (
+    <HeroLoaderContext.Provider
+      value={{
+        markHeroMediaReady: () => setIsHeroMediaReady(true),
+      }}
+    >
+      <>
         <>
           <header>
             <Navigation />
@@ -618,9 +665,21 @@ const RootLayout = () => {
           <footer>
             <Footer />
           </footer>
+          {showLoader ? (
+            <div
+              style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9999,
+                background: '#ffffff',
+              }}
+            >
+              <Loader />
+            </div>
+          ) : null}
         </>
-      )}
-    </>
+      </>
+    </HeroLoaderContext.Provider>
   )
 }
 
