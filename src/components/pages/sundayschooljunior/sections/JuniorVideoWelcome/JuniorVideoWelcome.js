@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './JuniorVideoWelcome.css';
-import JuniorVideo from '../../../../../media/sundayschool/sunday-school-video.webm';
+import JuniorVideo from '../../../../../media/sundayschool/presentations-video-20260527.mp4';
 import JuniorHeroMobile from '../../../../../media/sundayschool/senior.webp'; // add this image
 
 const JuniorVideoWelcome = () => {
@@ -15,7 +15,7 @@ const JuniorVideoWelcome = () => {
           loop
           muted
           playsInline
-          preload="none"
+          preload="metadata"
           controls={false}
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
