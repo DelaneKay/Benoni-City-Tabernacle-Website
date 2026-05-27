@@ -18,7 +18,7 @@ const RestoredWordDaveytonTabernacle = () => {
         targetId="restored-word-sermon"
         videoSrc={RestoredWordVideo}
         mobileHeroSrc={RestoredWordMobileHero}
-        mobileHeroObjectPosition="62% 42%"
+        mobileHeroObjectPosition="62% 34%"
         title="Welcome to Restored Word Daveyton Tabernacle"
         description="Restored Word Daveyton Tabernacle continues to shine as a place of worship, restoration, and spiritual growth within the Daveyton community. Under the leadership of Pastor Adio Maadza, the ministry stands as a testimony of God's grace, drawing believers closer to Christ through the preaching of the revealed Word of God."
       />
