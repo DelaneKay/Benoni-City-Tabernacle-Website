@@ -1,25 +1,60 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Container, Button } from 'react-bootstrap';
 import { IoLocationOutline } from "react-icons/io5";
 import '../Carousel/CarouselPage.css';
 
 // Slide 1 variants
-import Img1Desktop from '../../../../../media/homepage/carousel-1-v3.jpeg';
-import Img1Tablet  from '../../../../../media/homepage/carousel-1-v3.jpeg';
-import Img1Mobile  from '../../../../../media/homepage/carousel-1-mobile-v1.jpg';
+import Img1Desktop from '../../../../../media/homepage/carousel-1-desktop-opt-v1.jpg';
+import Img1Tablet  from '../../../../../media/homepage/carousel-1-tablet-opt-v1.jpg';
+import Img1Mobile  from '../../../../../media/homepage/carousel-1-mobile-opt-v1.jpg';
 
 // Slide 2 variants
-import Img2Desktop from '../../../../../media/homepage/carousel-2.jpeg';
-import Img2Tablet  from '../../../../../media/homepage/carousel-2.jpeg';
-import Img2Mobile  from '../../../../../media/homepage/carousel-2-mobile-v1.jpg';
+import Img2Desktop from '../../../../../media/homepage/carousel-2-desktop-opt-v1.jpg';
+import Img2Tablet  from '../../../../../media/homepage/carousel-2-tablet-opt-v1.jpg';
+import Img2Mobile  from '../../../../../media/homepage/carousel-2-mobile-opt-v1.jpg';
 
 // Slide 3 variants
-import Img3Desktop from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
-import Img3Tablet  from '../../../../../media/homepage/carousel-3-final-v3.jpeg';
-import Img3Mobile  from '../../../../../media/homepage/carousel-3-mobile-v1.jpg';
+import Img3Desktop from '../../../../../media/homepage/carousel-3-desktop-opt-v1.jpg';
+import Img3Tablet  from '../../../../../media/homepage/carousel-3-tablet-opt-v1.jpg';
+import Img3Mobile  from '../../../../../media/homepage/carousel-3-mobile-opt-v1.jpg';
 
 const CarouselPage = () => {
+  useEffect(() => {
+    const preloadConfigs = [
+      {
+        href: Img1Mobile,
+        media: '(max-width: 600px) and (orientation: portrait)',
+      },
+      {
+        href: Img1Tablet,
+        media: '(min-width: 601px) and (max-width: 1024px)',
+      },
+      {
+        href: Img1Desktop,
+        media: '(min-width: 1025px)',
+      },
+    ];
+
+    const links = preloadConfigs.map(({ href, media }) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = href;
+      link.media = media;
+      document.head.appendChild(link);
+      return link;
+    });
+
+    return () => {
+      links.forEach((link) => {
+        if (link.parentNode) {
+          link.parentNode.removeChild(link);
+        }
+      });
+    };
+  }, []);
+
   const handleWatchNow = () => {
     const el = document.getElementById('church-info');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -47,6 +82,8 @@ const CarouselPage = () => {
               src={Img1Desktop}
               alt="Welcome to Benoni City Tabernacle (BCT)"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </picture>
 
@@ -79,6 +116,8 @@ const CarouselPage = () => {
               src={Img2Desktop}
               alt="Connect with Bible Truths"
               loading="lazy"
+              fetchPriority="low"
+              decoding="async"
             />
           </picture>
 
@@ -111,6 +150,8 @@ const CarouselPage = () => {
               src={Img3Desktop}
               alt="Where the Eagles Gather"
               loading="lazy"
+              fetchPriority="low"
+              decoding="async"
             />
           </picture>
 
