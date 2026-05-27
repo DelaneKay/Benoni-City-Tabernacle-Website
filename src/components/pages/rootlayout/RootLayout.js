@@ -374,26 +374,47 @@ const RootLayout = () => {
         }
 
         if (routeNeeds.needsMainArchive) {
-          let recentVideos = []
+          let archiveVideos = []
           let allPlaylists = []
 
           try {
-            recentVideos = await loadCachedResource(
-              'mainRecentArchive',
-              'mainRecentArchivePromise',
-              () => fetchMainLatestUploads(50)
+            archiveVideos = await loadCachedResource(
+              'mainArchive',
+              'mainArchivePromise',
+              () => fetchMainAllUploads()
             )
 
-            if (!recentVideos.length) {
-              recentVideos = await fetchMainLatestUploads(50)
+            if (!archiveVideos.length) {
+              archiveVideos = await fetchMainAllUploads()
 
-              if (recentVideos.length) {
-                youtubeCache.mainRecentArchive = recentVideos
+              if (archiveVideos.length) {
+                youtubeCache.mainArchive = archiveVideos
               }
             }
-          } catch (recentVideosError) {
-            console.warn('Recent sermons failed to load for the sermons page.', recentVideosError)
-            recentVideos = []
+          } catch (archiveVideosError) {
+            console.warn('Full sermons archive failed to load for the sermons page.', archiveVideosError)
+            archiveVideos = []
+          }
+
+          if (!archiveVideos.length) {
+            try {
+              archiveVideos = await loadCachedResource(
+                'mainRecentArchive',
+                'mainRecentArchivePromise',
+                () => fetchMainLatestUploads(50)
+              )
+
+              if (!archiveVideos.length) {
+                archiveVideos = await fetchMainLatestUploads(50)
+
+                if (archiveVideos.length) {
+                  youtubeCache.mainRecentArchive = archiveVideos
+                }
+              }
+            } catch (recentVideosError) {
+              console.warn('Recent sermons fallback also failed to load for the sermons page.', recentVideosError)
+              archiveVideos = []
+            }
           }
 
           try {
@@ -409,13 +430,13 @@ const RootLayout = () => {
             return
           }
 
-          if (!recentVideos.length && !allPlaylists.length) {
+          if (!archiveVideos.length && !allPlaylists.length) {
             throw new Error('No sermons or playlists could be loaded for the sermons page.')
           }
 
-          setVideos(recentVideos)
+          setVideos(archiveVideos)
           setPlaylists(allPlaylists)
-          setAvailableYears(extractYears(recentVideos))
+          setAvailableYears(extractYears(archiveVideos))
           setVideosClayville([])
           setAvailableYearsClayville([])
           setVideosRestored([])
