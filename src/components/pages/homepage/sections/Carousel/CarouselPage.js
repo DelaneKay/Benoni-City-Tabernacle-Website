@@ -110,7 +110,7 @@ const CarouselPage = () => {
               <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                 <IoLocationOutline size={60} style={{ marginRight: 10 }} />
                 <div>
-                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, JHB</h4>
+                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, Ekurhuleni</h4>
                   <p style={{ margin: 0 }}>Feel free to visit us on any of our service days.</p>
                 </div>
               </div>
@@ -144,7 +144,7 @@ const CarouselPage = () => {
               <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                 <IoLocationOutline size={60} style={{ marginRight: 10 }} />
                 <div>
-                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, JHB</h4>
+                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, Ekurhuleni</h4>
                   <p style={{ margin: 0 }}>Feel free to visit us on any of our service days.</p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const CarouselPage = () => {
               <div className="address" style={{ display: 'flex', alignItems: 'center' }}>
                 <IoLocationOutline size={60} style={{ marginRight: 10 }} />
                 <div>
-                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, JHB</h4>
+                  <h4 style={{ margin: 0 }}>100 Elston Ave, Benoni, Ekurhuleni</h4>
                   <p style={{ margin: 0 }}>Feel free to visit us on any of our service days.</p>
                 </div>
               </div>
