@@ -12,7 +12,7 @@ import Img1Mobile  from '../../../../../media/homepage/carousel-1-mobile-opt-v1.
 
 // Slide 2 variants
 import Img2Desktop from '../../../../../media/homepage/carousel-2-desktop-opt-v1.jpg';
-import Img2Tablet  from '../../../../../media/homepage/carousel-2-tablet-opt-v1.jpg';
+import Img2Tablet  from '../../../../../media/homepage/carousel-2-tablet-opt-v2.jpg';
 import Img2Mobile  from '../../../../../media/homepage/carousel-2-mobile-opt-v1.jpg';
 
 // Slide 3 variants
