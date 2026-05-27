@@ -44,8 +44,10 @@ const MissionsWelcome = ({ targetId = 'mission-links', videoSrc = MissionsVideo 
             <h1>Welcome to our Missions Corner</h1>
             <p>
               BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed
-              the birth of sister churches, including Harvest Time Tabernacle, as part of its
-              mission to spread the End-Time Message.
+              the birth of sister churches, including Harvest Time Tabernacle and Restored Word
+              Daveyton Tabernacle, as part of its mission to spread the End-Time Message. This
+              section also shares the baptisms currently taking place at BCT as more people come to
+              believe this Message.
             </p>
             <button className="btn btn-outline-light" onClick={handleWatchNow}>
               Learn More
