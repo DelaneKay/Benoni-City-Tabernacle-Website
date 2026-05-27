@@ -5,13 +5,14 @@ import MissionFeatureSection from './sections/MissionFeatureSection/MissionFeatu
 import HarvestImage from '../../../media/missions/harvest-time-logo.png'
 import RestoredWordImage from '../../../media/missions/restored-word-logo.png'
 import BaptismsImage from '../../../media/homepage/bct-logo.png'
+import MissionsMainVideo from '../../../media/missions/missions-main-video-20260527.mp4'
 
 const BAPTISM_URL = 'https://baptism.benonicitytabernacle.co.za/'
 
 const Missionary = () => {
   return (
     <>
-      <MissionsWelcome />
+      <MissionsWelcome videoSrc={MissionsMainVideo} />
       <section id="mission-links">
         <MissionsLiveLinks />
         <MissionFeatureSection
