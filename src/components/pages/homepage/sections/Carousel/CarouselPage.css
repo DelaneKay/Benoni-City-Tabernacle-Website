@@ -273,7 +273,7 @@
 /* Responsive styles for screens from  900px to 1200px */
 @media screen and (min-width: 900px) and (max-width: 1200px) {
   .carousel-img-slide-2 {
-    object-position: center 4%;
+    object-position: center 0%;
   }
 
   /* Adjusting the carousel height to be more mobile-friendly */
