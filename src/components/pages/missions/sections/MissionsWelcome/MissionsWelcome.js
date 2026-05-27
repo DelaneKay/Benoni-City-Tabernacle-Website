@@ -4,7 +4,17 @@ import './MissionsWelcome.css';
 import MissionsVideo from '../../../../../media/missions/harvest-time-video-20260527.mp4';
 import MissionsMobileHero from '../../../../../media/missions/clayville-2.webp'; // add this image
 
-const MissionsWelcome = ({ targetId = 'mission-links', videoSrc = MissionsVideo }) => {
+const MissionsWelcome = ({
+  targetId = 'mission-links',
+  videoSrc = MissionsVideo,
+  mobileHeroSrc = MissionsMobileHero,
+  title = 'Welcome to our Missions Corner',
+  description = `BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed
+              the birth of sister churches, including Harvest Time Tabernacle and Restored Word
+              Daveyton Tabernacle, as part of its mission to spread the End-Time Message. This
+              section also shares the baptisms currently taking place at BCT as more people come to
+              believe this Message.`,
+}) => {
   const handleWatchNow = () => {
     const missionLinksSection = document.getElementById(targetId)
     if (missionLinksSection) missionLinksSection.scrollIntoView({ behavior: 'smooth' })
@@ -32,7 +42,7 @@ const MissionsWelcome = ({ targetId = 'mission-links', videoSrc = MissionsVideo 
         {/* Image (shown on mobile + tablet portrait via CSS) */}
         <img
           className="missions-image-background hero-image"
-          src={MissionsMobileHero}
+          src={mobileHeroSrc}
           alt=""
           aria-hidden="true"
           loading="eager"
@@ -41,14 +51,8 @@ const MissionsWelcome = ({ targetId = 'mission-links', videoSrc = MissionsVideo 
         {/* Overlay */}
         <div className="missions-video-overlay">
           <div className="missions-overlay-content">
-            <h1>Welcome to our Missions Corner</h1>
-            <p>
-              BCT is deeply committed to evangelism and outreach programs. The ministry has witnessed
-              the birth of sister churches, including Harvest Time Tabernacle and Restored Word
-              Daveyton Tabernacle, as part of its mission to spread the End-Time Message. This
-              section also shares the baptisms currently taking place at BCT as more people come to
-              believe this Message.
-            </p>
+            <h1>{title}</h1>
+            <p>{description}</p>
             <button className="btn btn-outline-light" onClick={handleWatchNow}>
               Learn More
             </button>
