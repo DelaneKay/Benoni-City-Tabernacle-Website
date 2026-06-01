@@ -2,12 +2,13 @@ import React from 'react'
 import { Row, Col, Button, Container } from 'react-bootstrap';
 import MissionsImage from '../../../../../media/missions/harvest-time-logo.png';
 import './MissionsAbout.css'
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const MissionsAbout = () => {
+    const navigate = useNavigate();
 
-    const goToYoutubePage = () => {
-      window.open('https://www.youtube.com/@clayviewspokenword7940', '_blank')
+    const goToMissionsPage = () => {
+      navigate('/missionary');
   }; 
 
   return (
@@ -35,8 +36,8 @@ const MissionsAbout = () => {
                 </p>
                 <div className="text-start">
                     <Button className='btn-missions' variant="outline-danger" size="lg"
-                    onClick={goToYoutubePage}>
-                    Watch More
+                    onClick={goToMissionsPage}>
+                    Back to Missions
                     </Button>
                     <Outlet/>
                 </div>
