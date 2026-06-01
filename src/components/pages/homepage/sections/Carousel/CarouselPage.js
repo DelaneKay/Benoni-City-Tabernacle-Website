@@ -32,7 +32,7 @@ const CarouselPage = () => {
       },
       {
         href: Img1Tablet,
-        media: '(min-width: 601px) and (max-width: 1024px)',
+        media: '(min-width: 601px) and (max-width: 1200px)',
       },
       {
         href: Img1Desktop,
@@ -83,7 +83,7 @@ const CarouselPage = () => {
             />
             {/* Tablets & small laptops (and phone landscape): 1366×768 */}
             <source
-              media="(max-width: 1024px)"
+              media="(min-width: 601px) and (max-width: 1200px)"
               srcSet={Img1Tablet}
             />
             {/* Desktop default: 1920×1080 */}
