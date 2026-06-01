@@ -59,7 +59,11 @@ const Navigation = () => {
           expanded={expanded} 
         >
           <Container className='nav-section'>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand
+              as={Link}
+              to="/"
+              onClick={() => setExpanded(false)}
+            >
               <img src={useHeroLogo ? BCTLogoWhite : BCTLogo} alt="BCT" className={`logo ${useHeroLogo ? 'logo-hero' : ''}`} />
             </Navbar.Brand>
 
