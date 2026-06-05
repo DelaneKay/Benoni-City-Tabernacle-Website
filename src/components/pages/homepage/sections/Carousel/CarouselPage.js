@@ -18,7 +18,7 @@ import Img2Mobile  from '../../../../../media/homepage/carousel-3-mobile-opt-v1.
 // Slide 3 variants
 import Img3Desktop from '../../../../../media/homepage/carousel-1-desktop-opt-v1.jpg';
 import Img3Tablet  from '../../../../../media/homepage/carousel-1-tablet-opt-v1.jpg';
-import Img3Mobile  from '../../../../../media/homepage/carousel-1-mobile-opt-v4.jpg';
+import Img3Mobile  from '../../../../../media/homepage/carousel-1-mobile-opt-v3.jpg';
 
 const CarouselPage = () => {
   const { markHeroMediaReady } = useHeroLoader();
