@@ -11,13 +11,13 @@ import Img1Tablet  from '../../../../../media/homepage/carousel-2-tablet-opt-v2.
 import Img1Mobile  from '../../../../../media/homepage/carousel-2-mobile-opt-v1.jpg';
 
 // Slide 2 variants
-import Img2Desktop from '../../../../../media/homepage/carousel-3-desktop-opt-v1.jpg';
-import Img2Tablet  from '../../../../../media/homepage/carousel-3-tablet-opt-v1.jpg';
+import Img2Desktop from '../../../../../media/homepage/carousel-slide-2-desktop-v2.jpeg';
+import Img2Tablet  from '../../../../../media/homepage/carousel-slide-2-tablet-v2.jpeg';
 import Img2Mobile  from '../../../../../media/homepage/carousel-3-mobile-opt-v1.jpg';
 
 // Slide 3 variants
-import Img3Desktop from '../../../../../media/homepage/carousel-1-desktop-opt-v1.jpg';
-import Img3Tablet  from '../../../../../media/homepage/carousel-1-tablet-opt-v1.jpg';
+import Img3Desktop from '../../../../../media/homepage/carousel-slide-3-desktop-v2.jpeg';
+import Img3Tablet  from '../../../../../media/homepage/carousel-slide-3-tablet-v2.jpeg';
 import Img3Mobile  from '../../../../../media/homepage/carousel-1-mobile-opt-v3.jpg';
 
 const CarouselPage = () => {
